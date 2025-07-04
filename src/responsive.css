@@ -1,0 +1,85 @@
+/*==============================*/
+/* Responsive Breakpoints      */
+/*==============================*/
+
+@media (max-width: 976px) {
+  .img-overlay p {
+    max-width: 900px;
+    font-size: clamp(1.25rem, 6vw, 2.8rem);
+  }
+  .img-overlay h1 {
+    max-width: 900px;
+    font-size: clamp(2.75rem, 10vw, 5.875rem);
+  }
+  .img-overlay h2 {
+    max-width: 900px;
+    font-size: clamp(0.875rem, 4vw, 1.5rem);
+  }
+  #booking {
+    margin-top: -350px;
+  }
+  #booking .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-group {
+    max-width: 26rem;
+  }
+  .nav-left,
+  .nav-right > button {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 788px) {
+  .places-card .flex {
+    flex-direction: column;
+  }
+  .places-heading .btn-stroke {
+    margin-top: 1em;
+    font-size: 0.75rem;
+  }
+  .places-heading .grid {
+    margin-right: 2rem;
+  }
+  .places-content {
+    padding: 2rem;
+  }
+  .places-content img {
+    width: 220px;
+    height: 220px;
+    margin: 0 0 16px 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  #booking .grid-4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .form-group {
+    max-width: 30rem;
+  }
+  #booking {
+    margin-top: -350px;
+  }
+  .tabs {
+    display: flex;
+    justify-content: center;
+  }
+  .actions {
+    justify-content: center;
+  }
+  .actions .btn-black,
+  .actions .btn-primary,
+  .card-overlay .btn-primary {
+    font-size: 0.75rem;
+  }
+  .places-heading .btn-stroke {
+    margin-top: 1em;
+    font-size: 0.625rem;
+  }
+}
