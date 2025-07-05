@@ -1,8 +1,8 @@
 // Tabs Toggle
-document.querySelectorAll('.tab').forEach((tab) =>
+document.querySelectorAll('.booking-tab').forEach((tab) =>
   tab.addEventListener('click', () => {
     document
-      .querySelectorAll('.tab')
+      .querySelectorAll('.booking-tab')
       .forEach((t) => t.classList.remove('active'));
     tab.classList.add('active');
   })

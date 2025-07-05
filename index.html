@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -40,13 +40,11 @@
     <header>
       <nav class="container">
         <div class="nav-left inline-flex">
-          <a href="#" class="inline-flex nav-link flights-btn">
-            <img src="assets/airplane-icon.svg" alt="airplane" />
-            <span class="fs-16 fw-semi-bold">&nbsp;Find Flights</span>
+          <a href="#" class="inline-flex nav-link flights-btn booking-tab">
+            <img src="assets/airplane-icon.svg" alt="airplane" />Find Flights
           </a>
-          <a href="#" class="inline-flex nav-link stays-btn">
-            <img src="assets/bed-icon.svg" alt="bed" />
-            <span class="fs-16 fw-semi-bold">&nbsp;Find Stays</span>
+          <a href="#" class="inline-flex nav-link stays-btn booking-tab">
+            <img src="assets/bed-icon.svg" alt="bed" />Find Stays
           </a>
         </div>
 
@@ -81,30 +79,36 @@
 
     <!-- Hero Slider -->
     <main>
-      <div class="slider-container swiper">
+      <div class="slider-container swiper hero-swiper">
         <div class="slider-content swiper-wrapper">
           <div class="overlay swiper-slide">
             <img src="assets/hero-section-bg.svg" alt="" />
             <div class="img-overlay text-center">
-              <p class="">Helping Others</p>
-              <h1>LIVE & TRAVEL</h1>
-              <h2>Special offers to suit your plan</h2>
+              <p class="fs-45 fw-bold">Helping Others</p>
+              <h1 class="fs-94 ff-primary fw-bold">LIVE & TRAVEL</h1>
+              <h2 class="fs-20 fw-semi-bold">
+                Special offers to suit your plan
+              </h2>
             </div>
           </div>
           <div class="overlay swiper-slide">
             <img src="assets/hero-section-bg-2.svg" alt="" />
             <div class="img-overlay text-center">
-              <p>Wander with Purpose</p>
-              <h1>GO BEYOND</h1>
-              <h2>Unforgettable journeys tailored for you</h2>
+              <p class="fs-45 fw-bold">Wander with Purpose</p>
+              <h1 class="fs-94 ff-primary fw-bold">GO BEYOND</h1>
+              <h2 class="fs-20 fw-semi-bold">
+                Unforgettable journeys tailored for you
+              </h2>
             </div>
           </div>
           <div class="overlay swiper-slide">
             <img src="assets/hero-section-bg-3.svg" alt="" />
             <div class="img-overlay text-center">
-              <p>Travel Made Simple</p>
-              <h1>COZY TRAILS</h1>
-              <h2>Enjoy seamless bookings and exclusive deals</h2>
+              <p class="fs-45 fw-bold">Travel Made Simple</p>
+              <h1 class="fs-94 ff-primary fw-bold">COZY TRAILS</h1>
+              <h2 class="fs-20 fw-semi-bold">
+                Enjoy seamless bookings and exclusive deals
+              </h2>
             </div>
           </div>
         </div>
@@ -115,15 +119,12 @@
     <section id="booking">
       <div class="container">
         <div class="booking-container">
-          <div class="tabs">
-            <button class="tab inline-flex">
-              <img
-                src="assets/airplane-icon.svg"
-                alt="Airplane Icon"
-              />&nbsp;Flights
+          <div class="booking-tabs">
+            <button class="booking-tab inline-flex">
+              <img src="assets/airplane-icon.svg" alt="Airplane Icon" />Flights
             </button>
-            <button class="tab inline-flex">
-              <img src="assets/bed-icon.svg" alt="Bed Icon" />&nbsp;Stays
+            <button class="booking-tab inline-flex">
+              <img src="assets/bed-icon.svg" alt="Bed Icon" />Stays
             </button>
           </div>
 
@@ -136,7 +137,7 @@
                 value="Lahore - Karachi"
                 placeholder="Lahore - Karachi"
               />
-              <span class="swap-icon">⇄</span>
+              <span class="fs-16 swap-icon">⇄</span>
             </div>
 
             <div class="form-group trip">
@@ -301,6 +302,304 @@
         </div>
       </div>
     </section>
+
+    <!-- Reviews Section -->
+    <section class="container">
+      <div class="reviews-heading">
+        <div class="grid">
+          <h1 class="heading-primary">Reviews</h1>
+          <p class="heading-normal-txt">
+            What people says about Golobe facilities
+          </p>
+        </div>
+        <button class="btn-stroke">See All</button>
+      </div>
+      <div class="slider-reviews-container">
+        <div class="swiper reviews-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="grid swiper-content">
+                <h1 class="fs-24 fw-bold">
+                  “A real sense of community, nurtured”
+                </h1>
+                <p class="fs-14 text-neutral-grey">
+                  Really appreciate the help and support from the staff during
+                  these tough times. Shout out to katie for
+                </p>
+                <button class="btn-black">View More</button>
+                <div class="star-icon">
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                </div>
+                <div>
+                  <h1 class="fs-14 fw-bold">Olga</h1>
+                  <h2 class="fs-12 fw-medium text-neutral-grey">
+                    Weave Studios &ndash; Kai Tak
+                  </h2>
+                  <div class="flex">
+                    <img src="assets/google-icon.svg" alt="" /><span
+                      class="fs-12 fw-bold text-neutral-grey"
+                      >&nbsp;Google</span
+                    >
+                  </div>
+                </div>
+                <div class="swiper-content-img">
+                  <img src="assets/review-banner-1.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid swiper-content">
+                <h1 class="fs-24 fw-bold">
+                  “A real sense of community, nurtured”
+                </h1>
+                <p class="fs-14 text-neutral-grey">
+                  Really appreciate the help and support from the staff during
+                  these tough times. Shout out to katie for
+                </p>
+                <button class="btn-black">View More</button>
+                <div class="star-icon">
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                </div>
+                <div>
+                  <h1 class="fs-14 fw-bold">Olga</h1>
+                  <h2 class="fs-12 fw-medium text-neutral-grey">
+                    Weave Studios &ndash; Kai Tak
+                  </h2>
+                  <div class="flex">
+                    <img src="assets/google-icon.svg" alt="" /><span
+                      class="fs-12 fw-bold text-neutral-grey"
+                      >&nbsp;Google</span
+                    >
+                  </div>
+                </div>
+                <div class="swiper-content-img">
+                  <img src="assets/review-banner-2.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid swiper-content">
+                <h1 class="fs-24 fw-bold">
+                  “A real sense of community, nurtured”
+                </h1>
+                <p class="fs-14 text-neutral-grey">
+                  Really appreciate the help and support from the staff during
+                  these tough times. Shout out to katie for
+                </p>
+                <button class="btn-black">View More</button>
+                <div class="star-icon">
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                </div>
+                <div>
+                  <h1 class="fs-14 fw-bold">Olga</h1>
+                  <h2 class="fs-12 fw-medium text-neutral-grey">
+                    Weave Studios &ndash; Kai Tak
+                  </h2>
+                  <div class="flex">
+                    <img src="assets/google-icon.svg" alt="" /><span
+                      class="fs-12 fw-bold text-neutral-grey"
+                      >&nbsp;Google</span
+                    >
+                  </div>
+                </div>
+                <div class="swiper-content-img">
+                  <img src="assets/review-banner-3.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid swiper-content">
+                <h1 class="fs-24 fw-bold">
+                  “A real sense of community, nurtured”
+                </h1>
+                <p class="fs-14 text-neutral-grey">
+                  Really appreciate the help and support from the staff during
+                  these tough times. Shout out to katie for
+                </p>
+                <button class="btn-black">View More</button>
+                <div class="star-icon">
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                </div>
+                <div>
+                  <h1 class="fs-14 fw-bold">Olga</h1>
+                  <h2 class="fs-12 fw-medium text-neutral-grey">
+                    Weave Studios &ndash; Kai Tak
+                  </h2>
+                  <div class="flex">
+                    <img src="assets/google-icon.svg" alt="" /><span
+                      class="fs-12 fw-bold text-neutral-grey"
+                      >&nbsp;Google</span
+                    >
+                  </div>
+                </div>
+                <div class="swiper-content-img">
+                  <img src="assets/review-banner-3.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid swiper-content">
+                <h1 class="fs-24 fw-bold">
+                  “A real sense of community, nurtured”
+                </h1>
+                <p class="fs-14 text-neutral-grey">
+                  Really appreciate the help and support from the staff during
+                  these tough times. Shout out to katie for
+                </p>
+                <button class="btn-black">View More</button>
+                <div class="star-icon">
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                </div>
+                <div>
+                  <h1 class="fs-14 fw-bold">Olga</h1>
+                  <h2 class="fs-12 fw-medium text-neutral-grey">
+                    Weave Studios &ndash; Kai Tak
+                  </h2>
+                  <div class="flex">
+                    <img src="assets/google-icon.svg" alt="" /><span
+                      class="fs-12 fw-bold text-neutral-grey"
+                      >&nbsp;Google</span
+                    >
+                  </div>
+                </div>
+                <div class="swiper-content-img">
+                  <img src="assets/review-banner-3.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid swiper-content">
+                <h1 class="fs-24 fw-bold">
+                  “A real sense of community, nurtured”
+                </h1>
+                <p class="fs-14 text-neutral-grey">
+                  Really appreciate the help and support from the staff during
+                  these tough times. Shout out to katie for
+                </p>
+                <button class="btn-black">View More</button>
+                <div class="star-icon">
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                  <img src="assets/star-icon.svg" alt="star" />
+                </div>
+                <div>
+                  <h1 class="fs-14 fw-bold">Olga</h1>
+                  <h2 class="fs-12 fw-medium text-neutral-grey">
+                    Weave Studios &ndash; Kai Tak
+                  </h2>
+                  <div class="flex">
+                    <img src="assets/google-icon.svg" alt="" /><span
+                      class="fs-12 fw-bold text-neutral-grey"
+                      >&nbsp;Google</span
+                    >
+                  </div>
+                </div>
+                <div class="swiper-content-img">
+                  <img src="assets/review-banner-3.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section>
+      <div class="container subscribe-wrapper">
+        <div class="flex">
+          <div class="grid subscribe-heading">
+            <h1 class="fw-bold">Subscribe Newsletter</h1>
+            <h2 class="fw-bold">The Travel</h2>
+            <p class="fw-medium text-neutral-grey">
+              Get inspired! Receive travel discounts, tips and behind the scenes
+              stories.
+            </p>
+          </div>
+          <div class="grid subscribe-form">
+            <label for="">Email</label>
+            <div>
+              <input type="text" placeholder="Your email address" />
+              <button class="btn-black fs-14 fw-semi-bold">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container flex-no-wrap">
+        <div class="links socials grid">
+          <img
+            class="socials-company-logo"
+            src="assets/footer-copany-logo.svg"
+            alt=""
+          />
+          <div class="social-links inline-flex">
+            <a href=""><img src="assets/fb-icon.svg" alt="facebook logo" /></a>
+            <a href="#"><img src="assets/tw-icon.svg" alt="twitter logo" /></a>
+            <a href="#"
+              ><img src="assets/ig-icon.svg" alt="instagram logo"
+            /></a>
+            <a href="#"><img src="assets/yt-icon.svg" alt="youtube logo" /></a>
+          </div>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Destination</h1>
+          <a href="#">Canada</a>
+          <a href="#">Alaska</a>
+          <a href="#">France</a>
+          <a href="#">Iceland</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Activities</h1>
+          <a href="#">Lights</a>
+          <a href="#">Cruising & sailing</a>
+          <a href="#">Multi-activities</a>
+          <a href="#">Kayaing</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Travel Blogs</h1>
+          <a href="#">Tokyo Travel Guide</a>
+          <a href="#">Sri Lanka Travel Guide</a>
+          <a href="#">Peru Travel Guide</a>
+          <a href="#">Bali Travel Guide</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">About Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Contact Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

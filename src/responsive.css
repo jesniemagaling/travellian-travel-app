@@ -1,6 +1,4 @@
-/*==============================*/
-/* Responsive Breakpoints      */
-/*==============================*/
+/* ========== RESPONSIVE BREAKPOINTS ========== */
 
 @media (max-width: 976px) {
   .img-overlay p {
@@ -31,6 +29,19 @@
   .mobile-toggle {
     display: block;
   }
+
+  footer .flex-no-wrap {
+    max-width: 680px;
+    row-gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-self: center;
+    padding-left: 2rem;
+  }
+  footer .grid {
+    justify-content: start;
+  }
 }
 
 @media (max-width: 788px) {
@@ -41,7 +52,8 @@
     margin-top: 1em;
     font-size: 0.75rem;
   }
-  .places-heading .grid {
+  .places-heading .grid,
+  .reviews-heading .grid {
     margin-right: 2rem;
   }
   .places-content {
@@ -66,7 +78,7 @@
   #booking {
     margin-top: -350px;
   }
-  .tabs {
+  .booking-tabs {
     display: flex;
     justify-content: center;
   }
@@ -78,8 +90,50 @@
   .card-overlay .btn-primary {
     font-size: 0.75rem;
   }
-  .places-heading .btn-stroke {
+  .places-heading .btn-stroke,
+  .reviews-heading .btn-stroke {
     margin-top: 1em;
     font-size: 0.625rem;
+  }
+
+  .subscribe-wrapper .flex {
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .subscribe-form input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .subscribe-form button {
+    font-size: var(--fs-12);
+    width: 100%;
+  }
+}
+
+@media (max-width: 440px) {
+  .actions {
+    display: grid;
+    margin-bottom: 1.75rem;
+  }
+  main .img-overlay p {
+    font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+  }
+
+  main .img-overlay h1 {
+    font-size: clamp(2.5rem, 6.5vw, 3.75rem);
+  }
+
+  main .img-overlay h2 {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+  .swiper-content button {
+    font-size: 0.7rem;
+    padding: 1.25rem 0;
+  }
+  footer .flex-no-wrap {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
