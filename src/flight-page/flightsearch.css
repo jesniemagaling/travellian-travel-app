@@ -1,0 +1,5 @@
+.booking-container .booking-tabs h1 {
+  font-size: var(--fs-20);
+  font-weight: var(--fw-semi-bold);
+  padding: 1rem 0;
+}

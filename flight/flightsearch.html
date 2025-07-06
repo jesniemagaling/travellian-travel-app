@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golobe</title>
+
+    <link rel="icon" type="image/svg+xml" href="/assets/company-icon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Swiper Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/src/landing-page/styles.css" />
+    <link rel="stylesheet" href="/src/flight-page/flightsearch.css" />
+    <link rel="stylesheet" href="/src/global-utilities/utilities.css" />
+    <link rel="stylesheet" href="/src/global-utilities/responsive.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header>
+      <nav class="container">
+        <div class="nav-left inline-flex">
+          <a
+            href="../flight/flightsearch.html"
+            class="inline-flex nav-link flights-btn nav-booking-tab active"
+          >
+            <img src="/assets/airplane-icon.svg" alt="airplane" />Find Flights
+          </a>
+          <a href="#" class="inline-flex nav-link stays-btn nav-booking-tab">
+            <img src="/assets/bed-icon.svg" alt="bed" />Find Stays
+          </a>
+        </div>
+
+        <div class="company-logo">
+          <a href="/landing/index.html"
+            ><img src="/assets/company-logo.svg" alt="Logo"
+          /></a>
+        </div>
+
+        <div class="nav-right inline-flex">
+          <button class="btn-white fs-16 fw-semi-bold">Login</button>
+          <button class="btn-secondary fs-16 fw-semi-bold">Sign up</button>
+          <div class="mobile-toggle" id="hamburger">
+            <i class="fa-solid fa-bars menu-icon"></i>
+            <i class="fa-solid fa-xmark close-icon"></i>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobileNav">
+        <a href="#" class="mobile-link">
+          <img src="/assets/airplane-icon.svg" alt="airplane" />
+          <span class="fs-16 fw-semi-bold">&nbsp;Find Flights</span>
+        </a>
+        <a href="#" class="mobile-link">
+          <img src="/assets/bed-icon.svg" alt="bed" />
+          <span class="fs-16 fw-semi-bold">&nbsp;Find Stays</span>
+        </a>
+        <a href="#" class="mobile-link fs-16 fw-semi-bold">Login</a>
+        <a href="#" class="mobile-link fs-16 fw-semi-bold">Sign Up</a>
+      </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <main>
+      <div class="slider-container swiper hero-swiper">
+        <div class="slider-content swiper-wrapper">
+          <div class="overlay swiper-slide">
+            <img src="/assets/hero-section-bg.svg" alt="" />
+            <div class="img-overlay text-center">
+              <p class="fs-45 fw-bold">Helping Others</p>
+              <h1 class="fs-94 ff-primary fw-bold">LIVE & TRAVEL</h1>
+              <h2 class="fs-20 fw-semi-bold">
+                Special offers to suit your plan
+              </h2>
+            </div>
+          </div>
+          <div class="overlay swiper-slide">
+            <img src="/assets/hero-section-bg-2.svg" alt="" />
+            <div class="img-overlay text-center">
+              <p class="fs-45 fw-bold">Wander with Purpose</p>
+              <h1 class="fs-94 ff-primary fw-bold">GO BEYOND</h1>
+              <h2 class="fs-20 fw-semi-bold">
+                Unforgettable journeys tailored for you
+              </h2>
+            </div>
+          </div>
+          <div class="overlay swiper-slide">
+            <img src="/assets/hero-section-bg-3.svg" alt="" />
+            <div class="img-overlay text-center">
+              <p class="fs-45 fw-bold">Travel Made Simple</p>
+              <h1 class="fs-94 ff-primary fw-bold">COZY TRAILS</h1>
+              <h2 class="fs-20 fw-semi-bold">
+                Enjoy seamless bookings and exclusive deals
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Booking Form -->
+    <section id="booking">
+      <div class="booking-container">
+        <!-- Tabs -->
+        <div class="booking-tabs">
+          <h1>Where are you flying?</h1>
+        </div>
+
+        <!-- Flights Form -->
+        <div id="flightForm" class="booking-form grid-4">
+          <div class="form-group">
+            <label>From - To</label>
+            <input
+              type="text"
+              id="fromToInput"
+              value="Lahore - Karachi"
+              placeholder="Lahore - Karachi"
+            />
+            <span class="fs-16 swap-icon">⇄</span>
+          </div>
+
+          <div class="form-group trip">
+            <label>Trip</label>
+            <select>
+              <option>Return</option>
+              <option>One Way</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Depart - Return</label>
+            <input type="text" placeholder="07 Nov 22 - 13 Nov 22" />
+          </div>
+
+          <div class="form-group">
+            <label>Passenger - Class</label>
+            <input type="text" placeholder="1 Passenger, Economy" />
+          </div>
+        </div>
+
+        <!-- Flights Actions -->
+        <div class="actions flight-actions">
+          <button class="inline-flex btn-black flight-btn">
+            <img src="/assets/plus-icon.svg" alt="" />&nbsp;Add Promo Code
+          </button>
+          <button class="inline-flex btn-primary flight-btn">
+            <img src="/assets/show-icon.svg" alt="" />&nbsp;Show Flights
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section>
+      <div class="subscribe-wrapper">
+        <div class="flex">
+          <div class="grid subscribe-heading">
+            <h1 class="fw-bold">Subscribe Newsletter</h1>
+            <h2 class="fw-bold">The Travel</h2>
+            <p class="fw-medium text-neutral-grey">
+              Get inspired! Receive travel discounts, tips and behind the scenes
+              stories.
+            </p>
+          </div>
+          <div class="grid subscribe-form">
+            <label for="">Email</label>
+            <div>
+              <input type="text" placeholder="Your email address" />
+              <button class="btn-black fs-14 fw-semi-bold">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container flex-no-wrap">
+        <div class="links socials grid">
+          <img
+            class="socials-company-logo"
+            src="/assets/footer-copany-logo.svg"
+            alt=""
+          />
+          <div class="social-links inline-flex">
+            <a href=""><img src="/assets/fb-icon.svg" alt="facebook logo" /></a>
+            <a href="#"><img src="/assets/tw-icon.svg" alt="twitter logo" /></a>
+            <a href="#"
+              ><img src="/assets/ig-icon.svg" alt="instagram logo"
+            /></a>
+            <a href="#"><img src="/assets/yt-icon.svg" alt="youtube logo" /></a>
+          </div>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Destination</h1>
+          <a href="#">Canada</a>
+          <a href="#">Alaska</a>
+          <a href="#">France</a>
+          <a href="#">Iceland</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Activities</h1>
+          <a href="#">Lights</a>
+          <a href="#">Cruising & sailing</a>
+          <a href="#">Multi-activities</a>
+          <a href="#">Kayaing</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Travel Blogs</h1>
+          <a href="#">Tokyo Travel Guide</a>
+          <a href="#">Sri Lanka Travel Guide</a>
+          <a href="#">Peru Travel Guide</a>
+          <a href="#">Bali Travel Guide</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">About Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Contact Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/landing-page/main.js"></script>
+    <script type="module" src="/src/flight-page/flightsearch.js"></script>
+    <script type="module" src="/src/global-utilities/swiper.js"></script>
+  </body>
+</html>

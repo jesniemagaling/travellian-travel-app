@@ -1,4 +1,14 @@
-// === Booking Tabs Toggle ===
+// Nav Booking Tab
+const navTabs = document.querySelectorAll('.nav-booking-tab');
+
+navTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    navTabs.forEach((t) => t.classList.remove('active')); // remove active from all
+    tab.classList.add('active'); // add active to the clicked one
+  });
+});
+
+// Booking Tabs Toggle
 const tabs = document.querySelectorAll('.booking-tab');
 const flightForm = document.getElementById('flightForm');
 const stayForm = document.getElementById('stayForm');
@@ -24,7 +34,7 @@ tabs.forEach((tab) => {
   });
 });
 
-// === Swap From - To values in flight form ===
+// Swap From - To values in flight form
 const swapIcon = document.querySelector('.swap-icon');
 const fromToInput = document.getElementById('fromToInput');
 

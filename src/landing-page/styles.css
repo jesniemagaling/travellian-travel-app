@@ -19,7 +19,7 @@ nav {
 
 .company-logo {
   max-width: 110px;
-  margin-right: 88px;
+  margin-right: 124px;
 }
 
 .nav-left,
@@ -28,9 +28,24 @@ nav {
   align-items: center;
 }
 
-.nav-left .booking-tab {
-  padding: 1.8125rem 0.8rem;
+.nav-booking-tab:not(.active):hover {
+  border-bottom: 5px solid var(--clr-primary-400);
+}
+
+.nav-booking-tab {
+  display: flex;
+  align-items: center;
+  padding: 30px 0.8rem;
+  border: none;
   border-bottom: 5px solid transparent;
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-neutral-200);
+  transition: all 0.3s;
+}
+
+.nav-booking-tab.active {
+  border-color: var(--clr-primary-400);
+  font-weight: var(--fw-bold);
 }
 
 /* Toggle Button */
@@ -164,7 +179,8 @@ main .img-overlay h2 {
 
 .booking-container {
   max-width: 1440px;
-  margin: 0 2em;
+  width: calc(100% - 4em); /* = 2em left + 2em right */
+  margin: 0 auto;
   padding: 0.825rem 2.25rem;
   background-color: var(--clr-neutral-50);
   border-radius: 16px;
@@ -320,7 +336,7 @@ main .img-overlay h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   max-width: 1232px;
   margin: auto;
 }
@@ -336,18 +352,14 @@ main .img-overlay h2 {
 }
 
 .places-content {
-  display: flex;
-  align-items: center;
   max-width: 390px;
   padding: 3rem;
-  flex-basis: 30%;
   min-width: 280px;
 }
 
 .places-content img {
   width: 90px;
   height: 90px;
-  margin-right: 1rem;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -535,8 +547,9 @@ main .img-overlay h2 {
 
 /* ========== SUBSCRIBE SECTION ========== */
 .subscribe-wrapper {
-  width: 100%;
   max-width: 1440px;
+  width: calc(100% - 4em); /* subtract 2em from both left and right */
+  margin: 0 auto; /* center the box horizontally */
   transform: translateY(40px);
   background-color: var(--clr-primary-300);
   border-radius: 26px;

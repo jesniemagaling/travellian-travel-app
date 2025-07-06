@@ -291,13 +291,11 @@ svg {
 .btn-primary:hover,
 .btn-secondary:hover,
 .btn-stroke:hover,
-a:hover,
 .btn-white:focus,
 .btn-stroke:focus,
 .btn-black:focus,
 .btn-primary:focus,
-.btn-secondary:focus,
-a:focus {
+.btn-secondary:focus {
   transform: scale(1.02) translateZ(0);
   transition: transform 0.2s ease-out;
 }
