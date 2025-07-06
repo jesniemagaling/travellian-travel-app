@@ -20,6 +20,8 @@
   --fw-bold: 700;
 
   /* Font Sizes*/
+  --fs-8: 0.5rem;
+  --fs-10: 0.625rem;
   --fs-12: 0.75rem;
   --fs-14: 0.875rem;
   --fs-16: 1rem;
@@ -177,6 +179,12 @@ svg {
   font-size: var(--fs-24);
 }
 
+.fs-8 {
+  font-size: var(--fs-8);
+}
+.fs-10 {
+  font-size: var(--fs-10);
+}
 .fs-12 {
   font-size: var(--fs-12);
 }

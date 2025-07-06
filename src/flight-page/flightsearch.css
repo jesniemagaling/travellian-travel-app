@@ -3,3 +3,67 @@
   font-weight: var(--fw-semi-bold);
   padding: 1rem 0;
 }
+
+/* Main container */
+.world-map {
+  width: 100%;
+  background-color: var(--clr-primary-400, #0ea5e9);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Draggable area */
+#mapContainer {
+  position: relative;
+}
+
+.map-container {
+  width: 100%;
+  min-height: 20vh;
+  max-height: 500px;
+  overflow: hidden;
+  cursor: grab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dragging state */
+.map-container.dragging {
+  cursor: grabbing;
+}
+
+/* SVG map */
+.map-container svg {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  display: block;
+  transform-origin: center center;
+}
+
+.map-container svg path:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.user-overlay {
+  background-color: var(--clr-neutral-50);
+  padding: 0.25rem 0.4rem 0.25rem 0.25rem;
+  border-radius: 4px;
+  max-width: 10rem;
+  max-height: 49px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 100;
+  position: absolute;
+}
+
+.user-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
