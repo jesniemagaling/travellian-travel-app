@@ -1,3 +1,4 @@
+/* ========== CUSTOM PROPERTIES (VARIABLES) ========== */
 :root {
   /* Neutral Colors */
   --clr-neutral-50: #ffffff;
@@ -36,14 +37,13 @@
   --fs-94: 5.875rem;
 }
 
-/* Box sizing rules */
+/* ========== BASE STYLES / CSS RESET ========== */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default margin */
 * {
   margin: 0;
   padding: 0;
@@ -54,13 +54,11 @@ html {
   font-size: 16px;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
 }
 
-/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -70,14 +68,12 @@ body {
   height: 100%;
 }
 
-/* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: var(--font-family-base);
 }
 
-/* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -87,7 +83,6 @@ a {
   color: var(--clr-neutral-200);
 }
 
-/* Make images easier to work with */
 img,
 picture,
 svg {
@@ -95,7 +90,6 @@ svg {
   display: block;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -111,7 +105,7 @@ svg {
   }
 }
 
-/* Utility classes */
+/* ========== UTILITY CLASSES ========== */
 
 /* Headings */
 .heading-normal-txt {
@@ -150,7 +144,7 @@ svg {
   background-color: var(--clr-neutral-50);
 }
 .bg-neutral-black {
-  background-color: var(--clr-neutral-20000);
+  background-color: var(--clr-neutral-200);
 }
 
 /* Font Family */
@@ -226,27 +220,27 @@ svg {
   font-size: var(--fs-94);
 }
 
-/* Custom Utilities */
-
+/* Layout Utilities */
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   flex-wrap: wrap;
+  height: 100%;
 }
 
 .flex-no-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   flex-wrap: nowrap;
+  height: 100%;
 }
 
 .inline-flex {
-  gap: 0.5rem;
   display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .grid {
@@ -277,10 +271,11 @@ svg {
 
 .container {
   max-width: 1440px;
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
 }
 
+/* Button Base Styles & Interactions */
 .btn-black,
 .btn-white,
 .btn-stroke,
@@ -289,63 +284,6 @@ svg {
   transition: transform 0.2s ease-out;
   transform: translateZ(0);
   backface-visibility: hidden;
-}
-
-.btn-black {
-  font-family: var(--font-family-base);
-  font-weight: var(--fw-semi-bold);
-  font-size: 0.875em;
-  background-color: transparent;
-  padding: 1.5rem 1rem;
-  border: none;
-  color: var(--clr-neutral-200);
-  cursor: pointer;
-  align-items: center;
-}
-
-.btn-white {
-  font-family: var(--font-family-base);
-  font-weight: var(--fw-semi-bold);
-  background-color: var(--clr-primary-400);
-  font-size: 1em;
-  background-color: transparent;
-  padding: 1.5rem 1rem;
-  border: none;
-  color: var(--clr-neutral-200);
-  cursor: pointer;
-}
-
-.btn-stroke {
-  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
-  font-family: var(--font-family-base);
-  font-weight: var(--fw-medium);
-  border-radius: 4px;
-  padding: 0.7188em 1em;
-  border: solid 1px var(--clr-primary-400);
-  color: var(--clr-neutral-200);
-  cursor: pointer;
-}
-
-.btn-secondary {
-  background-color: var(--clr-neutral-50);
-  border-radius: 4px;
-  padding: 1rem 1.5rem;
-  border: none;
-  color: var(--clr-neutral-200);
-  cursor: pointer;
-}
-
-.btn-primary {
-  font-family: var(--font-family-base);
-  font-weight: var(--fw-medium);
-  background-color: var(--clr-primary-400);
-  font-size: 0.875em;
-  border-radius: 4px;
-  padding: 0.8rem 1rem;
-  border: none;
-  color: var(--clr-neutral-200);
-  cursor: pointer;
-  align-items: center;
 }
 
 .btn-white:hover,
@@ -364,6 +302,65 @@ a:focus {
   transition: transform 0.2s ease-out;
 }
 
+/* Specific Button Styles */
+.btn-black {
+  padding: 1.5rem 1rem;
+  border: none;
+  font-family: var(--font-family-base);
+  font-weight: var(--fw-semi-bold);
+  font-size: 0.875em;
+  color: var(--clr-neutral-200);
+  background-color: transparent;
+  cursor: pointer;
+  align-items: center;
+}
+
+.btn-white {
+  padding: 1.5rem 1rem;
+  border: none;
+  font-family: var(--font-family-base);
+  font-weight: var(--fw-semi-bold);
+  font-size: 1em;
+  color: var(--clr-neutral-200);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-stroke {
+  padding: 0.7188em 1em;
+  border: solid 1px var(--clr-primary-400);
+  border-radius: 4px;
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+  font-family: var(--font-family-base);
+  font-weight: var(--fw-medium);
+  color: var(--clr-neutral-200);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  color: var(--clr-neutral-200);
+  background-color: var(--clr-neutral-50);
+  cursor: pointer;
+}
+
+.btn-primary {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-family-base);
+  font-weight: var(--fw-medium);
+  font-size: 0.875em;
+  color: var(--clr-neutral-200);
+  background-color: var(--clr-primary-400);
+  cursor: pointer;
+  align-items: center;
+}
+
+/* Text Alignment */
 .text-center {
   text-align: center;
 }

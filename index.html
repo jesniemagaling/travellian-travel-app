@@ -119,16 +119,21 @@
     <section id="booking">
       <div class="container">
         <div class="booking-container">
+          <!-- Tabs -->
           <div class="booking-tabs">
-            <button class="booking-tab inline-flex">
-              <img src="assets/airplane-icon.svg" alt="Airplane Icon" />Flights
+            <button
+              class="booking-tab inline-flex active"
+              data-target="flightForm"
+            >
+              <img src="assets/airplane-icon.svg" alt="Airplane Icon" /> Flights
             </button>
-            <button class="booking-tab inline-flex">
-              <img src="assets/bed-icon.svg" alt="Bed Icon" />Stays
+            <button class="booking-tab inline-flex" data-target="stayForm">
+              <img src="assets/bed-icon.svg" alt="Bed Icon" /> Stays
             </button>
           </div>
 
-          <div class="booking-form grid-4">
+          <!-- Flights Form -->
+          <div id="flightForm" class="booking-form grid-4">
             <div class="form-group">
               <label>From - To</label>
               <input
@@ -159,12 +164,69 @@
             </div>
           </div>
 
-          <div class="actions">
-            <button class="inline-flex btn-black">
+          <!-- Flights Actions -->
+          <div class="actions flight-actions">
+            <button class="inline-flex btn-black flight-btn">
               <img src="assets/plus-icon.svg" alt="" />&nbsp;Add Promo Code
             </button>
-            <button class="inline-flex btn-primary">
+            <button class="inline-flex btn-primary flight-btn">
               <img src="assets/show-icon.svg" alt="" />&nbsp;Show Flights
+            </button>
+          </div>
+
+          <!-- Stays Form -->
+          <div id="stayForm" class="booking-form grid-4 hidden">
+            <div class="form-group">
+              <label>Enter Destination</label>
+              <div class="input-with-icon">
+                <img src="assets/bed-icon.svg" alt="Bed" class="input-icon" />
+                <input type="text" value="Istanbul, Turkey" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Check In</label>
+              <div class="input-with-icon input-calendar">
+                <input type="date" />
+                <img
+                  src="assets/calendar-icon.svg"
+                  alt="Calendar"
+                  class="input-icon-right"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Check Out</label>
+              <div class="input-with-icon input-calendar">
+                <input type="date" />
+                <img
+                  src="assets/calendar-icon.svg"
+                  alt="Calendar"
+                  class="input-icon-right"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Rooms & Guests</label>
+              <div class="input-with-icon">
+                <img src="assets/user-icon.svg" alt="User" class="input-icon" />
+                <select>
+                  <option>1 room, 2 guests</option>
+                  <option>2 rooms, 4 guests</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stays Actions -->
+          <div class="actions stays-actions hidden">
+            <button class="inline-flex btn-black stays-btn">
+              <img src="assets/plus-icon.svg" alt="" />&nbsp;Add Promo Code
+            </button>
+            <button class="inline-flex btn-primary stays-btn">
+              <img src="assets/building-icon.svg" alt="" />&nbsp;Show Stays
             </button>
           </div>
         </div>
