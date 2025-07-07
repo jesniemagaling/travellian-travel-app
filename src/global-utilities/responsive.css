@@ -1,20 +1,19 @@
-/* ========== RESPONSIVE BREAKPOINTS (Desktop-First) ========== */
+/* Responsive Breakpoints */
 
 /* Tablet and Smaller Desktops (max-width: 976px) */
 @media (max-width: 976px) {
   main .img-overlay p {
     max-width: 900px;
-    font-size: clamp(1.25rem, 6vw, 2.8rem);
+    font-size: var(--fs-28); /* Using clamped fs-28 */
   }
   main .img-overlay h1 {
     max-width: 900px;
-    font-size: clamp(2.75rem, 10vw, 5.875rem);
+    font-size: var(--fs-94); /* Using clamped fs-94 */
   }
   main .img-overlay h2 {
     max-width: 900px;
-    font-size: clamp(0.875rem, 4vw, 1.5rem);
+    font-size: var(--fs-24); /* Using clamped fs-24 */
   }
-
   #booking {
     margin-top: -350px;
   }
@@ -24,7 +23,6 @@
   .form-group {
     max-width: 26rem;
   }
-
   .nav-left,
   .nav-right > button {
     display: none;
@@ -32,7 +30,6 @@
   .mobile-toggle {
     display: block;
   }
-
   footer .flex-no-wrap {
     max-width: 680px;
     row-gap: 40px;
@@ -45,16 +42,31 @@
   footer .grid {
     justify-content: start;
   }
+  .travel-location-wrapper {
+    grid-template-areas:
+      "box-1 box-1"
+      "box-2 box-3"
+      "box-4 box-5";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 200px 200px;
+  }
+  .travel-location-card.card-1 {
+    padding: 2rem;
+  }
+  .travel-location-card.card-1 .text-center {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
 }
 
-/* Small Tables (max-width: 788px) */
+/* Small Tablets (max-width: 788px) */
 @media (max-width: 788px) {
   .places-card .flex {
     flex-direction: column;
   }
   .places-heading .btn-stroke {
     margin-top: 1em;
-    font-size: 0.75rem;
+    font-size: var(--fs-12); /* Using clamped fs-12 */
   }
   .places-heading .grid,
   .reviews-heading .grid {
@@ -77,6 +89,19 @@
 
 /* Large Smartphones (max-width: 670px) */
 @media (max-width: 670px) {
+  main .img-overlay p {
+    max-width: 900px;
+    font-size: clamp(1.25rem, 6vw, 2.8rem);
+  }
+  main .img-overlay h1 {
+    max-width: 900px;
+    font-size: clamp(2.75rem, 10vw, 5.875rem);
+  }
+  main .img-overlay h2 {
+    max-width: 900px;
+    font-size: clamp(0.875rem, 4vw, 1.5rem);
+  }
+
   .booking-tabs {
     display: flex;
     justify-content: center;
@@ -88,7 +113,7 @@
   .actions .btn-black,
   .actions .btn-primary,
   .card-overlay .btn-primary {
-    font-size: 0.75rem;
+    font-size: var(--fs-12); /* Using clamped fs-12 */
   }
 
   #booking {
@@ -100,14 +125,29 @@
   .form-group {
     max-width: 30rem;
   }
+  .travel-location-wrapper {
+    grid-template-areas:
+      "box-1"
+      "box-2"
+      "box-3"
+      "box-4"
+      "box-5";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .travel-location-card img {
+    max-height: 250px;
+    object-fit: cover;
+  }
 }
 
 /* Medium Smartphones (max-width: 560px) */
 @media (max-width: 560px) {
   .places-heading .btn-stroke,
   .reviews-heading .btn-stroke {
+    font-size: var(--fs-10); /* Using clamped fs-10 */
     margin-top: 1em;
-    font-size: 0.625rem;
   }
 
   .subscribe-wrapper .flex {
@@ -116,8 +156,8 @@
     flex-direction: column;
     gap: 1.5rem;
   }
-  .subscribe-heading {
-    text-align: center;
+  .subscribe-heading h1 {
+    margin-bottom: 1rem;
   }
 
   .subscribe-form {
@@ -132,7 +172,7 @@
     padding: 1rem;
   }
   .subscribe-form button {
-    font-size: var(--fs-12);
+    font-size: var(--fs-12); /* Using clamped fs-12 */
     width: 100%;
   }
 }
@@ -154,21 +194,19 @@
     font-size: clamp(0.875rem, 2vw, 1rem);
   }
 
+
   .swiper-content button {
-    font-size: 0.7rem;
-    padding: 1.25rem 0;
+    font-size: var(--fs-12); /* Using clamped fs-12 */
+    padding: 1.25em 0;
   }
 
   footer .flex-no-wrap {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding-left: 0;
-  }
-  footer .links {
-    text-align: center;
-    padding: 0;
+    justify-content: center;
   }
   footer .socials-company-logo {
-    margin: 0 auto 1.25rem auto;
+    margin: 0 auto 1.25em auto;
   }
   footer .links:nth-child(1),
   footer .links:nth-child(5),

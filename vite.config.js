@@ -1,7 +1,16 @@
+// vite.config.js
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+  // No 'root' property needed if your HTML files are in subdirectories directly under the project root.
+  // Vite defaults to process.cwd() (the project root) as the 'root' if not specified.
+
+  server: {
+    // Set the path to open relative to your project root
+    open: '/landing/index.html',
+  },
+
   build: {
     rollupOptions: {
       input: {
