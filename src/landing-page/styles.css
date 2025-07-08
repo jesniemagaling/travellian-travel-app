@@ -232,7 +232,6 @@ main .img-overlay h2 {
   flex-direction: column;
   position: relative;
   height: 68px;
-  max-width: 19.625rem;
   padding: 0.625em 0.875em;
   border: 1px solid var(--clr-neutral-100);
   border-radius: 4px;
@@ -270,7 +269,7 @@ main .img-overlay h2 {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
-  margin-top: 15px;
+  margin: 0.9375rem 1.4em 0 0;
   max-height: 48px;
 }
 
@@ -335,7 +334,7 @@ main .img-overlay h2 {
 }
 
 .secondary-heading {
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
 .places .flex {

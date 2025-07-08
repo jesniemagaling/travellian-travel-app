@@ -1,7 +1,7 @@
 /* Responsive Breakpoints */
 
 /* Tablet and Smaller Desktops (max-width: 976px) */
-@media (max-width: 976px) {
+@media (max-width: 1090px) {
   main .img-overlay p {
     max-width: 900px;
     font-size: var(--fs-28); /* Using clamped fs-28 */
@@ -17,11 +17,12 @@
   #booking {
     margin-top: -350px;
   }
-  #booking .grid-4 {
+  #booking .grid-4,
+  #booking-details .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
   .form-group {
-    max-width: 26rem;
+    max-width: 30rem;
   }
   .nav-left,
   .nav-right > button {
@@ -44,9 +45,9 @@
   }
   .travel-location-wrapper {
     grid-template-areas:
-      "box-1 box-1"
-      "box-2 box-3"
-      "box-4 box-5";
+      'box-1 box-1'
+      'box-2 box-3'
+      'box-4 box-5';
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 200px 200px;
   }
@@ -56,6 +57,9 @@
   .travel-location-card.card-1 .text-center {
     margin-top: 1rem;
     margin-left: 0;
+  }
+  .grid-2-col.layout {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -85,6 +89,9 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
+  .sort-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Large Smartphones (max-width: 670px) */
@@ -102,6 +109,26 @@
     font-size: clamp(0.875rem, 4vw, 1.5rem);
   }
 
+  .flight-booking-container {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    padding-right: 0;
+  }
+  .btn-mobile {
+    width: 30%;
+    height: 56px;
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-desktop {
+    display: none;
+  }
+  .flight-listing-btn img {
+    width: 24px;
+    height: 24px;
+  }
   .booking-tabs {
     display: flex;
     justify-content: center;
@@ -119,19 +146,21 @@
   #booking {
     margin-top: -350px;
   }
-  #booking .grid-4 {
+  #booking .grid-4,
+  #booking-details .grid-4 {
     grid-template-columns: repeat(1, 1fr);
   }
-  .form-group {
-    max-width: 30rem;
+  .form-group,
+  .flight-form-group {
+    max-width: 40rem;
   }
   .travel-location-wrapper {
     grid-template-areas:
-      "box-1"
-      "box-2"
-      "box-3"
-      "box-4"
-      "box-5";
+      'box-1'
+      'box-2'
+      'box-3'
+      'box-4'
+      'box-5';
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
@@ -148,6 +177,10 @@
   .reviews-heading .btn-stroke {
     font-size: var(--fs-10); /* Using clamped fs-10 */
     margin-top: 1em;
+  }
+
+  .booking-container {
+    padding: 0.825em 1.4em;
   }
 
   .subscribe-wrapper .flex {
@@ -194,10 +227,13 @@
     font-size: clamp(0.875rem, 2vw, 1rem);
   }
 
-
   .swiper-content button {
     font-size: var(--fs-12); /* Using clamped fs-12 */
     padding: 1.25em 0;
+  }
+
+  .flight-non-stop {
+    padding: 0 0.5em;
   }
 
   footer .flex-no-wrap {
