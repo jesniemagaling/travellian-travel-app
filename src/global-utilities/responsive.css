@@ -38,7 +38,7 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-self: center;
-    padding-left: 2rem;
+    padding-left: 1rem;
   }
   footer .grid {
     justify-content: start;
@@ -91,6 +91,13 @@
   }
   .sort-options {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .flight-details-btn {
+    margin: 1em 0;
+  }
+  .flight-itinerary-airlines {
+    justify-content: center;
+    gap: 1em;
   }
 }
 
@@ -168,6 +175,10 @@
   .travel-location-card img {
     max-height: 250px;
     object-fit: cover;
+  }
+
+  .itinerary-time.flex {
+    gap: 0.1em;
   }
 }
 

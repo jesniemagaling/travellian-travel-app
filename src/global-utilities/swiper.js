@@ -60,3 +60,26 @@ document.addEventListener('click', (e) => {
     resumeTimeout = null;
   }
 });
+
+// Features banner
+const featuresSwiper = new Swiper('.flight-features-swiper', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 16,
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  loopedSlides: 20,
+  breakpoints: {
+    0: { slidesPerView: 1.5 },
+    640: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
+    1024: { slidesPerView: 4 },
+    1280: { slidesPerView: 5 },
+    1440: { slidesPerView: 6 },
+    1720: { slidesPerView: 8 },
+  },
+});

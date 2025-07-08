@@ -179,7 +179,7 @@ main .img-overlay h2 {
 
 .booking-container {
   max-width: 1440px;
-  width: calc(100% - 4em); /* = 2em left + 2em right */
+  width: calc(100% - 2em); /* = 1em left + 1em right */
   margin: 0 auto;
   padding: 0.825em 2.25em;
   background-color: var(--clr-neutral-50);
@@ -328,7 +328,7 @@ main .img-overlay h2 {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1.5em;
+  padding: 1.5em 1em;
   margin: 60px auto 0 auto;
   max-width: 1232px;
 }
@@ -376,7 +376,7 @@ main .img-overlay h2 {
 
 /* ========== BOOKING BANNER SECTION ========== */
 .booking-banner {
-  margin: 5rem 2rem;
+  margin: 5rem 1rem;
 }
 
 .box-area {
@@ -557,7 +557,7 @@ main .img-overlay h2 {
 /* ========== SUBSCRIBE SECTION ========== */
 .subscribe-wrapper {
   max-width: 1440px;
-  width: calc(100% - 4em); /* subtract 2em from both left and right */
+  width: calc(100% - 2em); /* subtract 2em from both left and right */
   margin: 0 auto; /* center the box horizontally */
   transform: translateY(40px);
   background-color: var(--clr-primary-300);
