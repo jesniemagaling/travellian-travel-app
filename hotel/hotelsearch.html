@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golobe</title>
+
+    <link rel="icon" type="image/svg+xml" href="/assets/company-icon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Swiper Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/src/landing-page/styles.css" />
+    <link rel="stylesheet" href="/src/hotel-page/hotelsearch.css" />
+    <link rel="stylesheet" href="/src/global-utilities/utilities.css" />
+    <link rel="stylesheet" href="/src/global-utilities/responsive.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header>
+      <nav class="container">
+        <div class="nav-left inline-flex">
+          <a
+            href="../flight/flightsearch.html"
+            class="inline-flex nav-link flights-btn nav-booking-tab"
+          >
+            <img src="/assets/airplane-icon.svg" alt="airplane" />Find Flights
+          </a>
+          <a
+            href="#"
+            class="inline-flex nav-link stays-btn nav-booking-tab active"
+          >
+            <img src="/assets/bed-icon.svg" alt="bed" />Find Stays
+          </a>
+        </div>
+
+        <div class="company-logo">
+          <a href="/landing/index.html"
+            ><img src="/assets/company-logo.svg" alt="Logo"
+          /></a>
+        </div>
+
+        <div class="nav-right inline-flex">
+          <button class="btn-white fs-16 fw-semi-bold">Login</button>
+          <button class="btn-secondary fs-16 fw-semi-bold">Sign up</button>
+          <div class="mobile-toggle" id="hamburger">
+            <i class="fa-solid fa-bars menu-icon"></i>
+            <i class="fa-solid fa-xmark close-icon"></i>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobileNav">
+        <a href="#" class="mobile-link">
+          <img src="/assets/airplane-icon.svg" alt="airplane" />
+          <span class="fs-16 fw-semi-bold">&nbsp;Find Flights</span>
+        </a>
+        <a href="#" class="mobile-link">
+          <img src="/assets/bed-icon.svg" alt="bed" />
+          <span class="fs-16 fw-semi-bold">&nbsp;Find Stays</span>
+        </a>
+        <a href="#" class="mobile-link fs-16 fw-semi-bold">Login</a>
+        <a href="#" class="mobile-link fs-16 fw-semi-bold">Sign Up</a>
+      </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <main>
+      <div class="slider-container swiper hero-swiper">
+        <div class="slider-content swiper-wrapper">
+          <div class="overlay swiper-slide">
+            <img src="/assets/hero-section-bg.svg" alt="" />
+            <div class="img-overlay text-center">
+              <p class="fs-45 fw-bold">Helping Others</p>
+              <h1 class="fs-94 ff-primary fw-bold">LIVE & TRAVEL</h1>
+              <h2 class="fs-20 fw-semi-bold">
+                Special offers to suit your plan
+              </h2>
+            </div>
+          </div>
+          <div class="overlay swiper-slide">
+            <img src="/assets/hero-section-bg-2.svg" alt="" />
+            <div class="img-overlay text-center">
+              <p class="fs-45 fw-bold">Wander with Purpose</p>
+              <h1 class="fs-94 ff-primary fw-bold">GO BEYOND</h1>
+              <h2 class="fs-20 fw-semi-bold">
+                Unforgettable journeys tailored for you
+              </h2>
+            </div>
+          </div>
+          <div class="overlay swiper-slide">
+            <img src="/assets/hero-section-bg-3.svg" alt="" />
+            <div class="img-overlay text-center">
+              <p class="fs-45 fw-bold">Travel Made Simple</p>
+              <h1 class="fs-94 ff-primary fw-bold">COZY TRAILS</h1>
+              <h2 class="fs-20 fw-semi-bold">
+                Enjoy seamless bookings and exclusive deals
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Booking Form -->
+    <section id="booking">
+      <div class="booking-container">
+        <!-- Tabs -->
+        <div class="booking-tabs">
+          <h1>Where are you flying?</h1>
+        </div>
+
+        <!-- Stays Form -->
+        <div id="stayForm" class="booking-form grid-4">
+          <div class="form-group">
+            <label>Enter Destination</label>
+            <div class="input-with-icon">
+              <img src="/assets/bed-icon.svg" alt="Bed" class="input-icon" />
+              <input type="text" value="Istanbul, Turkey" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Check In</label>
+            <div class="input-with-icon input-calendar">
+              <input type="date" />
+              <img
+                src="/assets/calendar-icon.svg"
+                alt="Calendar"
+                class="input-icon-right"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Check Out</label>
+            <div class="input-with-icon input-calendar">
+              <input type="date" />
+              <img
+                src="/assets/calendar-icon.svg"
+                alt="Calendar"
+                class="input-icon-right"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Rooms & Guests</label>
+            <div class="input-with-icon">
+              <img src="/assets/user-icon.svg" alt="User" class="input-icon" />
+              <select>
+                <option>1 room, 2 guests</option>
+                <option>2 rooms, 4 guests</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stays Actions -->
+        <div class="actions stays-actions">
+          <button class="inline-flex btn-black stays-btn">
+            <img src="/assets/plus-icon.svg" alt="" />&nbsp;Add Promo Code
+          </button>
+          <button class="inline-flex btn-primary stays-btn">
+            <img src="/assets/building-icon.svg" alt="" />&nbsp;Show Stays
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Searches -->
+    <section class="places">
+      <div class="places-heading-hotel places-heading">
+        <div class="grid">
+          <h1 class="heading-primary">Popular Location</h1>
+        </div>
+      </div>
+
+      <div class="flex places-card-hotel places-card">
+        <div class="places-heading-hotel places-content flex">
+          <img src="/assets/istanbul.jpg" alt="istanbul" />
+          <div class="grid">
+            <p class="fw-semi-bold">Istanbul, Turkey</p>
+            <p class="fs-12">325 places</p>
+          </div>
+        </div>
+
+        <div class="places-heading-hotel places-content flex">
+          <img src="/assets/sydney.jpg" alt="" />
+          <div class="grid">
+            <p class="fw-semi-bold">Sydney, Australia</p>
+            <p class="fs-12">325 places</p>
+          </div>
+        </div>
+
+        <div class="places-heading-hotel places-content flex">
+          <img src="/assets/baku.jpg" alt="" />
+          <div class="grid">
+            <p class="fw-semi-bold">Baku, Azerbaijan</p>
+            <p class="fs-12">325 places</p>
+          </div>
+        </div>
+
+        <div class="places-heading-hotel places-content flex">
+          <img src="/assets/maldives.jpg" alt="" />
+          <div class="grid">
+            <p class="fw-semi-bold">Malé, Maldives</p>
+            <p class="fs-12">325 places</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Bundle Section -->
+    <section class="travel-bundle-container">
+      <div class="reviews-heading">
+        <div class="grid">
+          <h1 class="heading-primary">Pack Your Plans</h1>
+          <p class="secondary-heading heading-normal-txt">
+            Your one-stop travel pack for wherever you're off to next.
+          </p>
+        </div>
+        <button class="btn-stroke">
+          <a href="listinghotel.html">See All</a>
+        </button>
+      </div>
+      <div class="booking-banner box-area">
+        <div class="box">
+          <img class="image-box" src="/assets/travel-bg-au.svg" alt="Flights" />
+          <div class="card-overlay">
+            <div class="flex">
+              <div class="grid">
+                <h1>Melbourne</h1>
+                <p>An amazing journey</p>
+              </div>
+              <h2 class="fw-semi-bold fs-24">$ 700</h2>
+            </div>
+            <button class="travel-bundle-btn inline-flex btn-primary">
+              Book Hotel
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <img
+            class="image-box"
+            src="/assets/travel-bg-paris.svg"
+            alt="Flights"
+          />
+          <div class="card-overlay">
+            <div class="flex">
+              <div class="grid">
+                <h1>Paris</h1>
+                <p>A paris adventure</p>
+              </div>
+              <h2 class="fw-semi-bold fs-24">$ 700</h2>
+            </div>
+            <button class="travel-bundle-btn inline-flex btn-primary">
+              Book Hotel
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <img
+            class="image-box"
+            src="/assets/travel-bg-london.svg"
+            alt="Flights"
+          />
+          <div class="card-overlay">
+            <div class="flex">
+              <div class="grid">
+                <h1>London</h1>
+                <p>London eye adventure</p>
+              </div>
+              <h2 class="fw-semi-bold fs-24">$ 700</h2>
+            </div>
+            <button class="travel-bundle-btn inline-flex btn-primary">
+              Book Hotel
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <img
+            class="image-box"
+            src="/assets/travel-bg-columbia.svg"
+            alt="Flights"
+          />
+          <div class="card-overlay">
+            <div class="flex">
+              <div class="grid">
+                <h1>Columbia</h1>
+                <p>Amazing strees</p>
+              </div>
+              <h2 class="fw-semi-bold fs-24">$ 700</h2>
+            </div>
+            <button class="travel-bundle-btn inline-flex btn-primary">
+              Book Hotel
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Location -->
+    <section class="travel-location-container">
+      <div class="reviews-heading">
+        <div class="grid">
+          <h1 class="heading-primary">Fall into travel</h1>
+          <p class="secondary-heading heading-normal-txt">
+            Traveling this season? We’ll help you get there.
+          </p>
+        </div>
+        <button class="btn-stroke">
+          <a href="listinghotel.html">See All</a>
+        </button>
+      </div>
+      <div class="travel-location-wrapper">
+        <div class="travel-location-card card-1">
+          <div class="flex">
+            <div class="grid">
+              <div class="travel-location-heading flex">
+                <h1 class="fw-bold">Backpacking Sri Lanka</h1>
+                <div class="text-center">
+                  <p>From</p>
+                  <h2 class="fw-semi-bold">$ 700</h2>
+                </div>
+              </div>
+              <p class="fs-14">
+                Traveling is a unique experience as it's the best way to unplug
+                from the pushes and pulls of daily life. It helps us to forget
+                about our problems, frustrations, and fears at home. During our
+                journey, we experience life in different ways. We explore new
+                places, cultures, cuisines, traditions, and ways of living.
+              </p>
+            </div>
+          </div>
+          <button class="travel-location-btn inline-flex btn-primary">
+            Book Flight
+          </button>
+        </div>
+        <div class="travel-location-card card-2">
+          <img src="/assets/srilanka-bg-1.svg" alt="" />
+        </div>
+        <div class="travel-location-card card-3">
+          <img src="/assets/srilanka-bg-2.svg" alt="" />
+        </div>
+        <div class="travel-location-card card-4">
+          <img src="/assets/srilanka-bg-3.svg" alt="" />
+        </div>
+        <div class="travel-location-card card-5">
+          <img src="/assets/srilanka-bg-4.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section>
+      <div class="subscribe-wrapper">
+        <div class="flex">
+          <div class="grid subscribe-heading">
+            <h1 class="fw-bold">Subscribe Newsletter</h1>
+            <h2 class="fw-bold">The Travel</h2>
+            <p class="fw-medium text-neutral-grey">
+              Get inspired! Receive travel discounts, tips and behind the scenes
+              stories.
+            </p>
+          </div>
+          <div class="grid subscribe-form">
+            <label for="">Email</label>
+            <div>
+              <input type="text" placeholder="Your email address" />
+              <button class="btn-black fs-14 fw-semi-bold">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container flex-no-wrap">
+        <div class="links socials grid">
+          <img
+            class="socials-company-logo"
+            src="/assets/footer-copany-logo.svg"
+            alt=""
+          />
+          <div class="social-links inline-flex">
+            <a href=""><img src="/assets/fb-icon.svg" alt="facebook logo" /></a>
+            <a href="#"><img src="/assets/tw-icon.svg" alt="twitter logo" /></a>
+            <a href="#"
+              ><img src="/assets/ig-icon.svg" alt="instagram logo"
+            /></a>
+            <a href="#"><img src="/assets/yt-icon.svg" alt="youtube logo" /></a>
+          </div>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Destination</h1>
+          <a href="#">Canada</a>
+          <a href="#">Alaska</a>
+          <a href="#">France</a>
+          <a href="#">Iceland</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Activities</h1>
+          <a href="#">Lights</a>
+          <a href="#">Cruising & sailing</a>
+          <a href="#">Multi-activities</a>
+          <a href="#">Kayaing</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Travel Blogs</h1>
+          <a href="#">Tokyo Travel Guide</a>
+          <a href="#">Sri Lanka Travel Guide</a>
+          <a href="#">Peru Travel Guide</a>
+          <a href="#">Bali Travel Guide</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">About Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Contact Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/landing-page/main.js"></script>
+    <script type="module" src="/src/hotel-page/hotelsearch.js"></script>
+    <script type="module" src="/src/global-utilities/swiper.js"></script>
+  </body>
+</html>

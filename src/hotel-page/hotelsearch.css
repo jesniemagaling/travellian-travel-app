@@ -1,0 +1,185 @@
+.booking-tabs h1 {
+  font-size: var(--fs-20);
+  font-weight: var(--fw-semi-bold);
+  padding: 1rem 0;
+}
+
+.places-content {
+  padding: 1em;
+}
+
+/* Travel bundle section */
+.places,
+.travel-bundle-container,
+.travel-location-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.travel-bundle-container .box-area {
+  margin: 2rem 2rem;
+  gap: 1rem;
+}
+
+.travel-bundle-container .box {
+  height: 400px;
+  min-width: 296px;
+  max-width: 296px;
+}
+
+.booking-banner .card-overlay {
+  text-align: start;
+}
+
+.card-overlay .flex {
+  width: 100%;
+  max-width: 248px;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.card-overlay h1,
+.card-overlay h2 {
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+.card-overlay h1 {
+  margin: 0 0.1rem 0 0;
+}
+
+.card-overlay p {
+  margin: 0 0.1rem 0.35rem 0;
+  font-size: clamp(12px, 2vw, 14px);
+}
+
+.travel-bundle-btn.inline-flex {
+  margin-top: 0.3rem;
+  width: 96%;
+  justify-content: center;
+}
+
+/* Travel location wrapper layout  */
+.travel-location-wrapper {
+  display: grid;
+  gap: 20px;
+  padding: 1rem;
+  margin: 2rem auto 4rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+
+  grid-template-areas:
+    'box-1 box-1 box-2 box-3'
+    'box-1 box-1 box-4 box-5';
+
+  grid-template-columns: minmax(380px, 1.5fr) 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px;
+}
+
+.travel-location-card.card-1 {
+  grid-area: box-1;
+  background-color: var(--clr-primary-300);
+  padding: 2.5em;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--clr-neutral-200);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.4s ease;
+}
+
+.travel-location-card.card-1 .grid {
+  align-items: start;
+  gap: 1rem;
+}
+
+.travel-location-heading.flex {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.travel-location-card.card-1 h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  max-width: 360px;
+  line-height: 1.2;
+}
+
+.travel-location-card.card-1 .text-center {
+  min-width: 90px;
+  background-color: var(--clr-primary-400);
+  padding: 0.4em 1em;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.travel-location-card.card-1 .text-center p {
+  font-size: var(--fs-14);
+  opacity: 76%;
+  font-weight: var(--fw-regular);
+  font-family: var(--font-family-display);
+}
+
+.travel-location-card.card-1 .text-center h2 {
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
+  font-weight: var(--fw-semi-bold);
+}
+
+.travel-location-btn.inline-flex {
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Image Cards */
+.travel-location-card.card-2,
+.travel-location-card.card-3,
+.travel-location-card.card-4,
+.travel-location-card.card-5 {
+  border-radius: 12px;
+  overflow: hidden;
+  border: solid 2px var(--clr-primary-400);
+}
+
+.travel-location-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+}
+
+.travel-location-card.card-2 {
+  grid-area: box-2;
+}
+.travel-location-card.card-3 {
+  grid-area: box-3;
+}
+.travel-location-card.card-4 {
+  grid-area: box-4;
+}
+.travel-location-card.card-5 {
+  grid-area: box-5;
+}
+
+/* Hover effects for cards */
+.travel-location-card img:hover {
+  transform: scale(1.05);
+}
+
+.travel-location-card.card-1:hover,
+.travel-location-card.card-1:focus-within {
+  background-color: var(--clr-primary-400);
+}
+
+.travel-location-card.card-1:hover .travel-location-btn,
+.travel-location-card.card-1:focus-within .travel-location-btn {
+  background-color: var(--clr-neutral-50);
+  color: var(--clr-neutral-200);
+}
+
+.travel-location-card.card-1:hover .text-center,
+.travel-location-card.card-1:focus-within .text-center {
+  background-color: var(--clr-neutral-50);
+  color: var(--clr-neutral-200);
+}

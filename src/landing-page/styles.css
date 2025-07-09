@@ -330,7 +330,7 @@ main .img-overlay h2 {
   flex-wrap: wrap;
   padding: 1.5em 1em;
   margin: 60px auto 0 auto;
-  max-width: 1232px;
+  max-width: 1440px;
 }
 
 .secondary-heading {
@@ -471,7 +471,7 @@ main .img-overlay h2 {
 
 /* ========== REVIEWS SECTION ========== */
 .reviews-heading {
-  max-width: 1396px;
+  max-width: 1440px;
 }
 
 .slider-reviews-container {

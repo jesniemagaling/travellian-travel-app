@@ -8,7 +8,7 @@ export default defineConfig({
 
   server: {
     // Set the path to open relative to your project root
-    open: '/flight/flightdetails.html',
+    open: '/hotel/hotelsearch.html',
   },
 
   build: {
@@ -21,6 +21,10 @@ export default defineConfig({
         flightSearch: resolve(__dirname, 'flight/flightsearch.html'),
         flightListing: resolve(__dirname, 'flight/flightlisting.html'),
         flightDetails: resolve(__dirname, 'flight/flightdetails.html'),
+        flightConfirmation: resolve(
+          __dirname,
+          'flight/flightconfiramation.html'
+        ),
         flightBookingDetails: resolve(
           __dirname,
           'flight/flightbookingdetails.html'
