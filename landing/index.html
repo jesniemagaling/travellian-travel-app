@@ -46,7 +46,10 @@
           >
             <img src="/assets/airplane-icon.svg" alt="airplane" />Find Flights
           </a>
-          <a href="#" class="inline-flex nav-link stays-btn nav-booking-tab">
+          <a
+            href="../hotel/hotelsearch.html"
+            class="inline-flex nav-link stays-btn nav-booking-tab"
+          >
             <img src="/assets/bed-icon.svg" alt="bed" />Find Stays
           </a>
         </div>
@@ -56,8 +59,12 @@
         </div>
 
         <div class="nav-right inline-flex">
-          <button class="btn-white fs-16 fw-semi-bold">Login</button>
-          <button class="btn-secondary fs-16 fw-semi-bold">Sign up</button>
+          <button class="btn-white fs-16 fw-semi-bold">
+            <a href="../auth/login.html">Login</a>
+          </button>
+          <button class="btn-secondary fs-16 fw-semi-bold">
+            <a href="../auth/signup.html">Sign up</a>
+          </button>
           <div class="mobile-toggle" id="hamburger">
             <i class="fa-solid fa-bars menu-icon"></i>
             <i class="fa-solid fa-xmark close-icon"></i>
@@ -67,7 +74,7 @@
 
       <!-- Mobile Navigation -->
       <div class="mobile-nav" id="mobileNav">
-        <a href="/flight/flightsearch.html" class="mobile-link">
+        <a href="../flight/flightsearch.html" class="mobile-link">
           <img src="/assets/airplane-icon.svg" alt="airplane" />
           <span class="fs-16 fw-semi-bold">&nbsp;Find Flights</span>
         </a>
@@ -75,8 +82,12 @@
           <img src="/assets/bed-icon.svg" alt="bed" />
           <span class="fs-16 fw-semi-bold">&nbsp;Find Stays</span>
         </a>
-        <a href="#" class="mobile-link fs-16 fw-semi-bold">Login</a>
-        <a href="#" class="mobile-link fs-16 fw-semi-bold">Sign Up</a>
+        <a href="../auth/login.html" class="mobile-link fs-16 fw-semi-bold"
+          >Login</a
+        >
+        <a href="../auth/signup.html" class="mobile-link fs-16 fw-semi-bold"
+          >Sign Up</a
+        >
       </div>
     </header>
 
@@ -99,9 +110,7 @@
             <div class="img-overlay text-center">
               <p class="fs-45 fw-bold">Wander with Purpose</p>
               <h1 class="fs-94 ff-primary fw-bold">GO BEYOND</h1>
-              <h2 class="fs-20 fw-semi-bold">
-                Travel made simple
-              </h2>
+              <h2 class="fs-20 fw-semi-bold">Travel made simple</h2>
             </div>
           </div>
           <div class="overlay swiper-slide">
@@ -109,9 +118,7 @@
             <div class="img-overlay text-center">
               <p class="fs-45 fw-bold">Travel Made Simple</p>
               <h1 class="fs-94 ff-primary fw-bold">COZY TRAILS</h1>
-              <h2 class="fs-20 fw-semi-bold">
-                Where to next? Let’s go!
-              </h2>
+              <h2 class="fs-20 fw-semi-bold">Where to next? Let’s go!</h2>
             </div>
           </div>
         </div>
@@ -348,8 +355,10 @@
           <div class="card-overlay">
             <h1>Flights</h1>
             <p>Search Flights & Places Hire to our most popular destinations</p>
-            <button class="inline-flex btn-primary">
-              <img src="/assets/show-icon.svg" alt="" />&nbsp;Show Flights
+            <button class="btn-primary">
+              <a href="../flight/flightsearch.html" class="inline-flex"
+                ><img src="/assets/show-icon.svg" alt="" />&nbsp;Show Flights</a
+              >
             </button>
           </div>
         </div>
@@ -359,8 +368,10 @@
           <div class="card-overlay">
             <h1>Hotels</h1>
             <p>Search Hotels & Places Hire to our most popular destinations</p>
-            <button class="inline-flex btn-primary">
-              <img src="/assets/show-icon.svg" alt="" />&nbsp;Show Hotels
+            <button class="btn-primary">
+              <a href="../hotel/hotelsearch.html" class="inline-flex"
+                ><img src="/assets/show-icon.svg" alt="" />&nbsp;Show Hotels</a
+              >
             </button>
           </div>
         </div>

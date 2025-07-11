@@ -1,3 +1,7 @@
+.company-logo {
+  margin: 0 0 0 1.125em;
+}
+
 .flight-booking-container {
   width: 100%;
   margin: 140px auto 2rem auto;
@@ -303,9 +307,9 @@ input[type='checkbox']:checked {
 .sort-btn.active {
   border-bottom: solid 5px var(--clr-primary-400);
 }
+
 .sort-btn:hover {
-  transform: scale(1.02);
-  background-color: transparent;
+  background-color: var(--clr-primary-300);
 }
 
 /* Result Count */

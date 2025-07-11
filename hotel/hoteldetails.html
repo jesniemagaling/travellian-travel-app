@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golobe</title>
+
+    <link rel="icon" type="image/svg+xml" href="/assets/company-icon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Swiper Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/src/landing-page/styles.css" />
+    <link rel="stylesheet" href="/src/hotel-page/listinghotel.css" />
+    <link rel="stylesheet" href="/src/hotel-page/hoteldetails.css" />
+    <link rel="stylesheet" href="/src/global-utilities/utilities.css" />
+    <link rel="stylesheet" href="/src/global-utilities/responsive.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header>
+      <nav class="container">
+        <div class="nav-left inline-flex">
+          <a
+            href="#"
+            class="inline-flex nav-link flights-btn nav-booking-tab active"
+          >
+            <img src="/assets/airplane-icon.svg" alt="airplane" />Find Flights
+          </a>
+          <a
+            href="../hotel/hotelsearch.html"
+            class="inline-flex nav-link stays-btn nav-booking-tab"
+          >
+            <img src="/assets/bed-icon.svg" alt="bed" />Find Stays
+          </a>
+        </div>
+
+        <div class="company-logo">
+          <a href="/landing/index.html" target="_blank"
+            ><img src="/assets/company-logo.svg" alt="Logo"
+          /></a>
+        </div>
+
+        <div class="nav-right inline-flex">
+          <button class="favorites-btn btn-white fs-16 fw-semi-bold">
+            <img src="/assets/heart-icon.svg" alt="" />&nbsp;Favorites
+          </button>
+          <button class="user-profile-btn btn-secondary fs-16 fw-semi-bold">
+            <img src="/assets/profile-icon.svg" alt="" />&nbsp;&nbsp;Jesnie M.
+          </button>
+          <div class="mobile-toggle" id="hamburger">
+            <i class="fa-solid fa-bars menu-icon"></i>
+            <i class="fa-solid fa-xmark close-icon"></i>
+          </div>
+        </div>
+        <!-- This is the dropdown menu -->
+        <div class="user-nav" id="userNav">
+          <div class="user-nav-header flex">
+            <!-- Added class for styling header -->
+            <img
+              src="/assets/profile-icon.svg"
+              alt="profile"
+              class="user-nav-profile-img"
+            />
+            <div class="grid user-nav-info">
+              <!-- Added class for styling info -->
+              <h1 class="fs-16 fw-semi-bold">Jesnie Magaling</h1>
+              <h2 class="fs-14 fw-regular text-neutral-grey">Online</h2>
+            </div>
+          </div>
+          <div class="profile-layer">
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img src="/assets/user-sm-icon.svg" alt="" />&nbsp;&nbsp;My
+              Accounts</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img src="/assets/card-icon.svg" alt="" />&nbsp;&nbsp;Payments</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img
+                src="/assets/settings-icon.svg"
+                alt=""
+              />&nbsp;&nbsp;Settings</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img
+                src="/assets/support-icon.svg"
+                alt=""
+              />&nbsp;&nbsp;Support</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img src="/assets/logout-icon.svg" alt="" />&nbsp;&nbsp;Logout</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobileNav">
+        <a href="./flightsearch.html" class="mobile-link" target="_blank">
+          <img src="/assets/airplane-icon.svg" alt="airplane" />
+          <span class="fs-16 fw-semi-bold">&nbsp;&nbsp;Find Flights</span>
+        </a>
+        <a href="#" class="mobile-link">
+          <img src="/assets/bed-icon.svg" alt="bed" />
+          <span class="fs-16 fw-semi-bold">&nbsp;&nbsp;Find Stays</span>
+        </a>
+        <a href="#" class="mobile-link fs-16 fw-semi-bold"
+          ><img src="/assets/heart-icon.svg" alt="" />&nbsp;&nbsp;Favorites</a
+        >
+        <a href="#" class="mobile-link fs-16 fw-semi-bold"
+          ><img src="/assets/user-icon.svg" alt="" />&nbsp;&nbsp;Account</a
+        >
+      </div>
+    </header>
+
+    <!-- Hotel Banner -->
+    <section>
+      <div class="hotel-details-wrapper">
+        <div class="hotel-details-heading">
+          <div class="hotel-name flex">
+            <h1 class="fs-28 fw-bold">
+              Eresin Hotels Sultanahmet - Boutique Class
+            </h1>
+            <div class="flex">
+              <img src="/assets/starslamon-icon.svg" alt="star" />
+              <img src="/assets/starslamon-icon.svg" alt="star" />
+              <img src="/assets/starslamon-icon.svg" alt="star" />
+              <img src="/assets/starslamon-icon.svg" alt="star" />
+              <img src="/assets/starslamon-icon.svg" alt="star" />
+              <p class="fs-12 fw-medium">&nbsp;Star Hotel</p>
+            </div>
+          </div>
+          <h2 class="hotel-per-night fs-32 fw-bold text-accent-slamon">
+            $240<span class="fs-14">&#47;night</span>
+          </h2>
+        </div>
+        <div class="hotel-details-info">
+          <div>
+            <div class="hotel-details-location">
+              <img src="/assets/location-icon.svg" alt="" />
+              <p class="fs-14">
+                Kucukayasofya No. 40 Sultanahmet, Istanbul 34022
+              </p>
+            </div>
+            <div class="rating-badge">
+              <div class="rating-badge-ratings flex">
+                <p class="fs-12 fw-medium">4.2</p>
+                <h1 class="fs-12 fw-bold text-muted">Very Good</h1>
+                <h2 class="fs-12 text-muted">54 reviews</h2>
+              </div>
+            </div>
+          </div>
+          <div class="hotel-details-btn">
+            <button class="btn-stroke">
+              <img src="/assets/heart-stroke-icon.svg" alt="" />
+            </button>
+            <button class="btn-stroke">
+              <img src="/assets/share-icon.svg" alt="" />
+            </button>
+            <button class="btn-primary">Book Now</button>
+          </div>
+        </div>
+        <div class="hotel-location-wrapper">
+          <div class="hotel-location-card card-1">
+            <img src="/assets/listing-bg-main-2.jpg" alt="" />
+          </div>
+          <div class="hotel-location-card card-2">
+            <img src="/assets/listing-bg-2.jpg" alt="" />
+          </div>
+          <div class="hotel-location-card card-3">
+            <img src="/assets/listing-bg-3.jpg" alt="" />
+          </div>
+          <div class="hotel-location-card card-4">
+            <img src="/assets/listing-bg-8.jpg" alt="" />
+          </div>
+          <div class="hotel-location-card card-5">
+            <img src="/assets/listing-bg-7.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section>
+      <div class="overview-container container">
+        <div class="overview-heading">
+          <h1 class="fs-20 fw-bold">Overview</h1>
+          <p class="fw-medium">
+            Located in Taksim Gmsuyu, the heart of Istanbul, the CVK Park
+            Bosphorus Hotel Istanbul has risen from the ashes of the historic
+            Park Hotel, which also served as Foreign Affairs Palace 120 years
+            ago and is hosting its guests by assuming this hospitality mission.
+            With its 452 luxurious rooms and suites, 8500 m2 SPA and fitness
+            area, 18 meeting rooms including 4 dividable ones and 3 terraces
+            with Bosphorus view, Istanbuls largest terrace with Bosphorus view
+            (4500 m2) and latest technology infrastructure, CVK Park Bosphorus
+            Hotel Istanbul is destined to be the popular attraction point of the
+            city. Room and suite categories at various sizes with city and
+            Bosphorus view, as well as 68 separate luxury suites, are offered to
+            its special guests as a wide variety of selection.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Available rooms section -->
+    <section>
+      <div class="avail-rooms-container">
+        <div class="avail-rooms-heading container">
+          <h1 class="fs-20 fw-bold">Available Rooms</h1>
+        </div>
+        <div class="rooms-swiper-container">
+          <div class="rooms-swiper swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides here -->
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/listing-bg-2.jpg"
+                    alt="image"
+                    class="card__img"
+                  />
+                </div>
+                <div class="card__data">
+                  <h3 class="fs-20 fw-semi-bold">Family room</h3>
+                  <p class="fw-medium text-neutral-grey">
+                    1 queen bed and 2 twin beds and street view
+                  </p>
+                  <button
+                    class="more-details-btn btn-primary"
+                    data-room="familyRoom"
+                  >
+                    More Details
+                  </button>
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/listing-bg-3.jpg"
+                    alt="image"
+                    class="card__img"
+                  />
+                </div>
+                <div class="card__data">
+                  <h3 class="fs-20 fw-semi-bold">Deluxe room</h3>
+                  <p class="fw-medium text-neutral-grey">
+                    1 king bed and city skyline view
+                  </p>
+                  <button class="btn-primary" data-room="deluxeRoom">
+                    More Details
+                  </button>
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/listing-bg-4.jpg"
+                    alt="image"
+                    class="card__img"
+                  />
+                </div>
+                <div class="card__data">
+                  <h3 class="fs-20 fw-semi-bold">Executive Room</h3>
+                  <p class="fw-medium text-neutral-grey">
+                    1 king bed with partial ocean view
+                  </p>
+                  <button class="btn-primary" data-room="executiveRoom">
+                    More Details
+                  </button>
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/listing-bg-7.svg"
+                    alt="image"
+                    class="card__img"
+                  />
+                </div>
+                <div class="card__data">
+                  <h3 class="fs-20 fw-semi-bold">Junior Suite</h3>
+                  <p class="fw-medium text-neutral-grey">
+                    1 king bed and 1 sofa bed with a garden view
+                  </p>
+                  <button class="btn-primary" data-room="juniorSuite">
+                    More Details
+                  </button>
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/listing-bg-8.jpg"
+                    alt="image"
+                    class="card__img"
+                  />
+                </div>
+                <div class="card__data">
+                  <h3 class="fs-20 fw-semi-bold">Superior room</h3>
+                  <p class="fw-medium text-neutral-grey">
+                    1 double bed with courtyard view
+                  </p>
+                  <button class="btn-primary" data-room="superiorRoom">
+                    More Details
+                  </button>
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/listing-bg-14.jpg"
+                    alt="image"
+                    class="card__img"
+                  />
+                </div>
+                <div class="card__data">
+                  <h3 class="fs-20 fw-semi-bold">Presidential Suite</h3>
+                  <p class="fw-medium text-neutral-grey">
+                    2 twin beds with interior atrium view
+                  </p>
+                  <button class="btn-primary" data-room="presidentialSuite">
+                    More Details
+                  </button>
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/listing-bg-16.jpg"
+                    alt="image"
+                    class="card__img"
+                  />
+                </div>
+                <div class="card__data">
+                  <h3 class="fs-20 fw-semi-bold">Standard Room</h3>
+                  <p class="fw-medium text-neutral-grey">
+                    2 twin beds with interior atrium view
+                  </p>
+                  <button class="btn-primary">More Details</button>
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/listing-bg-15.jpg"
+                    alt="image"
+                    class="card__img"
+                  />
+                </div>
+                <div class="card__data">
+                  <h3 class="fs-20 fw-semi-bold">Premier Room</h3>
+                  <p class="fw-medium text-neutral-grey">
+                    1 king bed with mountain view
+                  </p>
+                  <button class="btn-primary" data-room="premierRoom">
+                    More Details
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- Navigation OUTSIDE wrapper -->
+          <div class="rooms-swiper-controls">
+            <div class="rooms-swiper-button-prev"></div>
+            <div class="rooms-swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stays location -->
+    <section>
+      <div class="stays-location-container container">
+        <div class="stays-location-heading">
+          <h1 class="fs-20 fw-bold">Location/Map</h1>
+          <button class="btn-primary">
+            <a
+              class="fs-14 fw-semi-bold"
+              href="https://www.google.com/maps?ll=41.003611%2C28.974722&z=16&t=m&hl=en&gl=PH&mapclient=embed&cid=2301651138487600372"
+              target="_blank"
+              >View on google maps</a
+            >
+          </button>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.9889470590215!2d28.972120545256313!3d41.00361511971126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55db79b3aff2d%3A0x1ff11b840a6d44f4!2sEresin%20Hotel%20Sultanahmet!5e0!3m2!1sen!2sph!4v1752198624275!5m2!1sen!2sph"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities section -->
+    <section>
+      <div class="amenities-container">
+        <div class="avail-rooms-heading container">
+          <h1 class="fs-20 fw-bold">Amenities</h1>
+        </div>
+      </div>
+      <div class="amenities-swiper-container">
+        <div class="amenities-swiper swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides here -->
+            <article class="amenities-article swiper-slide">
+              <div class="amenities-image">
+                <img
+                  src="/assets/outdoor-pool-img.jpg"
+                  alt="image"
+                  class="amenities-img"
+                />
+                <div class="amenities-data">
+                  <h3 class="fs-20 fw-semi-bold">Outdoor Pool</h3>
+                  <p class="fw-medium">
+                    A refreshing open-air pool perfect for sunbathing and
+                    swimming.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="amenities-article swiper-slide">
+              <div class="amenities-image">
+                <img
+                  src="/assets/indoor-pool-img.jpg"
+                  alt="image"
+                  class="amenities-img"
+                />
+                <div class="amenities-data">
+                  <h3 class="fs-20 fw-semi-bold">Indoor Pool</h3>
+                  <p class="fw-medium">
+                    A climate-controlled pool ideal for year-round use.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="amenities-article swiper-slide">
+              <div class="amenities-image">
+                <img
+                  src="/assets/wellness-center-img.jpg"
+                  alt="image"
+                  class="amenities-img"
+                />
+                <div class="amenities-data">
+                  <h3 class="fs-20 fw-semi-bold">Wellness Center</h3>
+                  <p class="fw-medium">
+                    A relaxing space offering spa treatments, sauna, and more.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="amenities-article swiper-slide">
+              <div class="amenities-image">
+                <img
+                  src="/assets/restaurant-img.jpg"
+                  alt="image"
+                  class="amenities-img"
+                />
+                <div class="amenities-data">
+                  <h3 class="fs-20 fw-semi-bold">Restaurant</h3>
+                  <p class="fw-medium">
+                    On-site dining with a variety of delicious meals.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="amenities-article swiper-slide">
+              <div class="amenities-image">
+                <img
+                  src="/assets/tea-coffee-machine-img.jpg"
+                  alt="image"
+                  class="amenities-img"
+                />
+                <div class="amenities-data">
+                  <h3 class="fs-20 fw-semi-bold">Tea/Coffee Machine</h3>
+                  <p class="fw-medium">
+                    In-room convenience for fresh tea or coffee anytime.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="amenities-article swiper-slide">
+              <div class="amenities-image">
+                <img
+                  src="/assets/fitness-center-img.jpg"
+                  alt="image"
+                  class="amenities-img"
+                />
+                <div class="amenities-data">
+                  <h3 class="fs-20 fw-semi-bold">Fitness Center</h3>
+                  <p class="fw-medium">
+                    Fully equipped gym for workouts and cardio sessions.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="amenities-article swiper-slide">
+              <div class="amenities-image">
+                <img
+                  src="/assets/bar-lounge-img.jpg"
+                  alt="image"
+                  class="amenities-img"
+                />
+                <div class="amenities-data">
+                  <h3 class="fs-20 fw-semi-bold">Bar/Lounge</h3>
+                  <p class="fw-medium">
+                    A cozy spot to unwind with drinks and light snacks.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- Navigation OUTSIDE wrapper -->
+        <div class="amenities-swiper-controls">
+          <div class="amenities-swiper-button-prev"></div>
+          <div class="amenities-swiper-pagination"></div>
+          <div class="amenities-swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section>
+      <div class="stays-reviews-container container">
+        <div class="stays-reviews-heading">
+          <h1 class="fs-20 fw-bold">Reviews</h1>
+          <button class="btn-primary">
+            <a class="fs-14 fw-semi-bold" href="#">Give your review</a>
+          </button>
+        </div>
+        <div class="stays-ratings">
+          <h1 class="fw-bold fs-50">4.2</h1>
+          <div class="div">
+            <h2 class="fs-20 fw-semi-bold">Very Good</h2>
+            <p class="fs-14">371 verified reviews</p>
+          </div>
+        </div>
+        <div class="testimonials-swiper-container">
+          <div class="testimonials-swiper swiper">
+            <div class="stays-testimonial swiper-wrapper">
+              <article class="testimonials-details swiper-slide">
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Jesnie Magaling</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon-1.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Ahmad Pamaylaon</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon-2.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Czar Bjorn</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon-3.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Jomel Jose</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon-4.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Maurice Cabaybay</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonials-details swiper-slide">
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon-1.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Jesnie Magaling</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon-2.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Ahmad Pamaylaon</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon-4.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Czar Bjorn</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon-3.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Jomel Jose</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Maurice Cabaybay</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonials-details swiper-slide">
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon-1.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Jesnie Magaling</p>
+                      </div>
+                      <img src="/assets/flag-icon-3.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon-2.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Ahmad Pamaylaon</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <img src="/assets/profile-icon.svg" alt="" />
+                  <div class="fs-14 testimonial-info">
+                    <div class="testimonials-heading">
+                      <div class="testimonials-ratings flex">
+                        <h2 class="fw-semi-bold">5.0 Amazing</h2>
+                        <span>|</span>
+                        <p>Czar Bjorn</p>
+                      </div>
+                      <img src="/assets/flag-icon.svg" alt="" />
+                    </div>
+                    <p class="testimonials-feedback">
+                      The hotel exceeded all my expectations—clean, stylish
+                      rooms, incredibly friendly staff, and a perfect location.
+                      The breakfast buffet was delicious, and everything felt
+                      thoughtfully managed. I would definitely come back again.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- Navigation OUTSIDE wrapper -->
+          <div class="testimonials-swiper-controls">
+            <div class="testimonials-swiper-button-prev"></div>
+            <div class="testimonials-swiper-pagination"></div>
+            <div class="testimonials-swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section>
+      <div class="subscribe-wrapper">
+        <div class="flex">
+          <div class="grid subscribe-heading">
+            <h1 class="fw-bold">Subscribe Newsletter</h1>
+            <h2 class="fw-bold">The Travel</h2>
+            <p class="fw-medium text-neutral-grey">
+              Get inspired! Receive travel discounts, tips and behind the scenes
+              stories.
+            </p>
+          </div>
+          <div class="grid subscribe-form">
+            <label for="">Email</label>
+            <div>
+              <input type="text" placeholder="Your email address" />
+              <button class="btn-black fs-14 fw-semi-bold">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container flex-no-wrap">
+        <div class="links socials grid">
+          <img
+            class="socials-company-logo"
+            src="/assets/footer-copany-logo.svg"
+            alt=""
+          />
+          <div class="social-links inline-flex">
+            <a href=""><img src="/assets/fb-icon.svg" alt="facebook logo" /></a>
+            <a href="#"><img src="/assets/tw-icon.svg" alt="twitter logo" /></a>
+            <a href="#"
+              ><img src="/assets/ig-icon.svg" alt="instagram logo"
+            /></a>
+            <a href="#"><img src="/assets/yt-icon.svg" alt="youtube logo" /></a>
+          </div>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Destination</h1>
+          <a href="#">Canada</a>
+          <a href="#">Alaska</a>
+          <a href="#">France</a>
+          <a href="#">Iceland</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Activities</h1>
+          <a href="#">Lights</a>
+          <a href="#">Cruising & sailing</a>
+          <a href="#">Multi-activities</a>
+          <a href="#">Kayaing</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Travel Blogs</h1>
+          <a href="#">Tokyo Travel Guide</a>
+          <a href="#">Sri Lanka Travel Guide</a>
+          <a href="#">Peru Travel Guide</a>
+          <a href="#">Bali Travel Guide</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">About Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Contact Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/landing-page/main.js"></script>
+    <script type="module" src="/src/hotel-page/hotelsearch.js"></script>
+    <script type="module" src="/src/hotel-page/listinghotel.js"></script>
+    <script type="module" src="/src/hotel-page/hoteldetails.js"></script>
+    <script type="module" src="/src/global-utilities/swiper.js"></script>
+  </body>
+</html>

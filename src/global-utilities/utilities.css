@@ -38,6 +38,7 @@
   --fs-36: clamp(2rem, 5vw, 2.25rem); /* Min 32px, Max 36px */
   --fs-40: clamp(2.25rem, 5.5vw, 2.5rem); /* Min 36px, Max 40px */
   --fs-45: clamp(2.5rem, 6vw, 2.8125rem); /* Min 40px, Max 45px */
+  --fs-50: clamp(2.625rem, 7vw, 3.125rem); /* Min 40px, Max 45px */
   --fs-54: clamp(3rem, 7vw, 3.375rem); /* Min 48px, Max 54px */
   --fs-58: clamp(3.25rem, 7.5vw, 3.625rem); /* Min 52px, Max 58px */
   --fs-64: clamp(3.5rem, 8vw, 4rem); /* Min 56px, Max 64px */
@@ -225,6 +226,9 @@ svg {
 }
 .fs-45 {
   font-size: var(--fs-45);
+}
+.fs-50 {
+  font-size: var(--fs-50);
 }
 .fs-54 {
   font-size: var(--fs-54);

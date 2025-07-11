@@ -100,7 +100,7 @@
 
 .payment-method:hover,
 .payment-option:hover {
-  background-color: var(--clr-primary-400);
+  background-color: var(--clr-primary-300);
   filter: none;
 }
 

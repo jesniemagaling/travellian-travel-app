@@ -82,4 +82,106 @@ const featuresSwiper = new Swiper('.flight-features-swiper', {
     1440: { slidesPerView: 6 },
     1720: { slidesPerView: 8 },
   },
+  on: {
+    init: function () {
+      // Fix centering at start
+      this.slideToLoop(0, 0);
+    },
+  },
 });
+
+// Available Rooms Slider Swiper
+const roomsSwiper = new Swiper('.rooms-swiper', {
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  spaceBetween: 2,
+  slideToClickedSlide: true,
+  navigation: {
+    nextEl: '.rooms-swiper-button-next',
+    prevEl: '.rooms-swiper-button-prev',
+  },
+  on: {
+    init: function () {
+      // Fix centering at start
+      this.slideToLoop(0, 0);
+    },
+  },
+});
+
+// Amenities slider
+const amenitiesSwiper = new Swiper('.amenities-swiper', {
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  grabCursor: true,
+  slideToClickedSlide: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: '.amenities-swiper-button-next',
+    prevEl: '.amenities-swiper-button-prev',
+  },
+  pagination: {
+    el: '.amenities-swiper-pagination',
+    clickable: true,
+  },
+});
+
+// Testimonials slider
+const testimonialSwiper = new Swiper('.testimonials-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.testimonials-swiper-pagination',
+    type: 'fraction',
+    formatFractionCurrent: (number) => (number < 10 ? `${number}` : number),
+    formatFractionTotal: (number) => (number < 10 ? `${number}` : number),
+  },
+  navigation: {
+    nextEl: '.testimonials-swiper-button-next',
+    prevEl: '.testimonials-swiper-button-prev',
+  },
+});
+
+// Modal Swiper
+const modalSwiper = new Swiper('.modal-swiper', {
+  loop: false, // no infinite loop
+  slidesPerView: 1,
+  spaceBetween: 16,
+  grabCursor: true,
+  centeredSlides: true,
+
+  navigation: {
+    nextEl: '.modal-swiper-button-next',
+    prevEl: '.modal-swiper-button-prev',
+  },
+  pagination: {
+    el: '.modal-swiper-pagination',
+    clickable: true,
+  },
+});
+
+document
+  .querySelector('.modal-swiper-button-next')
+  .addEventListener('click', () => {
+    if (modalSwiper.isEnd) {
+      setTimeout(() => {
+        modalSwiper.slideTo(0, 500); // slide to first with smooth 500ms animation
+      }, 150);
+    }
+  });
+
+document
+  .querySelector('.modal-swiper-button-prev')
+  .addEventListener('click', () => {
+    if (modalSwiper.isBeginning) {
+      setTimeout(() => {
+        modalSwiper.slideTo(modalSwiper.slides.length - 1, 500);
+      }, 150);
+    }
+  });

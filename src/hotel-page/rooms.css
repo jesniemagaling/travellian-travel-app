@@ -1,0 +1,213 @@
+.rooms-content.hidden {
+  display: none;
+}
+
+.rooms-content.active {
+  display: block;
+}
+
+/* Modal section */
+.rooms-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 7em auto;
+  background-color: var(--clr-neutral-50);
+  padding: 1em;
+  border-radius: 12px;
+  z-index: 10000;
+}
+
+.rooms-back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--fs-20);
+  font-weight: var(--fw-medium);
+}
+
+.rooms-back-btn img {
+  width: 40px;
+  height: 40px;
+}
+/* Container for modal */
+.modal-image-container {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  margin: 0 auto 2em auto;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Swiper container */
+.modal-swiper {
+  width: 100%;
+  max-width: 1400px;
+  height: clamp(440px, 48vw, 720px);
+  overflow: hidden;
+}
+
+/* Swiper wrapper */
+.modal-swiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Slide images wrapper */
+.modal-images {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+  cursor: pointer;
+}
+
+/* Actual image */
+.modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ==========================
+  Swiper Navigation Controls
+========================== */
+.modal-swiper-controls {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  z-index: 30;
+  padding: 0.5em;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Pagination Dots */
+.modal-swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+  position: static;
+}
+
+.modal-swiper-pagination-bullet {
+  background-color: #ccc;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.modal-swiper-controls .swiper-pagination-bullet-active {
+  background-color: var(--clr-neutral-200);
+}
+
+/* Prev/Next Arrows */
+.modal-swiper-button-prev,
+.modal-swiper-button-next {
+  width: 34px;
+  height: 34px;
+  border-radius: 4px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.modal-swiper-button-prev {
+  background-image: url('/assets/arrow-left-icon.svg');
+}
+
+.modal-swiper-button-next {
+  background-image: url('/assets/arrow-right-icon.svg');
+}
+
+.modal-swiper-button-prev::after,
+.modal-swiper-button-next::after {
+  display: none;
+}
+
+.modal-swiper-button-prev:hover,
+.modal-swiper-button-prev:focus,
+.modal-swiper-button-next:hover,
+.modal-swiper-button-next:focus {
+  opacity: 1;
+  transform: scale(1.1);
+  background-color: var(--clr-primary-400);
+  transition: all 0.3s ease;
+}
+
+/* ==========================
+  Extra Layout Styles (Optional)
+========================== */
+.modal-details {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+  padding: 1em 2em;
+}
+
+.modal-heading h2 {
+  padding: 0.25em 0 0.5em;
+}
+
+.modal-heading p {
+  max-width: 700px;
+  padding-bottom: 1em;
+}
+
+.rooms-btn {
+  margin: 0 auto;
+  display: flex;
+  gap: 1em;
+}
+
+.rooms-btn .btn-stroke {
+  width: clamp(90px, 12vw, 180px);
+}
+
+.rooms-btn .btn-primary {
+  width: clamp(190px, 20vw, 280px);
+}
+
+.room-amenities {
+  padding: 2.5em 0 0 1.5em;
+}
+
+.room-amenities h3 {
+  padding-bottom: 0.3em;
+}
+
+.room-amenities li {
+  padding: 0.25em 0;
+}
+
+@media (max-width: 1078px) {
+  .modal-details {
+    flex-direction: column;
+  }
+  .room-amenities {
+    padding: 0.5em 0 0 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-details {
+    padding: 1em;
+  }
+}

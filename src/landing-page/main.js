@@ -14,6 +14,7 @@ const flightForm = document.getElementById('flightForm');
 const stayForm = document.getElementById('stayForm');
 const flightActions = document.querySelector('.flight-actions');
 const staysActions = document.querySelector('.stays-actions');
+const header = document.querySelector('header');
 
 tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
@@ -46,6 +47,15 @@ if (swapIcon && fromToInput) {
     }
   });
 }
+
+// // scroll sticky navbar
+// window.addEventListener('scroll', () => {
+//   if (document.documentElement.scrollTop > 20) {
+//     header.classList.add('sticky');
+//   } else {
+//     header.classList.remove('sticky');
+//   }
+// });
 
 // Mobile Navigation
 const hamburger = document.getElementById('hamburger');

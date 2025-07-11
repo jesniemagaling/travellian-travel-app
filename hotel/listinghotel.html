@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golobe</title>
+
+    <link rel="icon" type="image/svg+xml" href="/assets/company-icon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Swiper Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/src/landing-page/styles.css" />
+    <link rel="stylesheet" href="/src/hotel-page/listinghotel.css" />
+    <link rel="stylesheet" href="/src/global-utilities/utilities.css" />
+    <link rel="stylesheet" href="/src/global-utilities/responsive.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header>
+      <nav class="container">
+        <div class="nav-left inline-flex">
+          <a
+            href="#"
+            class="inline-flex nav-link flights-btn nav-booking-tab active"
+          >
+            <img src="/assets/airplane-icon.svg" alt="airplane" />Find Flights
+          </a>
+          <a
+            href="../hotel/hotelsearch.html"
+            class="inline-flex nav-link stays-btn nav-booking-tab"
+          >
+            <img src="/assets/bed-icon.svg" alt="bed" />Find Stays
+          </a>
+        </div>
+
+        <div class="company-logo">
+          <a href="/landing/index.html" target="_blank"
+            ><img src="/assets/company-logo.svg" alt="Logo"
+          /></a>
+        </div>
+
+        <div class="nav-right inline-flex">
+          <button class="favorites-btn btn-white fs-16 fw-semi-bold">
+            <img src="/assets/heart-icon.svg" alt="" />&nbsp;Favorites
+          </button>
+          <button class="user-profile-btn btn-secondary fs-16 fw-semi-bold">
+            <img src="/assets/profile-icon.svg" alt="" />&nbsp;&nbsp;Jesnie M.
+          </button>
+          <div class="mobile-toggle" id="hamburger">
+            <i class="fa-solid fa-bars menu-icon"></i>
+            <i class="fa-solid fa-xmark close-icon"></i>
+          </div>
+        </div>
+        <!-- This is the dropdown menu -->
+        <div class="user-nav" id="userNav">
+          <div class="user-nav-header flex">
+            <!-- Added class for styling header -->
+            <img
+              src="/assets/profile-icon.svg"
+              alt="profile"
+              class="user-nav-profile-img"
+            />
+            <div class="grid user-nav-info">
+              <!-- Added class for styling info -->
+              <h1 class="fs-16 fw-semi-bold">Jesnie Magaling</h1>
+              <h2 class="fs-14 fw-regular text-neutral-grey">Online</h2>
+            </div>
+          </div>
+          <div class="profile-layer">
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img src="/assets/user-sm-icon.svg" alt="" />&nbsp;&nbsp;My
+              Accounts</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img src="/assets/card-icon.svg" alt="" />&nbsp;&nbsp;Payments</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img
+                src="/assets/settings-icon.svg"
+                alt=""
+              />&nbsp;&nbsp;Settings</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img
+                src="/assets/support-icon.svg"
+                alt=""
+              />&nbsp;&nbsp;Support</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img src="/assets/logout-icon.svg" alt="" />&nbsp;&nbsp;Logout</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobileNav">
+        <a href="./flightsearch.html" class="mobile-link" target="_blank">
+          <img src="/assets/airplane-icon.svg" alt="airplane" />
+          <span class="fs-16 fw-semi-bold">&nbsp;&nbsp;Find Flights</span>
+        </a>
+        <a href="#" class="mobile-link">
+          <img src="/assets/bed-icon.svg" alt="bed" />
+          <span class="fs-16 fw-semi-bold">&nbsp;&nbsp;Find Stays</span>
+        </a>
+        <a href="#" class="mobile-link fs-16 fw-semi-bold"
+          ><img src="/assets/heart-icon.svg" alt="" />&nbsp;&nbsp;Favorites</a
+        >
+        <a href="#" class="mobile-link fs-16 fw-semi-bold"
+          ><img src="/assets/user-icon.svg" alt="" />&nbsp;&nbsp;Account</a
+        >
+      </div>
+    </header>
+
+    <!-- Booking Form -->
+    <section id="booking-details">
+      <div class="hotel-booking-container">
+        <!-- Stays Form -->
+        <div id="stayForm" class="hotel-booking-form grid-4">
+          <div class="hotel-form-group">
+            <label>Enter Destination</label>
+            <div class="input-with-icon">
+              <img src="/assets/bed-icon.svg" alt="Bed" class="input-icon" />
+              <input type="text" value="Istanbul, Turkey" />
+            </div>
+          </div>
+
+          <div class="hotel-form-group">
+            <label>Check In</label>
+            <div class="input-with-icon input-calendar">
+              <input type="date" />
+              <img
+                src="/assets/calendar-icon.svg"
+                alt="Calendar"
+                class="input-icon-right"
+              />
+            </div>
+          </div>
+
+          <div class="hotel-form-group">
+            <label>Check Out</label>
+            <div class="input-with-icon input-calendar">
+              <input type="date" />
+              <img
+                src="/assets/calendar-icon.svg"
+                alt="Calendar"
+                class="input-icon-right"
+              />
+            </div>
+          </div>
+
+          <div class="hotel-form-group">
+            <label>Rooms & Guests</label>
+            <div class="input-with-icon">
+              <img src="/assets/user-icon.svg" alt="User" class="input-icon" />
+              <select>
+                <option>1 room, 2 guests</option>
+                <option>2 rooms, 4 guests</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button class="hotel-listing-btn btn-primary btn-desktop">
+          <img src="/assets/search-icon.svg" alt="" />
+        </button>
+      </div>
+    </section>
+
+    <!-- Flight Listing and Filters -->
+    <section class="flight-listing container">
+      <div class="grid-2-col layout">
+        <!-- Filters Sidebar -->
+        <aside class="filters">
+          <h2 class="fs-20 fw-bold">Filters</h2>
+
+          <!-- Price Filter -->
+          <div class="filter-group">
+            <button class="fs-16 fw-semi-bold filter-toggle">Price</button>
+            <input type="range" min="50" max="1200" class="price-slider" />
+            <div class="price-values flex">
+              <p class="fs-14 fw-medium text-neutral-grey">$50</p>
+              <p class="fs-14 fw-medium text-neutral-grey">$1200</p>
+            </div>
+          </div>
+
+          <!-- Rating -->
+          <div class="filter-group">
+            <h3 class="fs-16 fw-semi-bold filter-heading">Rating</h3>
+            <div class="rating-options">
+              <button class="btn-stroke">0+</button>
+              <button class="btn-stroke">1+</button>
+              <button class="btn-stroke">2+</button>
+              <button class="btn-stroke">3+</button>
+              <button class="btn-stroke">4+</button>
+            </div>
+          </div>
+
+          <!-- Freebies -->
+          <div class="filter-group">
+            <h3 class="fs-16 fw-semi-bold filter-heading filter-toggle">
+              Freebies
+            </h3>
+            <label
+              ><input type="checkbox" name="airlines" /> Free breakfast</label
+            >
+            <label
+              ><input type="checkbox" name="airlines" /> Free parking</label
+            >
+            <label
+              ><input type="checkbox" name="airlines" /> Free internet</label
+            >
+            <label
+              ><input type="checkbox" name="airlines" /> Free airport
+              shuttle</label
+            >
+            <label
+              ><input type="checkbox" name="airlines" /> Free
+              cancellation</label
+            >
+          </div>
+
+          <!-- Amenities Types -->
+          <div class="filter-group">
+            <h3 class="fs-16 fw-semi-bold filter-heading filter-toggle">
+              Amenities
+            </h3>
+            <label
+              ><input type="checkbox" name="trips" /> 24hr front desk</label
+            >
+            <label
+              ><input type="checkbox" name="trips" /> Air conditioned</label
+            >
+            <label><input type="checkbox" name="trips" /> Fitness</label>
+            <label><input type="checkbox" name="trips" /> Pool</label>
+          </div>
+        </aside>
+
+        <!-- Hotels Listings Section -->
+        <div class="hotel-results">
+          <!-- Sorting Options -->
+          <div class="sort-bar space-between">
+            <div class="sort-options grid-4">
+              <button class="sort-btn">
+                Hotels<br /><small>513 places</small>
+              </button>
+              <button class="sort-btn active">
+                Motels<br /><small>51 places</small>
+              </button>
+              <button class="sort-btn">
+                Hostels<br /><small>13 places</small>
+              </button>
+              <button class="sort-btn">
+                Resorts<br /><small>72 places</small>
+              </button>
+            </div>
+          </div>
+
+          <!-- Result Count -->
+          <div class="showing-result">
+            <p class="fs-14 fw-semi-bold">
+              Showing 13 of <strong>259 places</strong>
+            </p>
+            <div class="sort-dropdown flex">
+              <label>Sort by</label>
+              <select>
+                <option>Recommended</option>
+                <option>Price Low to High</option>
+                <option>Duration</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Accommodations -->
+          <div class="hotel-card">
+            <div class="hotel-info">
+              <div class="hotel-logo">
+                <img src="/assets/listing-bg-main.svg" alt="Bed" />
+                <div class="hotel-logo-overlay">
+                  <p class="fs-12 fw-medium">9 images</p>
+                </div>
+              </div>
+              <div class="hotel-info-container">
+                <div class="hotel-badge">
+                  <div class="hotel-details">
+                    <h1 class="fs-20 fw-bold text-muted">
+                      CVK Park Bosphorus Hotel Istanbul
+                    </h1>
+                    <div class="hotel-location">
+                      <img src="/assets/location-icon.svg" alt="" />
+                      <p class="fs-12 fw-medium">
+                        Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
+                      </p>
+                    </div>
+                    <div class="hotel-rating-badge">
+                      <div class="flex">
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <p class="fs-12 fw-medium">&nbsp;Star Hotel</p>
+                      </div>
+                      <div class="flex">
+                        <img src="/assets/cup-icon.svg" alt="" />
+                        <p class="fw-medium fs-12">
+                          <span class="fs-12 fw-bold">&nbsp;20+</span
+                          >&nbsp;Amenities
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <h2 class="fw-medium fs-12">starting from</h2>
+                    <h1 class="fw-bold text-accent-slamon fs-24">
+                      $513<span class="fs-14">/night</span>
+                    </h1>
+                    <h3 class="fw-medium fs-12">excl. tax</h3>
+                  </div>
+                </div>
+                <div class="rating-badge-ratings flex">
+                  <p class="fs-12 fw-medium">4.2</p>
+                  <h1 class="fs-12 fw-bold text-muted">Very Good</h1>
+                  <h2 class="fs-12 text-muted">54 reviews</h2>
+                </div>
+                <div class="hotel-actions">
+                  <button class="btn-stroke">
+                    <img src="/assets/heart-stroke-icon.svg" alt="" />
+                  </button>
+                  <button class="btn-primary full-width">View Deals</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card">
+            <div class="hotel-info">
+              <div class="hotel-logo">
+                <img src="/assets/listing-bg-2.jpg" alt="Bed" />
+                <div class="hotel-logo-overlay">
+                  <p class="fs-12 fw-medium">9 images</p>
+                </div>
+              </div>
+              <div class="hotel-info-container">
+                <div class="hotel-badge">
+                  <div class="hotel-details">
+                    <h1 class="fs-20 fw-bold text-muted">
+                      Eresin Hotels Sultanahmet - Boutique Class
+                    </h1>
+                    <div class="hotel-location">
+                      <img src="/assets/location-icon.svg" alt="" />
+                      <p class="fs-12 fw-medium">
+                        Kucukayasofya No. 40 Sultanahmet, Istanbul 34022
+                      </p>
+                    </div>
+                    <div class="hotel-rating-badge">
+                      <div class="flex">
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <p class="fs-12 fw-medium">&nbsp;Star Hotel</p>
+                      </div>
+                      <div class="flex">
+                        <img src="/assets/cup-icon.svg" alt="" />
+                        <p class="fw-medium fs-12">
+                          <span class="fs-12 fw-bold">&nbsp;20+</span
+                          >&nbsp;Amenities
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <h2 class="fw-medium fs-12">starting from</h2>
+                    <h1 class="fw-bold text-accent-slamon fs-24">
+                      $290<span class="fs-14">/night</span>
+                    </h1>
+                    <h3 class="fw-medium fs-12">excl. tax</h3>
+                  </div>
+                </div>
+                <div class="rating-badge-ratings flex">
+                  <p class="fs-12 fw-medium">4.2</p>
+                  <h1 class="fs-12 fw-bold text-muted">Very Good</h1>
+                  <h2 class="fs-12 text-muted">54 reviews</h2>
+                </div>
+                <div class="hotel-actions">
+                  <button class="btn-stroke">
+                    <img src="/assets/heart-stroke-icon.svg" alt="" />
+                  </button>
+                  <button class="btn-primary full-width">View Deals</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card">
+            <div class="hotel-info">
+              <div class="hotel-logo">
+                <img src="/assets/listing-bg-4.jpg" alt="Bed" />
+                <div class="hotel-logo-overlay">
+                  <p class="fs-12 fw-medium">9 images</p>
+                </div>
+              </div>
+              <div class="hotel-info-container">
+                <div class="hotel-badge">
+                  <div class="hotel-details">
+                    <h1 class="fs-20 fw-bold text-muted">
+                      CVK Park Bosphorus Hotel Istanbul
+                    </h1>
+                    <div class="hotel-location">
+                      <img src="/assets/location-icon.svg" alt="" />
+                      <p class="fs-12 fw-medium">
+                        Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
+                      </p>
+                    </div>
+                    <div class="hotel-rating-badge">
+                      <div class="flex">
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <p class="fs-12 fw-medium">&nbsp;Star Hotel</p>
+                      </div>
+                      <div class="flex">
+                        <img src="/assets/cup-icon.svg" alt="" />
+                        <p class="fw-medium fs-12">
+                          <span class="fs-12 fw-bold">&nbsp;20+</span
+                          >&nbsp;Amenities
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <h2 class="fw-medium fs-12">starting from</h2>
+                    <h1 class="fw-bold text-accent-slamon fs-24">
+                      $290<span class="fs-14">/night</span>
+                    </h1>
+                    <h3 class="fw-medium fs-12">excl. tax</h3>
+                  </div>
+                </div>
+                <div class="rating-badge-ratings flex">
+                  <p class="fs-12 fw-medium">4.2</p>
+                  <h1 class="fs-12 fw-bold text-muted">Very Good</h1>
+                  <h2 class="fs-12 text-muted">54 reviews</h2>
+                </div>
+                <div class="hotel-actions">
+                  <button class="btn-stroke">
+                    <img src="/assets/heart-stroke-icon.svg" alt="" />
+                  </button>
+                  <button class="btn-primary full-width">View Deals</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hotel-card">
+            <div class="hotel-info">
+              <div class="hotel-logo">
+                <img src="/assets/listing-bg-7.svg" alt="Bed" />
+                <div class="hotel-logo-overlay">
+                  <p class="fs-12 fw-medium">9 images</p>
+                </div>
+              </div>
+              <div class="hotel-info-container">
+                <div class="hotel-badge">
+                  <div class="hotel-details">
+                    <h1 class="fs-20 fw-bold text-muted">
+                      Eresin Hotels Sultanahmet - Boutique Class
+                    </h1>
+                    <div class="hotel-location">
+                      <img src="/assets/location-icon.svg" alt="" />
+                      <p class="fs-12 fw-medium">
+                        Kucukayasofya No. 40 Sultanahmet, Istanbul 34022
+                      </p>
+                    </div>
+                    <div class="hotel-rating-badge">
+                      <div class="flex">
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <img src="/assets/starslamon-icon.svg" alt="star" />
+                        <p class="fs-12 fw-medium">&nbsp;Star Hotel</p>
+                      </div>
+                      <div class="flex">
+                        <img src="/assets/cup-icon.svg" alt="" />
+                        <p class="fw-medium fs-12">
+                          <span class="fs-12 fw-bold">&nbsp;20+</span
+                          >&nbsp;Amenities
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <h2 class="fw-medium fs-12">starting from</h2>
+                    <h1 class="fw-bold text-accent-slamon fs-24">
+                      $513<span class="fs-14">/night</span>
+                    </h1>
+                    <h3 class="fw-medium fs-12">excl. tax</h3>
+                  </div>
+                </div>
+                <div class="rating-badge-ratings flex">
+                  <p class="fs-12 fw-medium">4.2</p>
+                  <h1 class="fs-12 fw-bold text-muted">Very Good</h1>
+                  <h2 class="fs-12 text-muted">54 reviews</h2>
+                </div>
+                <div class="hotel-actions">
+                  <button class="btn-stroke">
+                    <img src="/assets/heart-stroke-icon.svg" alt="" />
+                  </button>
+                  <button class="btn-primary full-width">View Deals</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Show more -->
+          <button class="btn-secondary full-width mt-2">
+            Show more results
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section>
+      <div class="subscribe-wrapper">
+        <div class="flex">
+          <div class="grid subscribe-heading">
+            <h1 class="fw-bold">Subscribe Newsletter</h1>
+            <h2 class="fw-bold">The Travel</h2>
+            <p class="fw-medium text-neutral-grey">
+              Get inspired! Receive travel discounts, tips and behind the scenes
+              stories.
+            </p>
+          </div>
+          <div class="grid subscribe-form">
+            <label for="">Email</label>
+            <div>
+              <input type="text" placeholder="Your email address" />
+              <button class="btn-black fs-14 fw-semi-bold">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container flex-no-wrap">
+        <div class="links socials grid">
+          <img
+            class="socials-company-logo"
+            src="/assets/footer-copany-logo.svg"
+            alt=""
+          />
+          <div class="social-links inline-flex">
+            <a href=""><img src="/assets/fb-icon.svg" alt="facebook logo" /></a>
+            <a href="#"><img src="/assets/tw-icon.svg" alt="twitter logo" /></a>
+            <a href="#"
+              ><img src="/assets/ig-icon.svg" alt="instagram logo"
+            /></a>
+            <a href="#"><img src="/assets/yt-icon.svg" alt="youtube logo" /></a>
+          </div>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Destination</h1>
+          <a href="#">Canada</a>
+          <a href="#">Alaska</a>
+          <a href="#">France</a>
+          <a href="#">Iceland</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Activities</h1>
+          <a href="#">Lights</a>
+          <a href="#">Cruising & sailing</a>
+          <a href="#">Multi-activities</a>
+          <a href="#">Kayaing</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Travel Blogs</h1>
+          <a href="#">Tokyo Travel Guide</a>
+          <a href="#">Sri Lanka Travel Guide</a>
+          <a href="#">Peru Travel Guide</a>
+          <a href="#">Bali Travel Guide</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">About Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Contact Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/landing-page/main.js"></script>
+    <script type="module" src="/src/hotel-page/hotelsearch.js"></script>
+    <script type="module" src="/src/hotel-page/listinghotel.js"></script>
+    <script type="module" src="/src/global-utilities/swiper.js"></script>
+  </body>
+</html>

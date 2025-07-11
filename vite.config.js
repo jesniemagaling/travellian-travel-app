@@ -8,7 +8,7 @@ export default defineConfig({
 
   server: {
     // Set the path to open relative to your project root
-    open: '/hotel/hotelsearch.html',
+    open: '/hotel/rooms.html',
   },
 
   build: {
@@ -34,6 +34,7 @@ export default defineConfig({
         hotelSearch: resolve(__dirname, 'hotel/hotelsearch.html'),
         listingHotel: resolve(__dirname, 'hotel/listinghotel.html'),
         hotelDetails: resolve(__dirname, 'hotel/hoteldetails.html'),
+        hotelDetails: resolve(__dirname, 'hotel/rooms.html'),
         hotelBookingDetails: resolve(
           __dirname,
           'hotel/hotelbookingdetails.html'
