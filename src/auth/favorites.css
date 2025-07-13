@@ -1,0 +1,73 @@
+.favorites-btn.btn-white:hover,
+.favorites-btn.btn-white:focus,
+.favorites-stays-btn.btn-white:hover,
+.favorites-stays-btn.btn-white:focus,
+.favorites-flights-btn.btn-white:hover,
+.favorites-flights-btn.btn-white:focus {
+  background: inherit;
+  color: inherit;
+  box-shadow: none;
+  transform: none;
+  filter: none;
+}
+
+.favorites-container.container {
+  margin: 6em auto;
+  padding: 1em;
+}
+
+.favorites-container-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0 2.5em 0;
+  gap: 1.25em;
+}
+
+.favorites-container-btn .favorites-flights-btn,
+.favorites-container-btn .favorites-stays-btn,
+.history-container-btn .favorites-flights-btn,
+.history-container-btn .favorites-stays-btn {
+  width: 100%;
+  text-align: left;
+  padding: 1em;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.stays-list .hotel-info {
+  padding: 1em 0;
+}
+
+.stays-list .hotel-logo {
+  height: 300px;
+}
+
+.flights-list {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1040px) {
+  .stays-list .hotel-logo {
+    width: 100%;
+    max-width: 684px;
+  }
+  .stays-list .hotel-logo img {
+    width: 100%;
+    max-width: 684px;
+    border-radius: 0;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+  .sta.hotel-info-container {
+    padding: 0 0 3em 0;
+  }
+}

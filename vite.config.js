@@ -8,7 +8,7 @@ export default defineConfig({
 
   server: {
     // Set the path to open relative to your project root
-    open: '/hotel/rooms.html',
+    open: '/stay/staysconfirmation.html',
   },
 
   build: {
@@ -31,14 +31,14 @@ export default defineConfig({
         ),
 
         // Hotel Pages
-        hotelSearch: resolve(__dirname, 'hotel/hotelsearch.html'),
-        listingHotel: resolve(__dirname, 'hotel/listinghotel.html'),
-        hotelDetails: resolve(__dirname, 'hotel/hoteldetails.html'),
-        hotelDetails: resolve(__dirname, 'hotel/rooms.html'),
-        hotelBookingDetails: resolve(
+        searchStays: resolve(__dirname, 'stay/searchstays.html'),
+        staysBookingDetails: resolve(
           __dirname,
-          'hotel/hotelbookingdetails.html'
+          'stay/staysbookingdetails.html'
         ),
+        staysConfirmation: resolve(__dirname, 'stay/staysconfirmation.html'),
+        staysDetails: resolve(__dirname, 'stay/staysdetails.html'),
+        staysListing: resolve(__dirname, 'stay/stayslisting.html'),
 
         // Auth Pages
         login: resolve(__dirname, 'auth/login.html'),

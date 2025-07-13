@@ -109,6 +109,26 @@ const roomsSwiper = new Swiper('.rooms-swiper', {
   },
 });
 
+// document
+//   .querySelector('.rooms-swiper-button-next')
+//   .addEventListener('click', () => {
+//     if (roomsSwiper.isEnd) {
+//       setTimeout(() => {
+//         roomsSwiper.slideTo(0, 500); // slide to first with smooth 500ms animation
+//       }, 150);
+//     }
+//   });
+
+// document
+//   .querySelector('.rooms-swiper-button-prev')
+//   .addEventListener('click', () => {
+//     if (roomsSwiper.isBeginning) {
+//       setTimeout(() => {
+//         roomsSwiper.slideTo(roomsSwiper.slides.length - 1, 500);
+//       }, 150);
+//     }
+//   });
+
 // Amenities slider
 const amenitiesSwiper = new Swiper('.amenities-swiper', {
   loop: true,
@@ -148,40 +168,62 @@ const testimonialSwiper = new Swiper('.testimonials-swiper', {
   },
 });
 
-// Modal Swiper
-const modalSwiper = new Swiper('.modal-swiper', {
-  loop: false, // no infinite loop
-  slidesPerView: 1,
-  spaceBetween: 16,
-  grabCursor: true,
-  centeredSlides: true,
+// Initialize modal Swipers and apply custom next/prev looping behavior
+document.querySelectorAll('.modal-swiper').forEach((swiperEl) => {
+  const nextBtn = swiperEl.parentElement.querySelector(
+    '.modal-swiper-button-next'
+  );
+  const prevBtn = swiperEl.parentElement.querySelector(
+    '.modal-swiper-button-prev'
+  );
+  const pagination = swiperEl.parentElement.querySelector(
+    '.modal-swiper-pagination'
+  );
 
-  navigation: {
-    nextEl: '.modal-swiper-button-next',
-    prevEl: '.modal-swiper-button-prev',
-  },
-  pagination: {
-    el: '.modal-swiper-pagination',
-    clickable: true,
-  },
-});
+  const modalSwiper = new Swiper(swiperEl, {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    grabCursor: true,
+    centeredSlides: true,
+    navigation: {
+      nextEl: nextBtn,
+      prevEl: prevBtn,
+    },
+    pagination: {
+      el: pagination,
+      clickable: true,
+    },
+  });
 
-document
-  .querySelector('.modal-swiper-button-next')
-  .addEventListener('click', () => {
+  // Custom looping: Go to first if next is clicked at end
+  nextBtn.addEventListener('click', () => {
     if (modalSwiper.isEnd) {
       setTimeout(() => {
-        modalSwiper.slideTo(0, 500); // slide to first with smooth 500ms animation
+        modalSwiper.slideTo(0, 500);
       }, 150);
     }
   });
 
-document
-  .querySelector('.modal-swiper-button-prev')
-  .addEventListener('click', () => {
+  // Custom looping: Go to last if prev is clicked at beginning
+  prevBtn.addEventListener('click', () => {
     if (modalSwiper.isBeginning) {
       setTimeout(() => {
         modalSwiper.slideTo(modalSwiper.slides.length - 1, 500);
       }, 150);
     }
   });
+});
+
+// Initialize allrooms-swiper for main room switching
+const allRoomsSwiper = new Swiper('.allrooms-swiper', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  centeredSlides: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: '.room-button-next',
+    prevEl: '.room-button-prev',
+  },
+});

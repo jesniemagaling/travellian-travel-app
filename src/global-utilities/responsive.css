@@ -59,7 +59,8 @@
     margin-left: 0;
   }
   .grid-2-col.layout,
-  .flight-booking-payment {
+  .flight-booking-payment,
+  .hotel-booking-payment {
     grid-template-columns: 1fr;
   }
   .places-card-hotel.places-card .flex {
@@ -88,17 +89,21 @@
 }
 
 @media (max-width: 914px) {
-  .flight-ticket {
+  .flight-ticket,
+  .hotel-ticket {
     gap: 2em;
   }
-  .flight-time {
+  .flight-time,
+  .hotel-time {
     padding: 0;
   }
   .flight-time h1,
+  .hotel-time h1,
   .ticket-code h1 {
     font-size: var(--fs-24);
   }
   .flight-time p,
+  .hotel-time p,
   .ticket-code p {
     font-size: var(--fs-12);
   }
@@ -235,21 +240,21 @@
     object-fit: cover;
   }
 
-  .itinerary-time.flex {
-    gap: 0.1em;
-  }
-
-  .flight-ticket {
+  .flight-ticket,
+  .hotel-ticket {
     padding: 2em 1em;
   }
-  .flight-ticket {
+  .flight-ticket,
+  .hotel-ticket {
     gap: 2em;
   }
   .flight-time h1,
+  .hotel-time h1,
   .ticket-code h1 {
     font-size: var(--fs-24);
   }
   .flight-time p,
+  .hotel-time p,
   .ticket-code p {
     font-size: var(--fs-12);
   }
@@ -315,10 +320,12 @@
     font-size: var(--fs-12); /* Using clamped fs-12 */
     width: 100%;
   }
-  .flight-ticket {
+  .flight-ticket,
+  .hotel-ticket {
     gap: 1em;
   }
-  .plane-details.grid-4 {
+  .plane-details.grid-4,
+  .hotel-details.grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
   .modal-content h2 {
@@ -328,6 +335,18 @@
   .modal-close {
     top: 1.25rem;
     right: 1.25rem;
+  }
+
+  .itinerary-hotel-info h2 {
+    font-size: var(--fs-18);
+  }
+
+  .itinerary-hotel-info .hotel-location p {
+    font-size: var(--fs-12);
+  }
+
+  .itinerary-time.flex {
+    gap: 0.4em;
   }
 }
 
@@ -351,6 +370,10 @@
   .swiper-content button {
     font-size: var(--fs-12); /* Using clamped fs-12 */
     padding: 1.25em 0;
+  }
+
+  .hotel-details {
+    gap: 0;
   }
 
   .flight-non-stop {

@@ -32,8 +32,8 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="/src/landing-page/styles.css" />
-    <link rel="stylesheet" href="/src/hotel-page/listinghotel.css" />
-    <link rel="stylesheet" href="/src/hotel-page/hoteldetails.css" />
+    <link rel="stylesheet" href="/src/stay-page/stayslisting.css" />
+    <link rel="stylesheet" href="/src/stay-page/staysdetails.css" />
     <link rel="stylesheet" href="/src/global-utilities/utilities.css" />
     <link rel="stylesheet" href="/src/global-utilities/responsive.css" />
   </head>
@@ -43,21 +43,21 @@
       <nav class="container">
         <div class="nav-left inline-flex">
           <a
-            href="#"
-            class="inline-flex nav-link flights-btn nav-booking-tab active"
+            href="../flight/flightsearch.html"
+            class="inline-flex nav-link flights-btn nav-booking-tab"
           >
             <img src="/assets/airplane-icon.svg" alt="airplane" />Find Flights
           </a>
           <a
-            href="../hotel/hotelsearch.html"
-            class="inline-flex nav-link stays-btn nav-booking-tab"
+            href="#"
+            class="inline-flex nav-link stays-btn nav-booking-tab active"
           >
             <img src="/assets/bed-icon.svg" alt="bed" />Find Stays
           </a>
         </div>
 
         <div class="company-logo">
-          <a href="/landing/index.html" target="_blank"
+          <a href="/landing/index.html"
             ><img src="/assets/company-logo.svg" alt="Logo"
           /></a>
         </div>
@@ -230,164 +230,264 @@
       <div class="avail-rooms-container">
         <div class="avail-rooms-heading container">
           <h1 class="fs-20 fw-bold">Available Rooms</h1>
+          <!-- Next / Prev Button Container -->
+          <div class="room-swiper-controls">
+            <div class="room-button room-button-prev btn-stroke">Back</div>
+            <div class="room-button room-button-next btn-primary">Next</div>
+          </div>
         </div>
-        <div class="rooms-swiper-container">
-          <div class="rooms-swiper swiper">
+        <div class="rooms-wrapper">
+          <div class="allrooms-swiper swiper">
             <div class="swiper-wrapper">
-              <!-- Slides here -->
-              <article class="card__article swiper-slide">
-                <div class="card__image">
-                  <img
-                    src="/assets/listing-bg-2.jpg"
-                    alt="image"
-                    class="card__img"
-                  />
+              <!-- FAMILY ROOM -->
+              <article class="rooms-content swiper-slide" id="familyRoom">
+                <div class="modal-image-container">
+                  <div class="modal-swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/table-img.jpg"
+                          alt="Table"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/kitchen-img.jpg"
+                          alt="Kitchen"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/listing-bg-12.jpg"
+                          alt="Bathroom"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/sofa-img.jpg"
+                          alt="Sofa"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/window-img.jpg"
+                          alt="Window"
+                          class="modal-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-swiper-controls">
+                    <div class="modal-swiper-button-prev"></div>
+                    <div class="modal-swiper-button-next"></div>
+                  </div>
                 </div>
-                <div class="card__data">
-                  <h3 class="fs-20 fw-semi-bold">Family room</h3>
-                  <p class="fw-medium text-neutral-grey">
-                    1 queen bed and 2 twin beds and street view
-                  </p>
-                  <button
-                    class="more-details-btn btn-primary"
-                    data-room="familyRoom"
-                  >
-                    More Details
-                  </button>
-                </div>
-              </article>
-              <article class="card__article swiper-slide">
-                <div class="card__image">
-                  <img
-                    src="/assets/listing-bg-3.jpg"
-                    alt="image"
-                    class="card__img"
-                  />
-                </div>
-                <div class="card__data">
-                  <h3 class="fs-20 fw-semi-bold">Deluxe room</h3>
-                  <p class="fw-medium text-neutral-grey">
-                    1 king bed and city skyline view
-                  </p>
-                  <button class="btn-primary" data-room="deluxeRoom">
-                    More Details
-                  </button>
-                </div>
-              </article>
-              <article class="card__article swiper-slide">
-                <div class="card__image">
-                  <img
-                    src="/assets/listing-bg-4.jpg"
-                    alt="image"
-                    class="card__img"
-                  />
-                </div>
-                <div class="card__data">
-                  <h3 class="fs-20 fw-semi-bold">Executive Room</h3>
-                  <p class="fw-medium text-neutral-grey">
-                    1 king bed with partial ocean view
-                  </p>
-                  <button class="btn-primary" data-room="executiveRoom">
-                    More Details
-                  </button>
-                </div>
-              </article>
-              <article class="card__article swiper-slide">
-                <div class="card__image">
-                  <img
-                    src="/assets/listing-bg-7.svg"
-                    alt="image"
-                    class="card__img"
-                  />
-                </div>
-                <div class="card__data">
-                  <h3 class="fs-20 fw-semi-bold">Junior Suite</h3>
-                  <p class="fw-medium text-neutral-grey">
-                    1 king bed and 1 sofa bed with a garden view
-                  </p>
-                  <button class="btn-primary" data-room="juniorSuite">
-                    More Details
-                  </button>
-                </div>
-              </article>
-              <article class="card__article swiper-slide">
-                <div class="card__image">
-                  <img
-                    src="/assets/listing-bg-8.jpg"
-                    alt="image"
-                    class="card__img"
-                  />
-                </div>
-                <div class="card__data">
-                  <h3 class="fs-20 fw-semi-bold">Superior room</h3>
-                  <p class="fw-medium text-neutral-grey">
-                    1 double bed with courtyard view
-                  </p>
-                  <button class="btn-primary" data-room="superiorRoom">
-                    More Details
-                  </button>
+
+                <div class="modal-details">
+                  <div class="modal-heading">
+                    <h1 class="fs-28 fw-bold">Family Room</h1>
+                    <h2 class="fs-18 fw-semi-bold">
+                      2 Queen Beds | 550 sq ft | Garden View
+                    </h2>
+                    <p>
+                      Designed with families in mind, this spacious
+                      51-square-meter (550 sq ft) room features warm maple
+                      hardwood floors and soft neutral tones, creating a cozy
+                      yet modern ambiance. The generous layout ensures comfort
+                      for all family members.
+                    </p>
+                  </div>
+                  <div class="room-amenities">
+                    <h3 class="fs-18 fw-semi-bold">In-Room Amenities</h3>
+                    <ul class="amenities">
+                      <li>Smart TV with satellite channels</li>
+                      <li>Individual climate control</li>
+                      <li>Complimentary high-speed Wi-Fi</li>
+                      <li>Hair dryer & bath amenities</li>
+                      <li>Minibar</li>
+                      <li>In-room safe</li>
+                      <li>24-hour room service</li>
+                    </ul>
+                  </div>
+                  <div class="rooms-btn">
+                    <button class="book-now-btn btn-stroke">Book Now</button>
+                  </div>
                 </div>
               </article>
-              <article class="card__article swiper-slide">
-                <div class="card__image">
-                  <img
-                    src="/assets/listing-bg-14.jpg"
-                    alt="image"
-                    class="card__img"
-                  />
+
+              <!-- DELUXE ROOM -->
+              <article class="rooms-content swiper-slide" id="deluxeRoom">
+                <div class="modal-image-container">
+                  <div class="modal-swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/table-img.jpg"
+                          alt="Table"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/kitchen-img.jpg"
+                          alt="Kitchen"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/listing-bg-12.jpg"
+                          alt="Bathroom"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/sofa-img.jpg"
+                          alt="Sofa"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/window-img.jpg"
+                          alt="Window"
+                          class="modal-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-swiper-controls">
+                    <div class="modal-swiper-button-prev"></div>
+                    <div class="modal-swiper-button-next"></div>
+                  </div>
                 </div>
-                <div class="card__data">
-                  <h3 class="fs-20 fw-semi-bold">Presidential Suite</h3>
-                  <p class="fw-medium text-neutral-grey">
-                    2 twin beds with interior atrium view
-                  </p>
-                  <button class="btn-primary" data-room="presidentialSuite">
-                    More Details
-                  </button>
+
+                <div class="modal-details">
+                  <div class="modal-heading">
+                    <h1 class="fs-28 fw-bold">Deluxe Room</h1>
+                    <h2 class="fs-18 fw-semi-bold">
+                      2 Queen Beds | 550 sq ft | City View
+                    </h2>
+                    <p>
+                      Crafted for comfort and elegance, the 45-square-meter (484
+                      sq ft) Deluxe Room showcases a modern design with honeyed
+                      wood panels, maple hardwood flooring, and soft, light-hued
+                      furnishings. A serene space ideal for solo travelers or
+                      couples seeking a touch of luxury.
+                    </p>
+                  </div>
+                  <div class="room-amenities">
+                    <h3 class="fs-18 fw-semi-bold">In-Room Amenities</h3>
+                    <ul class="amenities">
+                      <li>Smart TV with satellite channels</li>
+                      <li>Individual climate control</li>
+                      <li>Complimentary high-speed Wi-Fi</li>
+                      <li>Hair dryer & bath amenities</li>
+                      <li>Minibar</li>
+                      <li>In-room safe</li>
+                      <li>24-hour room service</li>
+                      <li>Plush robes and slippers</li>
+                    </ul>
+                  </div>
+                  <div class="rooms-btn">
+                    <button class="book-now-btn btn-stroke">Book Now</button>
+                  </div>
                 </div>
               </article>
-              <article class="card__article swiper-slide">
-                <div class="card__image">
-                  <img
-                    src="/assets/listing-bg-16.jpg"
-                    alt="image"
-                    class="card__img"
-                  />
+
+              <!-- EXECUTIVE ROOM -->
+              <article class="rooms-content swiper-slide" id="executiveRoom">
+                <div class="modal-image-container">
+                  <div class="modal-swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/table-img.jpg"
+                          alt="Table"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/kitchen-img.jpg"
+                          alt="Kitchen"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/listing-bg-12.jpg"
+                          alt="Bathroom"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/sofa-img.jpg"
+                          alt="Sofa"
+                          class="modal-img"
+                        />
+                      </div>
+                      <div class="modal-images swiper-slide">
+                        <img
+                          src="/assets/window-img.jpg"
+                          alt="Window"
+                          class="modal-img"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-swiper-controls">
+                    <div class="modal-swiper-button-prev"></div>
+                    <div class="modal-swiper-button-next"></div>
+                  </div>
                 </div>
-                <div class="card__data">
-                  <h3 class="fs-20 fw-semi-bold">Standard Room</h3>
-                  <p class="fw-medium text-neutral-grey">
-                    2 twin beds with interior atrium view
-                  </p>
-                  <button class="btn-primary">More Details</button>
-                </div>
-              </article>
-              <article class="card__article swiper-slide">
-                <div class="card__image">
-                  <img
-                    src="/assets/listing-bg-15.jpg"
-                    alt="image"
-                    class="card__img"
-                  />
-                </div>
-                <div class="card__data">
-                  <h3 class="fs-20 fw-semi-bold">Premier Room</h3>
-                  <p class="fw-medium text-neutral-grey">
-                    1 king bed with mountain view
-                  </p>
-                  <button class="btn-primary" data-room="premierRoom">
-                    More Details
-                  </button>
+
+                <div class="modal-details">
+                  <div class="modal-heading">
+                    <h1 class="fs-28 fw-bold">Executive Room</h1>
+                    <h2 class="fs-18 fw-semi-bold">
+                      1 King Bed | 560 sq ft | Skyline View
+                    </h2>
+                    <p>
+                      Designed for the modern traveler, this 52-square-meter
+                      (560 sq ft) Executive Room offers sweeping skyline views,
+                      enhanced privacy, and exclusive Club Lounge access.
+                      Finished with refined wooden accents and minimalist décor,
+                      it combines luxury with business-ready convenience.
+                    </p>
+                  </div>
+                  <div class="room-amenities">
+                    <h3 class="fs-18 fw-semi-bold">In-Room Amenities</h3>
+                    <ul class="amenities">
+                      <li>Smart TV with satellite channels</li>
+                      <li>Individual climate control</li>
+                      <li>Complimentary high-speed Wi-Fi</li>
+                      <li>Hair dryer & bath amenities</li>
+                      <li>Minibar</li>
+                      <li>In-room safe</li>
+                      <li>24-hour room service</li>
+                      <li>Complimentary grand club access</li>
+                      <li>Plush robes and slippers</li>
+                      <li>Ergonomic work desk</li>
+                    </ul>
+                  </div>
+                  <div class="rooms-btn">
+                    <button class="book-now-btn btn-stroke">Book Now</button>
+                  </div>
                 </div>
               </article>
             </div>
+            <!-- swiper-wrapper -->
           </div>
-          <!-- Navigation OUTSIDE wrapper -->
-          <div class="rooms-swiper-controls">
-            <div class="rooms-swiper-button-prev"></div>
-            <div class="rooms-swiper-button-next"></div>
-          </div>
+          <!-- allrooms-swiper -->
         </div>
+        <!-- rooms-wrapper -->
       </div>
     </section>
 
@@ -922,9 +1022,9 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/src/landing-page/main.js"></script>
-    <script type="module" src="/src/hotel-page/hotelsearch.js"></script>
-    <script type="module" src="/src/hotel-page/listinghotel.js"></script>
-    <script type="module" src="/src/hotel-page/hoteldetails.js"></script>
+    <script type="module" src="/src/stay-page/searchstays.js"></script>
+    <script type="module" src="/src/stay-page/stayslisting.js"></script>
+    <script type="module" src="/src/stay-page/staysdetails.js"></script>
     <script type="module" src="/src/global-utilities/swiper.js"></script>
   </body>
 </html>

@@ -32,9 +32,9 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="/src/landing-page/styles.css" />
-    <link rel="stylesheet" href="/src/flight-page/flightlisting.css" />
-    <link rel="stylesheet" href="/src/flight-page/flightdetails.css" />
-    <link rel="stylesheet" href="/src/flight-page/flightconfirmation.css" />
+    <link rel="stylesheet" href="/src/hotel-page/listinghotel.css" />
+    <link rel="stylesheet" href="/src/hotel-page/hoteldetails.css" />
+    <link rel="stylesheet" href="/src/hotel-page/allrooms.css" />
     <link rel="stylesheet" href="/src/global-utilities/utilities.css" />
     <link rel="stylesheet" href="/src/global-utilities/responsive.css" />
   </head>
@@ -44,18 +44,21 @@
       <nav class="container">
         <div class="nav-left inline-flex">
           <a
-            href="flightlisting.html"
+            href="#"
             class="inline-flex nav-link flights-btn nav-booking-tab active"
           >
             <img src="/assets/airplane-icon.svg" alt="airplane" />Find Flights
           </a>
-          <a href="#" class="inline-flex nav-link stays-btn nav-booking-tab">
+          <a
+            href="../hotel/hotelsearch.html"
+            class="inline-flex nav-link stays-btn nav-booking-tab"
+          >
             <img src="/assets/bed-icon.svg" alt="bed" />Find Stays
           </a>
         </div>
 
         <div class="company-logo">
-          <a href="/landing/index.html"
+          <a href="/landing/index.html" target="_blank"
             ><img src="/assets/company-logo.svg" alt="Logo"
           /></a>
         </div>
@@ -133,148 +136,165 @@
       </div>
     </header>
 
-    <section>
-      <div class="flight-details-wrapper">
-        <div class="flight-details-heading">
-          <h1 class="fs-28 fw-bold">Emirates A380 Airbus</h1>
-          <h2 class="fs-32 fw-bold">$240</h2>
-        </div>
-        <div class="flight-confirmation flight-details-info">
-          <div>
-            <div class="flight-details-location">
-              <img src="/assets/location-icon.svg" alt="" />
-              <p class="fs-14">
-                Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
-              </p>
-            </div>
-          </div>
-          <div class="flight-details-btn">
-            <button class="btn-stroke">
-              <img src="/assets/share-icon.svg" alt="" />
-            </button>
-            <button class="btn-primary">Download</button>
-          </div>
-        </div>
-        <div class="flight-details-confirmation">
-          <div class="flight-terms">
-            <div class="flight-ticket">
-              <div class="flight-time">
-                <h1 class="fs-32 fw-semi-bold">11:11 pm</h1>
-                <p class="fs-14 text-neutral-grey fw-medium">Newark(EWR)</p>
-                <img src="/assets/airplanevert-icon.svg" alt="" />
-                <h1 class="fs-32 fw-semi-bold">12:12 pm</h1>
-                <p class="fs-14 text-neutral-grey fw-medium">Newark(EWR)</p>
+    <div class="rooms-container">
+      <div class="rooms-swiper-container">
+        <div class="rooms-swiper swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides here -->
+            <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img
+                  src="/assets/listing-bg-2.jpg"
+                  alt="image"
+                  class="card__img"
+                />
               </div>
-              <div class="ticket-info">
-                <div class="ticket-profile">
-                  <div class="flex">
-                    <img src="/assets/profile-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="fs-20 fw-bold">Jesnie Magaling</h1>
-                      <p class="fs-14">Boarding Pass N’123</p>
-                    </div>
-                  </div>
-                  <h2 class="fs-14 fw-bold">Business Class</h2>
-                </div>
-                <div class="plane-details grid-4">
-                  <div class="flex">
-                    <img src="/assets/calendar-primary-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Date</h1>
-                      <p class="fs-12 fw-medium">Newark(EWR)</p>
-                    </div>
-                  </div>
-                  <div class="flex">
-                    <img src="/assets/clock-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Time</h1>
-                      <p class="fs-12 fw-medium">12:00</p>
-                    </div>
-                  </div>
-                  <div class="flex">
-                    <img src="/assets/door-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Gate</h1>
-                      <p class="fs-12 fw-medium">A12</p>
-                    </div>
-                  </div>
-                  <div class="flex">
-                    <img src="/assets/airlineseat-primary-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Seat</h1>
-                      <p class="fs-12 fw-medium">128</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="ticket-barcode">
-                  <div class="ticket-code">
-                    <h1 class="fs-32 fw-semi-bold">EK</h1>
-                    <p class="fw-medium fs12">ABC12345</p>
-                  </div>
-                  <img src="/assets/barcode-icon.svg" alt="" />
-                </div>
+              <div class="card__data">
+                <h3 class="fs-20 fw-semi-bold">Family room</h3>
+                <p class="fw-medium text-neutral-grey">
+                  1 queen bed and 2 twin beds and street view
+                </p>
+                <button
+                  class="more-details-btn btn-primary"
+                  data-room="familyRoom"
+                >
+                  More Details
+                </button>
               </div>
-            </div>
-            <h1 class="fw-semi-bold fs-24">Terms and Conditions</h1>
-            <h2 class="fs-20 fw-medium">Payments</h2>
-            <ul>
-              <li>
-                <span>
-                  If you are purchasing your ticket using a debit or credit card
-                  via the Website, we will process these payments via the
-                  automated secure common payment gateway which will be subject
-                  to fraud screening purposes.
-                </span>
-              </li>
-              <li>
-                <span>
-                  If you do not supply the correct card billing address and/or
-                  cardholder information, your booking will not be confirmed and
-                  the overall cost may increase. We reserve the right to cancel
-                  your booking if payment is declined for any reason or if you
-                  have supplied incorrect card information. If we become aware
-                  of, or is notified of, any fraud or illegal activity
-                  associated with the payment for the booking, the booking will
-                  be cancelled and you will be liable for all costs and expenses
-                  arising from such cancellation, without prejudice to any
-                  action that may be taken against us.
-                </span>
-              </li>
-              <li>
-                <span>
-                  Golobe may require the card holder to provide additional
-                  payment verification upon request by either submitting an
-                  online form or visiting the nearest Golobe office, or at the
-                  airport at the time of check-in. Golobe reserves the right to
-                  deny boarding or to collect a guarantee payment (in cash or
-                  from another credit card) if the card originally used for the
-                  purchase cannot be presented by the cardholder at check-in or
-                  when collecting the tickets, or in the case the original
-                  payment has been withheld or disputed by the card issuing
-                  bank. Credit card details are held in a secured environment
-                  and transferred through an internationally accepted system.
-                </span>
-              </li>
-            </ul>
-            <h3 class="fs-20 fw-medium">Contact Us</h3>
-            <div>
-              <p>
-                If you have any questions about our Website or our Terms of Use,
-                please contact:
-              </p>
-              <p>Golobe Group Q.C.S.C</p>
-              <p>Golobe Tower</p>
-              <p>P.O. Box: 22550</p>
-              <p>Doha, State of Qatar</p>
-              <p>
-                Further contact details can be found at
-                <a href="#">golobe.com/help</a>
-              </p>
-            </div>
+            </article>
+            <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img
+                  src="/assets/listing-bg-3.jpg"
+                  alt="image"
+                  class="card__img"
+                />
+              </div>
+              <div class="card__data">
+                <h3 class="fs-20 fw-semi-bold">Deluxe room</h3>
+                <p class="fw-medium text-neutral-grey">
+                  1 king bed and city skyline view
+                </p>
+                <button class="btn-primary" data-room="deluxeRoom">
+                  More Details
+                </button>
+              </div>
+            </article>
+            <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img
+                  src="/assets/listing-bg-4.jpg"
+                  alt="image"
+                  class="card__img"
+                />
+              </div>
+              <div class="card__data">
+                <h3 class="fs-20 fw-semi-bold">Executive Room</h3>
+                <p class="fw-medium text-neutral-grey">
+                  1 king bed with partial ocean view
+                </p>
+                <button class="btn-primary" data-room="executiveRoom">
+                  More Details
+                </button>
+              </div>
+            </article>
+            <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img
+                  src="/assets/listing-bg-7.svg"
+                  alt="image"
+                  class="card__img"
+                />
+              </div>
+              <div class="card__data">
+                <h3 class="fs-20 fw-semi-bold">Junior Suite</h3>
+                <p class="fw-medium text-neutral-grey">
+                  1 king bed and 1 sofa bed with a garden view
+                </p>
+                <button class="btn-primary" data-room="juniorSuite">
+                  More Details
+                </button>
+              </div>
+            </article>
+            <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img
+                  src="/assets/listing-bg-8.jpg"
+                  alt="image"
+                  class="card__img"
+                />
+              </div>
+              <div class="card__data">
+                <h3 class="fs-20 fw-semi-bold">Superior room</h3>
+                <p class="fw-medium text-neutral-grey">
+                  1 double bed with courtyard view
+                </p>
+                <button class="btn-primary" data-room="superiorRoom">
+                  More Details
+                </button>
+              </div>
+            </article>
+            <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img
+                  src="/assets/listing-bg-14.jpg"
+                  alt="image"
+                  class="card__img"
+                />
+              </div>
+              <div class="card__data">
+                <h3 class="fs-20 fw-semi-bold">Presidential Suite</h3>
+                <p class="fw-medium text-neutral-grey">
+                  2 twin beds with interior atrium view
+                </p>
+                <button class="btn-primary" data-room="presidentialSuite">
+                  More Details
+                </button>
+              </div>
+            </article>
+            <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img
+                  src="/assets/listing-bg-16.jpg"
+                  alt="image"
+                  class="card__img"
+                />
+              </div>
+              <div class="card__data">
+                <h3 class="fs-20 fw-semi-bold">Standard Room</h3>
+                <p class="fw-medium text-neutral-grey">
+                  2 twin beds with interior atrium view
+                </p>
+                <button class="btn-primary">More Details</button>
+              </div>
+            </article>
+            <article class="card__article swiper-slide">
+              <div class="card__image">
+                <img
+                  src="/assets/listing-bg-15.jpg"
+                  alt="image"
+                  class="card__img"
+                />
+              </div>
+              <div class="card__data">
+                <h3 class="fs-20 fw-semi-bold">Premier Room</h3>
+                <p class="fw-medium text-neutral-grey">
+                  1 king bed with mountain view
+                </p>
+                <button class="btn-primary" data-room="premierRoom">
+                  More Details
+                </button>
+              </div>
+            </article>
           </div>
+        </div>
+        <!-- Navigation OUTSIDE wrapper -->
+        <div class="rooms-swiper-controls">
+          <div class="rooms-swiper-button-prev"></div>
+          <div class="rooms-swiper-button-next"></div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Subscribe Section -->
     <section>
@@ -354,8 +374,9 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/src/landing-page/main.js"></script>
-    <script type="module" src="/src/flight-page/flightdetails.js"></script>
-    <script type="module" src="/src/flight-page/flightlisting.js"></script>
+    <script type="module" src="/src/hotel-page/hotelsearch.js"></script>
+    <script type="module" src="/src/hotel-page/listinghotel.js"></script>
+    <script type="module" src="/src/hotel-page/hoteldetails.js"></script>
     <script type="module" src="/src/global-utilities/swiper.js"></script>
   </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golobe</title>
+
+    <link rel="icon" type="image/svg+xml" href="/assets/company-icon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Swiper Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/src/auth/account.css" />
+    <link rel="stylesheet" href="/src/auth/login.css" />
+    <link rel="stylesheet" href="/src/global-utilities/utilities.css" />
+    <link rel="stylesheet" href="/src/global-utilities/responsive.css" />
+  </head>
+  <body>
+    <!-- Login section -->
+    <section>
+      <div class="login-section-container container">
+        <div class="company-logo">
+          <img src="/assets/company-logo.svg" alt="" width="110px" />
+        </div>
+        <div class="login-header">
+          <h1 class="fs-40 fw-bold">Login</h1>
+          <p class="text-neutral-grey">Login to access your Golobe account</p>
+        </div>
+        <div class="login-form">
+          <div class="login-input-group">
+            <input type="text" id="email" placeholder=" " required />
+            <label for="email">Email</label>
+          </div>
+          <div class="login-input-group">
+            <input type="text" id="password" placeholder=" " required />
+            <label for="password">Password</label>
+            <button>
+              <img src="/assets/hide-icon.svg" alt="" /><img
+                src="/assets/eye-show-icon.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="login-checkbox-group">
+            <label class="checkbox">
+              <input type="checkbox" />
+              Remember me
+            </label>
+            <button class="btn-black">Forgot Password</button>
+          </div>
+          <button type="login" class="btn-primary">Login</button>
+          <div class="login-to-signup">
+            <p>Don't have an account?</p>
+            <button class="btn-black">Sign up</button>
+          </div>
+          <p>Or login with</p>
+          <div class="social-login flex">
+            <button class="btn-stroke">
+              <img src="/assets/fb-icon-primary.svg" alt="fb-icon" />
+            </button>
+            <button class="btn-stroke">
+              <img src="/assets/google-icon-primary.svg" alt="google-icon" />
+            </button>
+            <button class="btn-stroke">
+              <img src="/assets/apple-icon-primary.svg" alt="apple-icon" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/auth/account.js"></script>
+    <script type="module" src="/src/auth/login.js"></script>
+    <script type="module" src="/src/global-utilities/swiper.js"></script>
+  </body>
+</html>

@@ -32,9 +32,9 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="/src/landing-page/styles.css" />
-    <link rel="stylesheet" href="/src/flight-page/flightlisting.css" />
-    <link rel="stylesheet" href="/src/flight-page/flightdetails.css" />
-    <link rel="stylesheet" href="/src/flight-page/flightconfirmation.css" />
+    <link rel="stylesheet" href="/src/stay-page/stayslisting.css" />
+    <link rel="stylesheet" href="/src/stay-page/staysdetails.css" />
+    <link rel="stylesheet" href="/src/stay-page/staysbookingdetails.css" />
     <link rel="stylesheet" href="/src/global-utilities/utilities.css" />
     <link rel="stylesheet" href="/src/global-utilities/responsive.css" />
   </head>
@@ -44,12 +44,15 @@
       <nav class="container">
         <div class="nav-left inline-flex">
           <a
-            href="flightlisting.html"
-            class="inline-flex nav-link flights-btn nav-booking-tab active"
+            href="../flight/flightsearch.html"
+            class="inline-flex nav-link flights-btn nav-booking-tab"
           >
             <img src="/assets/airplane-icon.svg" alt="airplane" />Find Flights
           </a>
-          <a href="#" class="inline-flex nav-link stays-btn nav-booking-tab">
+          <a
+            href="#"
+            class="inline-flex nav-link stays-btn nav-booking-tab active"
+          >
             <img src="/assets/bed-icon.svg" alt="bed" />Find Stays
           </a>
         </div>
@@ -133,146 +136,141 @@
       </div>
     </header>
 
-    <section>
-      <div class="flight-details-wrapper">
-        <div class="flight-details-heading">
-          <h1 class="fs-28 fw-bold">Emirates A380 Airbus</h1>
-          <h2 class="fs-32 fw-bold">$240</h2>
-        </div>
-        <div class="flight-confirmation flight-details-info">
-          <div>
-            <div class="flight-details-location">
-              <img src="/assets/location-icon.svg" alt="" />
-              <p class="fs-14">
-                Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
-              </p>
+    <!-- Flight booking payment -->
+    <section class="booking-payment container">
+      <div class="hotel-booking-payment">
+        <div class="booking-payment-wrapper">
+          <div class="room-details-heading">
+            <h1 class="fs-28 fw-bold">
+              Superior room - 1 double bed or 2 twin beds
+            </h1>
+            <h2 class="fs-32 fw-bold text-accent-slamon">$240</h2>
+          </div>
+          <div class="hotel-itinerary-container">
+            <div class="hotel-itinerary">
+              <img src="/assets/hotel-logo.svg" alt="" />
+              <div class="itinerary-hotel-info">
+                <h2 class="fw-semi-bold fs-24">
+                  CVK Park Bosphorus Hotel Istanbul
+                </h2>
+                <div class="hotel-location">
+                  <img src="/assets/location-icon.svg" alt="" />
+                  <p class="fs-14 fw-medium">
+                    Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="hotel-itinerary-timeframe flex">
+              <div class="itinerary-time flex">
+                <h3 class="fs-24 fw-semi-bold text-center">Thursday, Dec 8</h3>
+                <p class="text-neutral-grey fw-medium">Check-In</p>
+              </div>
+              <img
+                src="/assets/building-icon.svg"
+                alt="building logo"
+                width="38px"
+              />
+              <div class="itinerary-time flex">
+                <h3 class="fs-24 fw-semi-bold text-center">Friday, Dec 9</h3>
+                <p class="text-neutral-grey fw-medium">Check-Out</p>
+              </div>
             </div>
           </div>
-          <div class="flight-details-btn">
-            <button class="btn-stroke">
-              <img src="/assets/share-icon.svg" alt="" />
+          <div class="payment-options">
+            <!-- Option 1 -->
+            <label class="payment-option selected">
+              <div class="payment-info">
+                <h3 class="fs-16 fw-bold">Pay in full</h3>
+                <p>Pay the total and you are all set</p>
+              </div>
+              <input type="radio" name="payment" checked />
+            </label>
+
+            <!-- Option 2 -->
+            <label class="payment-option">
+              <div class="payment-info">
+                <h3 class="fs-16 fw-bold">Pay part now, part later</h3>
+                <p>
+                  Pay $207.43 now, and the rest ($207.43) will be automatically
+                  charged to the same payment method on Nov 14, 2022. No extra
+                  fees.
+                </p>
+                <a href="#">More info</a>
+              </div>
+              <input type="radio" name="payment" />
+            </label>
+          </div>
+          <div class="payment-method-wrapper">
+            <!-- Option 1 -->
+            <label class="payment-method selected">
+              <div class="payment-info">
+                <img src="/assets/visa-icon.svg" alt="" />
+                <h3 class="fs-16 fw-bold">
+                  **** 4321 <span class="fw-regular fs-14">02/27</span>
+                </h3>
+              </div>
+              <input type="radio" name="paymentMethod" checked />
+            </label>
+            <!-- Option 1 -->
+            <button class="payment-method-btn">
+              <img src="/assets/addcircle-icon.svg" alt="" />
+              <p class="fw-medium fs-12 text-neutral-grey">Add a new card</p>
             </button>
-            <button class="btn-primary">Download</button>
           </div>
         </div>
-        <div class="flight-details-confirmation">
-          <div class="flight-terms">
-            <div class="flight-ticket">
-              <div class="flight-time">
-                <h1 class="fs-32 fw-semi-bold">11:11 pm</h1>
-                <p class="fs-14 text-neutral-grey fw-medium">Newark(EWR)</p>
-                <img src="/assets/airplanevert-icon.svg" alt="" />
-                <h1 class="fs-32 fw-semi-bold">12:12 pm</h1>
-                <p class="fs-14 text-neutral-grey fw-medium">Newark(EWR)</p>
-              </div>
-              <div class="ticket-info">
-                <div class="ticket-profile">
-                  <div class="flex">
-                    <img src="/assets/profile-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="fs-20 fw-bold">Jesnie Magaling</h1>
-                      <p class="fs-14">Boarding Pass N’123</p>
-                    </div>
-                  </div>
-                  <h2 class="fs-14 fw-bold">Business Class</h2>
-                </div>
-                <div class="plane-details grid-4">
-                  <div class="flex">
-                    <img src="/assets/calendar-primary-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Date</h1>
-                      <p class="fs-12 fw-medium">Newark(EWR)</p>
-                    </div>
-                  </div>
-                  <div class="flex">
-                    <img src="/assets/clock-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Time</h1>
-                      <p class="fs-12 fw-medium">12:00</p>
-                    </div>
-                  </div>
-                  <div class="flex">
-                    <img src="/assets/door-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Gate</h1>
-                      <p class="fs-12 fw-medium">A12</p>
-                    </div>
-                  </div>
-                  <div class="flex">
-                    <img src="/assets/airlineseat-primary-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Seat</h1>
-                      <p class="fs-12 fw-medium">128</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="ticket-barcode">
-                  <div class="ticket-code">
-                    <h1 class="fs-32 fw-semi-bold">EK</h1>
-                    <p class="fw-medium fs12">ABC12345</p>
-                  </div>
-                  <img src="/assets/barcode-icon.svg" alt="" />
+
+        <aside class="booking-total-container">
+          <div class="booking-total-wrapper flex">
+            <div class="booking-total-banner">
+              <img src="/assets/listing-bg-main-2.jpg" alt="" />
+            </div>
+            <div class="booking-total-heading">
+              <h2 class="fs-14 fw-medium text-neutral-grey">
+                CVK Park Bosphorus...
+              </h2>
+              <h2 class="fs-18 fw-semi-bold">
+                Superior room - 1 double bed or 2 twin beds
+              </h2>
+              <div class="rating-badge">
+                <div class="rating-badge-ratings flex">
+                  <p class="fs-12 fw-medium">4.2</p>
+                  <h1 class="fs-12 fw-bold text-muted">Very Good</h1>
+                  <h2 class="fs-12 text-muted">54 reviews</h2>
                 </div>
               </div>
             </div>
-            <h1 class="fw-semi-bold fs-24">Terms and Conditions</h1>
-            <h2 class="fs-20 fw-medium">Payments</h2>
-            <ul>
-              <li>
-                <span>
-                  If you are purchasing your ticket using a debit or credit card
-                  via the Website, we will process these payments via the
-                  automated secure common payment gateway which will be subject
-                  to fraud screening purposes.
-                </span>
-              </li>
-              <li>
-                <span>
-                  If you do not supply the correct card billing address and/or
-                  cardholder information, your booking will not be confirmed and
-                  the overall cost may increase. We reserve the right to cancel
-                  your booking if payment is declined for any reason or if you
-                  have supplied incorrect card information. If we become aware
-                  of, or is notified of, any fraud or illegal activity
-                  associated with the payment for the booking, the booking will
-                  be cancelled and you will be liable for all costs and expenses
-                  arising from such cancellation, without prejudice to any
-                  action that may be taken against us.
-                </span>
-              </li>
-              <li>
-                <span>
-                  Golobe may require the card holder to provide additional
-                  payment verification upon request by either submitting an
-                  online form or visiting the nearest Golobe office, or at the
-                  airport at the time of check-in. Golobe reserves the right to
-                  deny boarding or to collect a guarantee payment (in cash or
-                  from another credit card) if the card originally used for the
-                  purchase cannot be presented by the cardholder at check-in or
-                  when collecting the tickets, or in the case the original
-                  payment has been withheld or disputed by the card issuing
-                  bank. Credit card details are held in a secured environment
-                  and transferred through an internationally accepted system.
-                </span>
-              </li>
-            </ul>
-            <h3 class="fs-20 fw-medium">Contact Us</h3>
-            <div>
-              <p>
-                If you have any questions about our Website or our Terms of Use,
-                please contact:
-              </p>
-              <p>Golobe Group Q.C.S.C</p>
-              <p>Golobe Tower</p>
-              <p>P.O. Box: 22550</p>
-              <p>Doha, State of Qatar</p>
-              <p>
-                Further contact details can be found at
-                <a href="#">golobe.com/help</a>
-              </p>
+          </div>
+          <div class="booking-price-info">
+            <p class="fw-medium">
+              Your booking is protected by
+              <strong class="fw-bold">golobe</strong>
+            </p>
+            <div class="booking-price-details fw-medium">
+              <h1 class="fw-bold">Price Details</h1>
+              <div class="price">
+                <p>Base Fare</p>
+                <h2 class="fw-semi-bold">$240</h2>
+              </div>
+              <div class="price">
+                <p>Discount</p>
+                <h2 class="fw-semi-bold">$0</h2>
+              </div>
+              <div class="price">
+                <p>Taxes</p>
+                <h2 class="fw-semi-bold">$20</h2>
+              </div>
+              <div class="price">
+                <p>Service Fee</p>
+                <h2 class="fw-semi-bold">$5</h2>
+              </div>
+            </div>
+            <div class="price">
+              <p class="fw-bold">Total</p>
+              <h2 class="fw-semi-bold">$265</h2>
             </div>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
@@ -351,11 +349,68 @@
       </div>
     </footer>
 
+    <div class="modal" id="addCardModal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close">
+          <img src="/assets/close-icon.svg" alt="Close" />
+        </button>
+        <h2 class="fs-40 fw-bold">Add a new Card</h2>
+
+        <form class="add-card-form">
+          <!-- Floating Card Number Input -->
+          <div class="floating-input-group">
+            <input type="text" id="cardNumber" placeholder=" " required />
+            <label for="cardNumber">Card Number</label>
+            <img src="/assets/visablue-icon.svg" class="card-icon" alt="Visa" />
+          </div>
+
+          <div class="flex">
+            <div class="floating-input-group exp-date">
+              <input type="text" placeholder="02/27" required />
+              <label>Exp. Date</label>
+            </div>
+            <div class="floating-input-group cvc">
+              <input type="text" placeholder="123" required />
+              <label>CVC</label>
+            </div>
+          </div>
+
+          <div class="floating-input-group">
+            <input type="text" id="cardNumber" placeholder=" " required />
+            <label for="cardNumber">Name on Card</label>
+          </div>
+
+          <div class="floating-input-group">
+            <select>
+              <option>United States</option>
+              <option>Philippines</option>
+              <option>Japan</option>
+              <!-- Add more -->
+            </select>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" />
+            Securely save my information for 1-click checkout
+          </label>
+
+          <button type="submit" class="btn-primary">Add Card</button>
+
+          <p class="fs-12 text-center text-neutral-grey">
+            By confirming your submission, you allow Golobe to charge your card
+            for this payment and future payments in accordance with their terms.
+            You can always cancel your subscription.
+          </p>
+        </form>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/src/landing-page/main.js"></script>
-    <script type="module" src="/src/flight-page/flightdetails.js"></script>
-    <script type="module" src="/src/flight-page/flightlisting.js"></script>
+    <script type="module" src="/src/stay-page/staysdetails.js"></script>
+    <script type="module" src="/src/stay-page/stayslisting.js"></script>
     <script type="module" src="/src/global-utilities/swiper.js"></script>
   </body>
 </html>

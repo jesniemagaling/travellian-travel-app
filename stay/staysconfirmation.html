@@ -32,9 +32,9 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="/src/landing-page/styles.css" />
-    <link rel="stylesheet" href="/src/flight-page/flightlisting.css" />
-    <link rel="stylesheet" href="/src/flight-page/flightdetails.css" />
-    <link rel="stylesheet" href="/src/flight-page/flightconfirmation.css" />
+    <link rel="stylesheet" href="/src/stay-page/stayslisting.css" />
+    <link rel="stylesheet" href="/src/stay-page/staysdetails.css" />
+    <link rel="stylesheet" href="/src/stay-page/staysconfirmation.css" />
     <link rel="stylesheet" href="/src/global-utilities/utilities.css" />
     <link rel="stylesheet" href="/src/global-utilities/responsive.css" />
   </head>
@@ -134,36 +134,36 @@
     </header>
 
     <section>
-      <div class="flight-details-wrapper">
-        <div class="flight-details-heading">
+      <div class="hotel-details-wrapper">
+        <div class="hotel-details-heading">
           <h1 class="fs-28 fw-bold">Emirates A380 Airbus</h1>
           <h2 class="fs-32 fw-bold">$240</h2>
         </div>
-        <div class="flight-confirmation flight-details-info">
+        <div class="hotel-details-info">
           <div>
-            <div class="flight-details-location">
+            <div class="hotel-details-location">
               <img src="/assets/location-icon.svg" alt="" />
               <p class="fs-14">
                 Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
               </p>
             </div>
           </div>
-          <div class="flight-details-btn">
+          <div class="hotel-details-btn">
             <button class="btn-stroke">
               <img src="/assets/share-icon.svg" alt="" />
             </button>
             <button class="btn-primary">Download</button>
           </div>
         </div>
-        <div class="flight-details-confirmation">
-          <div class="flight-terms">
-            <div class="flight-ticket">
-              <div class="flight-time">
-                <h1 class="fs-32 fw-semi-bold">11:11 pm</h1>
-                <p class="fs-14 text-neutral-grey fw-medium">Newark(EWR)</p>
-                <img src="/assets/airplanevert-icon.svg" alt="" />
-                <h1 class="fs-32 fw-semi-bold">12:12 pm</h1>
-                <p class="fs-14 text-neutral-grey fw-medium">Newark(EWR)</p>
+        <div class="hotel-details-confirmation">
+          <div class="hotel-terms">
+            <div class="hotel-ticket">
+              <div class="hotel-time">
+                <h1 class="fs-32 fw-semi-bold">Thur, Dec 8</h1>
+                <p class="fs-14 text-neutral-grey fw-medium">Check-In</p>
+                <img src="/assets/building-icon.svg" alt="" />
+                <h1 class="fs-32 fw-semi-bold">Fri, Dec 9</h1>
+                <p class="fs-14 text-neutral-grey fw-medium">Check-Out</p>
               </div>
               <div class="ticket-info">
                 <div class="ticket-profile">
@@ -171,38 +171,38 @@
                     <img src="/assets/profile-icon.svg" alt="" />
                     <div class="profile-name">
                       <h1 class="fs-20 fw-bold">Jesnie Magaling</h1>
-                      <p class="fs-14">Boarding Pass N’123</p>
                     </div>
                   </div>
-                  <h2 class="fs-14 fw-bold">Business Class</h2>
+                  <h2 class="fs-14 fw-bold">
+                    Superior room - 1 double bed or 2 twin beds
+                  </h2>
                 </div>
-                <div class="plane-details grid-4">
+                <div class="hotel-details grid-4">
                   <div class="flex">
-                    <img src="/assets/calendar-primary-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Date</h1>
-                      <p class="fs-12 fw-medium">Newark(EWR)</p>
+                    <img src="/assets/clock-icon.svg" alt="" />
+                    <div class="">
+                      <h1 class="text-neutral-grey fs-12 fw-semi-bold">
+                        Check-In time
+                      </h1>
+                      <p class="fs-16 fw-medium">13:09am</p>
                     </div>
                   </div>
                   <div class="flex">
                     <img src="/assets/clock-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Time</h1>
-                      <p class="fs-12 fw-medium">12:00</p>
+                    <div class="">
+                      <h1 class="text-neutral-grey fs-12 fw-semi-bold">
+                        Check-Out time
+                      </h1>
+                      <p class="fs-16 fw-medium">05:09pm</p>
                     </div>
                   </div>
                   <div class="flex">
                     <img src="/assets/door-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Gate</h1>
-                      <p class="fs-12 fw-medium">A12</p>
-                    </div>
-                  </div>
-                  <div class="flex">
-                    <img src="/assets/airlineseat-primary-icon.svg" alt="" />
-                    <div class="profile-name">
-                      <h1 class="text-neutral-grey fs-14 fw-semi-bold">Seat</h1>
-                      <p class="fs-12 fw-medium">128</p>
+                    <div class="">
+                      <h1 class="text-neutral-grey fs-12 fw-semi-bold">
+                        Room no.
+                      </h1>
+                      <p class="fs-16 fw-medium">On arrival</p>
                     </div>
                   </div>
                 </div>
@@ -354,8 +354,8 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/src/landing-page/main.js"></script>
-    <script type="module" src="/src/flight-page/flightdetails.js"></script>
-    <script type="module" src="/src/flight-page/flightlisting.js"></script>
+    <script type="module" src="/src/stay-page/staysdetails.js"></script>
+    <script type="module" src="/src/stay-page/stayslisting.js"></script>
     <script type="module" src="/src/global-utilities/swiper.js"></script>
   </body>
 </html>

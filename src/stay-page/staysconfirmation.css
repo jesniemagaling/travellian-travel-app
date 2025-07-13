@@ -1,22 +1,23 @@
-.flight-confirmation .flight-details-location {
+.hotel-confirmation .hotel-details-location {
   padding: 0 0 0 0;
 }
 
-.flight-ticket {
+.hotel-ticket {
   display: flex;
   gap: 4.375em;
   padding: 2em;
 }
 
-.flight-time {
+.hotel-time {
   display: grid;
   align-items: center;
   padding: 1.5em 0;
 }
 
-.flight-time img {
+.hotel-time img {
   padding: 1.5em 0;
   opacity: 40%;
+  width: 20px;
 }
 
 .ticket-info {
@@ -35,7 +36,13 @@
   border-top-right-radius: 12px;
 }
 
+.ticket-profile .flex {
+  flex-wrap: nowrap;
+}
+
 .ticket-profile h2 {
+  max-width: 234px;
+  text-align: right;
   padding-left: 1.5em;
 }
 
@@ -47,10 +54,14 @@
   margin-right: 1em;
 }
 
-.plane-details .flex {
+.hotel-details .flex {
   flex-wrap: nowrap;
-  padding: 1em 0.5em;
+  padding: 1em 0.2em;
   gap: 0.5em;
+}
+
+.hotel-details h1 {
+  line-height: 1;
 }
 
 .ticket-barcode {
@@ -59,21 +70,21 @@
   padding: 1.2em;
 }
 
-.flight-terms {
+.hotel-terms {
   display: grid;
   row-gap: 2.125em;
 }
 
-.flight-terms ul {
+.hotel-terms ul {
   list-style: none;
   margin: -1.4em 0 0 1em;
 }
 
-.flight-terms ul li {
+.hotel-terms ul li {
   padding: 0.5em 0.1em;
 }
 
-.flight-terms li::before {
+.hotel-terms li::before {
   content: '';
   display: inline-block;
   height: 3px;
@@ -84,10 +95,10 @@
   vertical-align: middle;
 }
 
-.flight-terms h3 {
+.hotel-terms h3 {
   margin-bottom: -1em;
 }
 
-.flight-terms a {
+.hotel-terms a {
   text-decoration: underline;
 }
