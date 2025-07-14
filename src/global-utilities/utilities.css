@@ -328,25 +328,25 @@ svg {
 /* Specific Hover Darken Effects */
 .btn-primary:hover,
 .btn-primary:focus {
-  filter: brightness(0.9);
+  filter: brightness(0.95);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-  filter: brightness(0.95);
+  filter: brightness(0.98);
 }
 
 .btn-black:hover,
 .btn-black:focus,
 .btn-white:hover,
 .btn-white:focus {
-  filter: brightness(0.9);
+  filter: brightness(0.8);
 }
 
 .btn-stroke:hover,
 .btn-stroke:focus {
   background-color: var(--clr-primary-400);
-  filter: brightness(0.9);
+  filter: brightness(0.95);
 }
 
 /* Specific Button Styles */
@@ -374,7 +374,6 @@ svg {
 
 .btn-white.active {
   border-bottom: 5px solid var(--clr-primary-400);
-  font-weight: var(--fw-bold);
 }
 
 .btn-stroke {

@@ -40,51 +40,82 @@
     <!-- Login section -->
     <section>
       <div class="login-section-container container">
-        <div class="company-logo">
-          <img src="/assets/company-logo.svg" alt="" width="110px" />
+        <div class="login-image-container">
+          <div class="login-swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="login-images swiper-slide">
+                <img src="/assets/login-banner.svg" alt="" class="login-img" />
+              </div>
+              <div class="login-images swiper-slide">
+                <img
+                  src="/assets/login-banner-2.svg"
+                  alt=""
+                  class="login-img"
+                />
+              </div>
+              <div class="login-images swiper-slide">
+                <img
+                  src="/assets/outdoor-pool-img.jpg"
+                  alt=""
+                  class="login-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="login-swiper-controls">
+            <div class="login-swiper-pagination"></div>
+          </div>
         </div>
-        <div class="login-header">
-          <h1 class="fs-40 fw-bold">Login</h1>
-          <p class="text-neutral-grey">Login to access your Golobe account</p>
-        </div>
-        <div class="login-form">
-          <div class="login-input-group">
-            <input type="text" id="email" placeholder=" " required />
-            <label for="email">Email</label>
+        <div class="login-section-details">
+          <div class="company-logo">
+            <img src="/assets/company-logo.svg" alt="" width="110px" />
           </div>
-          <div class="login-input-group">
-            <input type="text" id="password" placeholder=" " required />
-            <label for="password">Password</label>
-            <button>
-              <img src="/assets/hide-icon.svg" alt="" /><img
-                src="/assets/eye-show-icon.svg"
-                alt=""
-              />
-            </button>
+          <div class="login-header">
+            <h1 class="fs-40 fw-bold">Login</h1>
+            <p class="text-neutral-grey">Login to access your Golobe account</p>
           </div>
-          <div class="login-checkbox-group">
-            <label class="checkbox">
-              <input type="checkbox" />
-              Remember me
-            </label>
-            <button class="btn-black">Forgot Password</button>
-          </div>
-          <button type="login" class="btn-primary">Login</button>
-          <div class="login-to-signup">
-            <p>Don't have an account?</p>
-            <button class="btn-black">Sign up</button>
-          </div>
-          <p>Or login with</p>
-          <div class="social-login flex">
-            <button class="btn-stroke">
-              <img src="/assets/fb-icon-primary.svg" alt="fb-icon" />
-            </button>
-            <button class="btn-stroke">
-              <img src="/assets/google-icon-primary.svg" alt="google-icon" />
-            </button>
-            <button class="btn-stroke">
-              <img src="/assets/apple-icon-primary.svg" alt="apple-icon" />
-            </button>
+          <div class="login-form">
+            <div class="login-input-group">
+              <input type="text" id="email" placeholder=" " required />
+              <label for="email">Email</label>
+            </div>
+            <div class="login-input-group password">
+              <input type="text" id="password" placeholder=" " required />
+              <label for="password">Password</label>
+              <button class="password-show-hide-btn">
+                <img src="/assets/hide-icon.svg" alt="" class="active" /><img
+                  src="/assets/eye-show-icon.svg"
+                  alt=""
+                  class="hidden"
+                />
+              </button>
+            </div>
+            <div class="login-checkbox-group">
+              <label class="checkbox">
+                <input type="checkbox" />
+                Remember me
+              </label>
+              <button class="btn-black">Forgot Password</button>
+            </div>
+            <button type="login" class="login-btn btn-primary">Login</button>
+            <div class="login-to-signup flex">
+              <p class="fw-medium fs-14">Don't have an account?</p>
+              <button class="btn-black">Sign up</button>
+            </div>
+            <p class="login-options text-center text-neutral-grey">
+              Or login with
+            </p>
+            <div class="social-login flex">
+              <button class="btn-stroke">
+                <img src="/assets/fb-icon-primary.svg" alt="fb-icon" />
+              </button>
+              <button class="btn-stroke">
+                <img src="/assets/google-icon-primary.svg" alt="google-icon" />
+              </button>
+              <button class="btn-stroke">
+                <img src="/assets/apple-icon-primary.svg" alt="apple-icon" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

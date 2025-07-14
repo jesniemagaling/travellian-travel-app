@@ -227,3 +227,39 @@ const allRoomsSwiper = new Swiper('.allrooms-swiper', {
     prevEl: '.room-button-prev',
   },
 });
+
+const loginSwiper = new Swiper('.login-swiper', {
+  loop: true,
+  loopedSlides: 3,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  grabCursor: true,
+  pagination: {
+    el: '.login-swiper-pagination',
+    clickable: true,
+  },
+});
+
+const signupSwiper = new Swiper('.signup-swiper', {
+  loop: true,
+  loopedSlides: 3,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  grabCursor: true,
+  pagination: {
+    el: '.signup-swiper-pagination',
+    clickable: true,
+  },
+});

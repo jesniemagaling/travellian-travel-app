@@ -1,7 +1,7 @@
 .booking-tabs h1 {
   font-size: var(--fs-20);
   font-weight: var(--fw-semi-bold);
-  padding: 1rem 0;
+  padding-block: 1em 0.5em;
 }
 
 .places-content {
@@ -17,8 +17,8 @@
 }
 
 .travel-bundle-container .box-area {
-  margin: 2rem 2rem;
-  gap: 1rem;
+  margin: 0 2em;
+  gap: 1em;
 }
 
 .travel-bundle-container .box {
@@ -44,16 +44,16 @@
 }
 
 .card-overlay h1 {
-  margin: 0 0.1rem 0 0;
+  margin: 0 0.1em 0 0;
 }
 
 .card-overlay p {
-  margin: 0 0.1rem 0.35rem 0;
+  margin: 0 0.1em 0.35em 0;
   font-size: clamp(12px, 2vw, 14px);
 }
 
 .travel-bundle-btn.inline-flex {
-  margin-top: 0.3rem;
+  margin-top: 0.3em;
   width: 96%;
   justify-content: center;
 }
@@ -62,8 +62,8 @@
 .travel-location-wrapper {
   display: grid;
   gap: 20px;
-  padding: 1rem;
-  margin: 2rem auto 4rem 0;
+  padding: 0 1em;
+  margin: 0 auto 4em 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
 

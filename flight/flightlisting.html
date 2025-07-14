@@ -69,8 +69,8 @@
             <img src="/assets/profile-icon.svg" alt="" />&nbsp;&nbsp;Jesnie M.
           </button>
           <div class="mobile-toggle" id="hamburger">
-            <i class="fa-solid fa-bars menu-icon"></i>
-            <i class="fa-solid fa-xmark close-icon"></i>
+            <img src="/assets/open-icon.svg" alt="" class="menu-icon" />
+            <img src="/assets/close-icon-nav.svg" alt="" class="close-icon" />
           </div>
         </div>
         <!-- This is the dropdown menu -->
@@ -85,18 +85,18 @@
             <div class="grid user-nav-info">
               <!-- Added class for styling info -->
               <h1 class="fs-16 fw-semi-bold">Jesnie Magaling</h1>
-              <h2 class="fs-14 fw-regular text-neutral-grey">Online</h2>
+              <h2 class="fs-14 fw-medium text-primary-color">Online</h2>
             </div>
           </div>
           <div class="profile-layer">
-            <a href="#" class="user-link fs-14 fw-medium"
+            <a href="/auth/account.html" class="user-link fs-14 fw-medium"
               ><img src="/assets/user-sm-icon.svg" alt="" />&nbsp;&nbsp;My
               Accounts</a
             >
-            <a href="#" class="user-link fs-14 fw-medium"
+            <a href="/auth/account.html" class="user-link fs-14 fw-medium"
               ><img src="/assets/card-icon.svg" alt="" />&nbsp;&nbsp;Payments</a
             >
-            <a href="#" class="user-link fs-14 fw-medium"
+            <a href="/auth/account.html" class="user-link fs-14 fw-medium"
               ><img
                 src="/assets/settings-icon.svg"
                 alt=""
@@ -137,43 +137,75 @@
     <!-- Booking Form -->
     <section id="booking-details">
       <div class="flight-booking-container">
+        <!-- Tabs -->
+        <div class="booking-tabs">
+          <h1>Where are you flying?</h1>
+        </div>
+
         <!-- Flights Form -->
-        <div id="flightForm" class="flight-booking-form grid-4">
-          <div class="flight-form-group">
-            <label>From - To</label>
-            <input
-              type="text"
-              id="fromToInput"
-              value="Lahore - Karachi"
-              placeholder="Lahore - Karachi"
-            />
-            <span class="fs-16 swap-icon">⇄</span>
-          </div>
+        <div id="flightForm" class="booking-form booking-flight-form">
+          <div class="grid">
+            <div class="form-group">
+              <label>From - To</label>
+              <input
+                type="text"
+                id="fromToInput"
+                value="Lahore - Karachi"
+                placeholder="Lahore - Karachi"
+              />
+              <span class="fs-16 swap-icon">⇄</span>
+            </div>
 
-          <div class="flight-form-group trip">
-            <label>Trip</label>
-            <select>
-              <option>Return</option>
-              <option>One Way</option>
-            </select>
-          </div>
+            <div class="form-group trip">
+              <label>Trip</label>
+              <select>
+                <option>Return</option>
+                <option>One Way</option>
+              </select>
+            </div>
 
-          <div class="flight-form-group">
-            <label>Depart - Return</label>
-            <input type="text" placeholder="07 Nov 22 - 13 Nov 22" />
-          </div>
+            <div class="return-depart">
+              <div class="form-group">
+                <label>Depart</label>
+                <div class="input-with-icon input-calendar">
+                  <input type="date" />
+                  <img
+                    src="/assets/calendar-icon.svg"
+                    alt="Calendar"
+                    class="input-icon-right input-calendar-icon"
+                  />
+                </div>
+              </div>
 
-          <div class="flight-form-group">
-            <label>Passenger - Class</label>
-            <input type="text" placeholder="1 Passenger, Economy" />
+              <div class="form-group">
+                <label>Return</label>
+                <div class="input-with-icon input-calendar">
+                  <input type="date" />
+                  <img
+                    src="/assets/calendar-icon.svg"
+                    alt="Calendar"
+                    class="input-icon-right input-calendar-icon"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Passenger - Class</label>
+              <input type="text" placeholder="1 Passenger, Economy" />
+            </div>
           </div>
-          <button class="flight-listing-btn btn-primary btn-mobile">
-            <img src="/assets/search-icon.svg" alt="" />
+        </div>
+
+        <!-- Flights Actions -->
+        <div class="actions flight-actions">
+          <button class="inline-flex btn-black flight-btn">
+            <img src="/assets/plus-icon.svg" alt="" />&nbsp;Add Promo Code
+          </button>
+          <button class="inline-flex btn-primary flight-btn">
+            <img src="/assets/show-icon.svg" alt="" />&nbsp;Show Flights
           </button>
         </div>
-        <button class="flight-listing-btn btn-primary btn-desktop">
-          <img src="/assets/search-icon.svg" alt="" />
-        </button>
       </div>
     </section>
 
@@ -624,7 +656,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="/src/landing-page/main.js"></script>
     <script type="module" src="/src/flight-page/flightsearch.js"></script>
     <script type="module" src="/src/flight-page/flightlisting.js"></script>
     <script type="module" src="/src/global-utilities/swiper.js"></script>

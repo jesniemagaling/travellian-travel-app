@@ -14,15 +14,30 @@
     max-width: 900px;
     font-size: var(--fs-24); /* Using clamped fs-24 */
   }
+
   #booking {
     margin-top: -350px;
   }
-  #booking .grid-4,
-  #booking-details .grid-4 {
+
+  .booking-form .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .form-group {
+
+  /* #booking .grid-4,
+  #booking-details .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  } */
+
+  /* .form-group {
     max-width: 30rem;
+  } */
+  .company-logo {
+    margin-right: 0;
+  }
+
+  .nav-left,
+  .nav-right > a {
+    display: none;
   }
   .nav-left,
   .nav-right > button {
@@ -128,6 +143,11 @@
 
 /* Small Tablets (max-width: 788px) */
 @media (max-width: 788px) {
+  .booking-form .grid {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
   .places-card .flex {
     flex-direction: column;
   }
@@ -166,6 +186,14 @@
 
 /* Large Smartphones (max-width: 670px) */
 @media (max-width: 670px) {
+  header {
+    padding: 0.75em 2.5em 0 2.5em;
+  }
+
+  main .swiper {
+    padding: 1em;
+  }
+
   main .img-overlay p {
     max-width: 900px;
     font-size: clamp(1.25rem, 6vw, 2.8rem);
@@ -199,14 +227,6 @@
     width: 24px;
     height: 24px;
   }
-  .booking-tabs {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .actions {
-    justify-content: center;
-  }
   .actions .btn-black,
   .actions .btn-primary,
   .card-overlay .btn-primary {
@@ -216,14 +236,16 @@
   #booking {
     margin-top: -350px;
   }
-  #booking .grid-4,
+
+  /* #booking .grid-4,
   #booking-details .grid-4 {
     grid-template-columns: repeat(1, 1fr);
   }
   .form-group,
   .flight-form-group {
     max-width: 40rem;
-  }
+  } */
+
   .travel-location-wrapper {
     grid-template-areas:
       'box-1'
@@ -352,11 +374,6 @@
 
 /* Small Smartphones (max-width: 440px) */
 @media (max-width: 440px) {
-  .actions {
-    display: grid;
-    margin-bottom: 1.75rem;
-  }
-
   main .img-overlay p {
     font-size: clamp(1.25rem, 3.5vw, 1.75rem);
   }

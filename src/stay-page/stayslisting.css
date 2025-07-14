@@ -1,8 +1,36 @@
+header {
+  position: fixed;
+  padding-top: 0;
+  background-color: var(--clr-neutral-50);
+  padding-inline: 1em;
+}
+
+.nav-left,
+.nav-right button {
+  display: flex;
+  align-items: center;
+}
+
 .company-logo {
   margin: 0 0 0 1.125em;
 }
 
-.hotel-booking-container {
+#booking-details {
+  margin: 140px auto 2em auto;
+  max-width: 1440px;
+}
+
+.booking-tabs h1 {
+  font-size: var(--fs-20);
+  font-weight: var(--fw-semi-bold);
+  padding-bottom: 0.5em;
+}
+
+.stays-booking-container {
+  margin: 0 1em;
+}
+
+/* .hotel-booking-container {
   width: 100%;
   margin: 140px auto 2rem auto;
   max-width: 1440px;
@@ -62,7 +90,7 @@
 
 .btn-mobile {
   display: none;
-}
+} */
 
 /* User Navigation */
 

@@ -45,11 +45,14 @@
         <div class="nav-left inline-flex">
           <a
             href="flightlisting.html"
-            class="inline-flex nav-link flights-btn nav-booking-tab active"
+            class="inline-flex nav-link flights-btn nav-booking-tab"
           >
             <img src="/assets/airplane-icon.svg" alt="airplane" />Find Flights
           </a>
-          <a href="#" class="inline-flex nav-link stays-btn nav-booking-tab">
+          <a
+            href="#"
+            class="inline-flex nav-link stays-btn nav-booking-tab active"
+          >
             <img src="/assets/bed-icon.svg" alt="bed" />Find Stays
           </a>
         </div>
@@ -68,8 +71,8 @@
             <img src="/assets/profile-icon.svg" alt="" />&nbsp;&nbsp;Jesnie M.
           </button>
           <div class="mobile-toggle" id="hamburger">
-            <i class="fa-solid fa-bars menu-icon"></i>
-            <i class="fa-solid fa-xmark close-icon"></i>
+            <img src="/assets/open-icon.svg" alt="" class="menu-icon" />
+            <img src="/assets/close-icon-nav.svg" alt="" class="close-icon" />
           </div>
         </div>
         <!-- This is the dropdown menu -->
@@ -84,18 +87,18 @@
             <div class="grid user-nav-info">
               <!-- Added class for styling info -->
               <h1 class="fs-16 fw-semi-bold">Jesnie Magaling</h1>
-              <h2 class="fs-14 fw-regular text-neutral-grey">Online</h2>
+              <h2 class="fs-14 fw-medium text-primary-color">Online</h2>
             </div>
           </div>
           <div class="profile-layer">
-            <a href="#" class="user-link fs-14 fw-medium"
+            <a href="/auth/account.html" class="user-link fs-14 fw-medium"
               ><img src="/assets/user-sm-icon.svg" alt="" />&nbsp;&nbsp;My
               Accounts</a
             >
-            <a href="#" class="user-link fs-14 fw-medium"
+            <a href="/auth/account.html" class="user-link fs-14 fw-medium"
               ><img src="/assets/card-icon.svg" alt="" />&nbsp;&nbsp;Payments</a
             >
-            <a href="#" class="user-link fs-14 fw-medium"
+            <a href="/auth/account.html" class="user-link fs-14 fw-medium"
               ><img
                 src="/assets/settings-icon.svg"
                 alt=""
@@ -353,7 +356,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="/src/landing-page/main.js"></script>
+    <script type="module" src="/src/stay-page/searchstays.js"></script>
     <script type="module" src="/src/stay-page/staysdetails.js"></script>
     <script type="module" src="/src/stay-page/stayslisting.js"></script>
     <script type="module" src="/src/global-utilities/swiper.js"></script>

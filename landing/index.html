@@ -38,36 +38,50 @@
   <body>
     <!-- Header & Navigation -->
     <header>
-      <nav class="container">
+      <nav>
         <div class="nav-left inline-flex">
           <a
             href="../flight/flightsearch.html"
-            class="inline-flex nav-link flights-btn nav-booking-tab"
+            class="inline-flex nav-link flights-btn-nav flights-btn nav-booking-tab"
           >
-            <img src="/assets/airplane-icon.svg" alt="airplane" />Find Flights
+            <img src="/assets/airplane-white-icon.svg" alt="airplane" /><span
+              >Find Flights</span
+            >
           </a>
           <a
             href="../hotel/hotelsearch.html"
-            class="inline-flex nav-link stays-btn nav-booking-tab"
+            class="inline-flex nav-link stays-btn-nav stays-btn nav-booking-tab"
           >
-            <img src="/assets/bed-icon.svg" alt="bed" />Find Stays
+            <img src="/assets/bed-white-icon.svg" alt="bed" /><span
+              >Find Stays</span
+            >
           </a>
         </div>
 
-        <div class="company-logo">
-          <a href="#"><img src="/assets/company-logo.svg" alt="Logo" /></a>
+        <div class="company-logo company-logo-nav">
+          <a href="#"
+            ><img src="/assets/company-logo-white.svg" alt="Logo"
+          /></a>
         </div>
 
         <div class="nav-right inline-flex">
-          <button class="btn-white fs-16 fw-semi-bold">
-            <a href="../auth/login.html">Login</a>
-          </button>
-          <button class="btn-secondary fs-16 fw-semi-bold">
-            <a href="../auth/signup.html">Sign up</a>
-          </button>
-          <div class="mobile-toggle" id="hamburger">
-            <i class="fa-solid fa-bars menu-icon"></i>
-            <i class="fa-solid fa-xmark close-icon"></i>
+          <a href="../auth/login.html" class="nav-link nav-booking-account"
+            ><span>Login</span></a
+          >
+          <a href="../auth/signup.html" class="nav-link nav-booking-account"
+            ><span>Sign up</span></a
+          >
+          <div class="nav-trigger mobile-toggle" id="hamburger">
+            <img
+              src="/assets/open-icon-white.svg"
+              alt=""
+              class="menu-nav menu-icon"
+            />
+            <img
+              src="/assets/close-icon-white.svg"
+              alt=""
+              class="close-nav close-icon"
+            />
           </div>
         </div>
       </nav>
@@ -98,8 +112,8 @@
           <div class="overlay swiper-slide">
             <img src="/assets/hero-section-bg.svg" alt="" />
             <div class="img-overlay text-center">
-              <p class="fs-45 fw-bold">Helping Others</p>
-              <h1 class="fs-94 ff-primary fw-bold">LIVE & TRAVEL</h1>
+              <p class="fs-45 fw-semi-bold">Have Smooth Travels</p>
+              <h1 class="fs-94 ff-primary fw-bold">NOMAD LIFE</h1>
               <h2 class="fs-20 fw-semi-bold">
                 Special offers to suit your plan
               </h2>
@@ -108,7 +122,7 @@
           <div class="overlay swiper-slide">
             <img src="/assets/hero-section-bg-2.svg" alt="" />
             <div class="img-overlay text-center">
-              <p class="fs-45 fw-bold">Wander with Purpose</p>
+              <p class="fs-45 fw-semi-bold">Wander with Purpose</p>
               <h1 class="fs-94 ff-primary fw-bold">GO BEYOND</h1>
               <h2 class="fs-20 fw-semi-bold">Travel made simple</h2>
             </div>
@@ -116,9 +130,9 @@
           <div class="overlay swiper-slide">
             <img src="/assets/hero-section-bg-3.svg" alt="" />
             <div class="img-overlay text-center">
-              <p class="fs-45 fw-bold">Travel Made Simple</p>
+              <p class="fs-45 fw-semi-bold">Travel Made Simple</p>
               <h1 class="fs-94 ff-primary fw-bold">COZY TRAILS</h1>
-              <h2 class="fs-20 fw-semi-bold">Where to next? Let’s go!</h2>
+              <h2 class="fs-20 fw-semi-bold">Where to go next? Let’s go!</h2>
             </div>
           </div>
         </div>
@@ -143,34 +157,57 @@
         </div>
 
         <!-- Flights Form -->
-        <div id="flightForm" class="booking-form grid-4">
-          <div class="form-group">
-            <label>From - To</label>
-            <input
-              type="text"
-              id="fromToInput"
-              value="Lahore - Karachi"
-              placeholder="Lahore - Karachi"
-            />
-            <span class="fs-16 swap-icon">⇄</span>
-          </div>
+        <div id="flightForm" class="booking-form booking-flight-form">
+          <div class="grid">
+            <div class="form-group">
+              <label>From - To</label>
+              <input
+                type="text"
+                id="fromToInput"
+                value="Lahore - Karachi"
+                placeholder="Lahore - Karachi"
+              />
+              <span class="fs-16 swap-icon">⇄</span>
+            </div>
 
-          <div class="form-group trip">
-            <label>Trip</label>
-            <select>
-              <option>Return</option>
-              <option>One Way</option>
-            </select>
-          </div>
+            <div class="form-group trip">
+              <label>Trip</label>
+              <select>
+                <option>Return</option>
+                <option>One Way</option>
+              </select>
+            </div>
 
-          <div class="form-group">
-            <label>Depart - Return</label>
-            <input type="text" placeholder="07 Nov 22 - 13 Nov 22" />
-          </div>
+            <div class="return-depart">
+              <div class="form-group">
+                <label>Depart</label>
+                <div class="input-with-icon input-calendar">
+                  <input type="date" />
+                  <img
+                    src="/assets/calendar-icon.svg"
+                    alt="Calendar"
+                    class="input-icon-right input-calendar-icon"
+                  />
+                </div>
+              </div>
 
-          <div class="form-group">
-            <label>Passenger - Class</label>
-            <input type="text" placeholder="1 Passenger, Economy" />
+              <div class="form-group">
+                <label>Return</label>
+                <div class="input-with-icon input-calendar">
+                  <input type="date" />
+                  <img
+                    src="/assets/calendar-icon.svg"
+                    alt="Calendar"
+                    class="input-icon-right input-calendar-icon"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Passenger - Class</label>
+              <input type="text" placeholder="1 Passenger, Economy" />
+            </div>
           </div>
         </div>
 
@@ -185,47 +222,53 @@
         </div>
 
         <!-- Stays Form -->
-        <div id="stayForm" class="booking-form grid-4 hidden">
-          <div class="form-group">
-            <label>Enter Destination</label>
-            <div class="input-with-icon">
-              <img src="/assets/bed-icon.svg" alt="Bed" class="input-icon" />
-              <input type="text" value="Istanbul, Turkey" />
+        <div id="stayForm" class="booking-form booking-stay-form hidden">
+          <div class="grid">
+            <div class="form-group">
+              <label>Enter Destination</label>
+              <div class="input-with-icon">
+                <img src="/assets/bed-icon.svg" alt="Bed" class="input-icon" />
+                <input type="text" placeholder="Istanbul, Turkey" />
+              </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label>Check In</label>
-            <div class="input-with-icon input-calendar">
-              <input type="date" />
-              <img
-                src="/assets/calendar-icon.svg"
-                alt="Calendar"
-                class="input-icon-right"
-              />
+            <div class="form-group">
+              <label>Check In</label>
+              <div class="input-with-icon input-calendar">
+                <input type="date" />
+                <img
+                  src="/assets/calendar-icon.svg"
+                  alt="Calendar"
+                  class="input-icon-right input-calendar-icon"
+                />
+              </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label>Check Out</label>
-            <div class="input-with-icon input-calendar">
-              <input type="date" />
-              <img
-                src="/assets/calendar-icon.svg"
-                alt="Calendar"
-                class="input-icon-right"
-              />
+            <div class="form-group">
+              <label>Check Out</label>
+              <div class="input-with-icon input-calendar">
+                <input type="date" />
+                <img
+                  src="/assets/calendar-icon.svg"
+                  alt="Calendar"
+                  class="input-icon-right input-calendar-icon"
+                />
+              </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label>Rooms & Guests</label>
-            <div class="input-with-icon">
-              <img src="/assets/user-icon.svg" alt="User" class="input-icon" />
-              <select>
-                <option>1 room, 2 guests</option>
-                <option>2 rooms, 4 guests</option>
-              </select>
+            <div class="form-group">
+              <label>Rooms & Guests</label>
+              <div class="input-with-icon">
+                <img
+                  src="/assets/user-icon.svg"
+                  alt="User"
+                  class="input-icon"
+                />
+                <select>
+                  <option>1 room, 2 guests</option>
+                  <option>2 rooms, 4 guests</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>

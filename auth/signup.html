@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golobe</title>
+
+    <link rel="icon" type="image/svg+xml" href="/assets/company-icon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Swiper Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/src/auth/account.css" />
+    <link rel="stylesheet" href="/src/auth/signup.css" />
+    <link rel="stylesheet" href="/src/global-utilities/utilities.css" />
+    <link rel="stylesheet" href="/src/global-utilities/responsive.css" />
+  </head>
+  <body>
+    <!-- Login section -->
+    <section>
+      <div class="signup-section-container container">
+        <div class="signup-image-container">
+          <div class="signup-swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="signup-images swiper-slide">
+                <img src="/assets/login-banner.svg" alt="" class="signup-img" />
+              </div>
+              <div class="signup-images swiper-slide">
+                <img
+                  src="/assets/login-banner-2.svg"
+                  alt=""
+                  class="signup-img"
+                />
+              </div>
+              <div class="signup-images swiper-slide">
+                <img
+                  src="/assets/outdoor-pool-img.jpg"
+                  alt=""
+                  class="signup-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="signup-swiper-controls">
+            <div class="signup-swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="signup-section-details">
+          <div class="company-logo">
+            <img src="/assets/company-logo.svg" alt="" width="110px" />
+          </div>
+          <div class="signup-header">
+            <h1 class="fs-40 fw-bold">Sign up</h1>
+            <p class="text-neutral-grey">
+              Let’s get you all st up so you can access your personal account.
+            </p>
+          </div>
+          <div class="signup-form">
+            <div class="signup-name-input">
+              <div class="signup-input-group">
+                <input type="text" id="firstName" placeholder=" " required />
+                <label for="firstName">First Name</label>
+              </div>
+              <div class="signup-input-group">
+                <input type="text" id="lastName" placeholder=" " required />
+                <label for="lastName">Last Name</label>
+              </div>
+            </div>
+            <div class="signup-contact-input">
+              <div class="signup-input-group">
+                <input type="text" id="email" placeholder=" " required />
+                <label for="email">Email</label>
+              </div>
+              <div class="signup-input-group">
+                <input type="text" id="number" placeholder=" " required />
+                <label for="PhoneNumber">Phone Number</label>
+              </div>
+            </div>
+            <div class="signup-input-group password">
+              <input type="text" id="password" placeholder=" " required />
+              <label for="password">Password</label>
+              <button class="password-show-hide-btn">
+                <img src="/assets/hide-icon.svg" alt="" class="active" /><img
+                  src="/assets/eye-show-icon.svg"
+                  alt=""
+                  class="hidden"
+                />
+              </button>
+            </div>
+            <div class="signup-input-group confirm-password">
+              <input type="text" id="password" placeholder=" " required />
+              <label for="password">Password</label>
+              <button class="password-show-hide-btn">
+                <img src="/assets/hide-icon.svg" alt="" class="active" /><img
+                  src="/assets/eye-show-icon.svg"
+                  alt=""
+                  class="hidden"
+                />
+              </button>
+            </div>
+            <div class="signup-checkbox-group">
+              <label class="checkbox">
+                <input type="checkbox" />
+                I agree to all the<span><a href="#">&nbsp;Terms&nbsp;</a></span
+                >and
+                <span><a href="#">&nbsp;Privacy Policies</a></span>
+              </label>
+            </div>
+            <button type="signup" class="signup-btn btn-primary">
+              Create Account
+            </button>
+            <div class="signup-to-login flex">
+              <p class="fw-medium fs-14">Already have an account?</p>
+              <button class="btn-black">Login</button>
+            </div>
+            <p class="signup-options text-center text-neutral-grey">
+              Or login with
+            </p>
+            <div class="social-signup flex">
+              <button class="btn-stroke">
+                <img src="/assets/fb-icon-primary.svg" alt="fb-icon" />
+              </button>
+              <button class="btn-stroke">
+                <img src="/assets/google-icon-primary.svg" alt="google-icon" />
+              </button>
+              <button class="btn-stroke">
+                <img src="/assets/apple-icon-primary.svg" alt="apple-icon" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/auth/account.js"></script>
+    <script type="module" src="/src/auth/signup.js"></script>
+    <script type="module" src="/src/global-utilities/swiper.js"></script>
+  </body>
+</html>
