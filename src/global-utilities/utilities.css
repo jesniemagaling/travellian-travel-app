@@ -413,3 +413,10 @@ svg {
 .text-center {
   text-align: center;
 }
+
+.limit-text-to-1-line {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

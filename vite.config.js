@@ -8,7 +8,7 @@ export default defineConfig({
 
   server: {
     // Set the path to open relative to your project root
-    open: '/stay/staysconfirmation.html',
+    open: '/landing/index.html',
   },
 
   build: {
