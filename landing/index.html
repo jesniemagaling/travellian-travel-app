@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,9 +31,9 @@
     />
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="/src/landing-page/styles.css" />
-    <link rel="stylesheet" href="/src/global-utilities/utilities.css" />
-    <link rel="stylesheet" href="/src/global-utilities/responsive.css" />
+    <link rel="stylesheet" href="/src/css/landing-page/styles.css" />
+    <link rel="stylesheet" href="/src/css/utils/utilities.css" />
+    <link rel="stylesheet" href="/src/css/utils/responsive.css" />
   </head>
   <body>
     <!-- Header & Navigation -->
@@ -213,12 +213,16 @@
 
         <!-- Flights Actions -->
         <div class="actions flight-actions">
-          <button class="inline-flex btn-black flight-btn">
-            <img src="/assets/plus-icon.svg" alt="" />&nbsp;Add Promo Code
-          </button>
-          <button class="inline-flex btn-primary flight-btn">
-            <img src="/assets/show-icon.svg" alt="" />&nbsp;Show Flights
-          </button>
+          <a href="">
+            <button class="inline-flex btn-black flight-btn">
+              <img src="/assets/plus-icon.svg" alt="" />&nbsp;Add Promo Code
+            </button>
+          </a>
+          <a href="">
+            <button class="inline-flex btn-primary flight-btn">
+              <img src="/assets/show-icon.svg" alt="" />&nbsp;Show Flights
+            </button>
+          </a>
         </div>
 
         <!-- Stays Form -->
@@ -275,12 +279,16 @@
 
         <!-- Stays Actions -->
         <div class="actions stays-actions hidden">
-          <button class="inline-flex btn-black stays-btn">
-            <img src="/assets/plus-icon.svg" alt="" />&nbsp;Add Promo Code
-          </button>
-          <button class="inline-flex btn-primary stays-btn">
-            <img src="/assets/building-icon.svg" alt="" />&nbsp;Show Stays
-          </button>
+          <a href="">
+            <button class="inline-flex btn-black stays-btn">
+              <img src="/assets/plus-icon.svg" alt="" />&nbsp;Add Promo Code
+            </button>
+          </a>
+          <a href="">
+            <button class="inline-flex btn-primary stays-btn">
+              <img src="/assets/building-icon.svg" alt="" />&nbsp;Show Stays
+            </button>
+          </a>
         </div>
       </div>
     </section>
@@ -294,7 +302,7 @@
             Search Flights & Places Hire to our most popular destinations
           </p>
         </div>
-        <button class="btn-stroke">See more places</button>
+        <a href=""><button class="btn-stroke">See more places</button></a>
       </div>
 
       <div class="flex places-card">
@@ -398,11 +406,11 @@
           <div class="card-overlay">
             <h1>Flights</h1>
             <p>Search Flights & Places Hire to our most popular destinations</p>
-            <button class="btn-primary">
-              <a href="../flight/flightsearch.html" class="inline-flex"
-                ><img src="/assets/show-icon.svg" alt="" />&nbsp;Show Flights</a
-              >
-            </button>
+            <a href="../flight/flightsearch.html">
+              <button class="btn-primary inline-flex">
+                <img src="/assets/show-icon.svg" alt="" />&nbsp;Show Flights
+              </button>
+            </a>
           </div>
         </div>
 
@@ -411,11 +419,11 @@
           <div class="card-overlay">
             <h1>Hotels</h1>
             <p>Search Hotels & Places Hire to our most popular destinations</p>
-            <button class="btn-primary">
-              <a href="../hotel/hotelsearch.html" class="inline-flex"
-                ><img src="/assets/show-icon.svg" alt="" />&nbsp;Show Hotels</a
-              >
-            </button>
+            <a href="../stay/searchstays.html">
+              <button class="btn-primary inline-flex">
+                <img src="/assets/show-icon.svg" alt="" />&nbsp;Show Hotels
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -721,7 +729,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="/src/landing-page/main.js"></script>
-    <script type="module" src="/src/global-utilities/swiper.js"></script>
+    <script type="module" src="/src/javascript/landing-page/main.js"></script>
+    <script type="module" src="/src/javascript/utils/swiper.js"></script>
   </body>
 </html>

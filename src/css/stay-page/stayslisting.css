@@ -107,7 +107,10 @@ header {
   gap: 1rem;
   background-color: var(--clr-neutral-50);
   border-radius: 0 0 12px 12px;
-  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease,
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    max-height 0.3s ease,
     padding 0.3s ease;
   opacity: 0;
   transform: translateY(-10px); /* start slightly above */
@@ -324,7 +327,9 @@ input[type='checkbox']:checked {
   font-weight: var(--fw-semi-bold);
   font-size: var(--fs-16);
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
   text-align: left;
 }
 
@@ -398,7 +403,9 @@ input[type='checkbox']:checked {
   border-radius: 8px;
   opacity: 0;
   transform: translateX(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
   pointer-events: none; /* optional, prevents hover */
 }
 
@@ -501,8 +508,15 @@ input[type='checkbox']:checked {
 
 /* Responsive breakpoints */
 @media (max-width: 1409px) {
-  .stays-listing .hotel-info-container {
-    padding: 0 0 3em 0;
+  .hotel-card.stays-listing {
+    gap: 2em;
+  }
+  .hotel-info {
+    gap: 0.5em;
+  }
+  .hotel-info-container {
+    padding: 0 0.5em;
+    padding-bottom: 1em;
   }
   .stays-listing .hotel-logo {
     width: 100%;
@@ -514,5 +528,11 @@ input[type='checkbox']:checked {
     border-radius: 0;
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
+  }
+}
+
+@media (max-width: 490px) {
+  .stays-listing .hotel-logo {
+    max-height: 220px;
   }
 }
