@@ -1,4 +1,8 @@
-// === Booking Tab Logic ===
+import { renderFlightForm } from '../utils/flightForm';
+
+renderFlightForm();
+
+// Booking Tab Logic
 let isStaysClicked = false;
 
 const navTabs = document.querySelectorAll('.nav-booking-tab');

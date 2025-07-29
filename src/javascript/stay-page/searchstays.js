@@ -1,3 +1,7 @@
+import { renderStayForm } from '../utils/stayForm';
+
+renderStayForm();
+
 const flightsTab = document.querySelector('.flights-btn');
 const staysTab = document.querySelector('.stays-btn');
 
