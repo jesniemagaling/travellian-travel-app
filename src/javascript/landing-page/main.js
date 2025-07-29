@@ -1,3 +1,6 @@
+import { renderFlightForm } from '../utils/flightForm';
+import { renderStayForm } from '../utils/stayForm';
+
 // Nav Booking Tab
 const navTabs = document.querySelectorAll('.nav-booking-tab');
 
@@ -10,8 +13,8 @@ navTabs.forEach((tab) => {
 
 // Booking Tabs Toggle
 const tabs = document.querySelectorAll('.booking-tab');
-const flightForm = document.getElementById('flightForm');
-const stayForm = document.getElementById('stayForm');
+const flightForm = document.getElementById('flight-content');
+const stayForm = document.getElementById('stay-content');
 const flightActions = document.querySelector('.flight-actions');
 const staysActions = document.querySelector('.stays-actions');
 const header = document.querySelector('header');
@@ -22,6 +25,9 @@ const flightIcon = header.querySelector('.flights-btn-nav img');
 const staysIcon = header.querySelector('.stays-btn-nav img');
 const menuIcon = header.querySelector('.menu-nav');
 const closeIcon = header.querySelector('.close-nav');
+
+renderFlightForm();
+renderStayForm();
 
 tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
@@ -35,10 +41,6 @@ tabs.forEach((tab) => {
     // Toggle visibility of forms
     flightForm.classList.toggle('hidden', !isFlight);
     stayForm.classList.toggle('hidden', isFlight);
-
-    // Toggle visibility of action buttons
-    flightActions.classList.toggle('hidden', !isFlight);
-    staysActions.classList.toggle('hidden', isFlight);
   });
 });
 

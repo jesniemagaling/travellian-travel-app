@@ -405,8 +405,7 @@ input[type='date'] {
 }
 
 /* Hidden Utility - Specificity is important here! */
-.booking-form.hidden,
-.actions.hidden {
+.hidden {
   display: none;
 }
 
