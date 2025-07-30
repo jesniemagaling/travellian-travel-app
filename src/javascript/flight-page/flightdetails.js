@@ -1,3 +1,18 @@
+import {
+  setupMobileNav,
+  createTabSwitcher,
+  initUserDropdown,
+} from '../utils/nav';
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupMobileNav();
+  initUserDropdown();
+  createTabSwitcher({
+    activeTab: document.querySelector('.flights-btn'),
+    inactiveTab: document.querySelector('.stays-btn'),
+  });
+});
+
 const paymentOptions = document.querySelectorAll('.payment-option');
 
 paymentOptions.forEach((option) => {

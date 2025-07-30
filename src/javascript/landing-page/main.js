@@ -1,5 +1,31 @@
 import { renderFlightForm } from '../utils/flightForm';
 import { renderStayForm } from '../utils/stayForm';
+import { setupStickyNav } from '../utils/nav.js';
+import { places } from '../utils/places.js';
+import { reviews } from '../utils/reviews.js';
+
+const imageBase = `${import.meta.env.BASE_URL}assets`;
+
+setupStickyNav({
+  lightAssets: {
+    logo: `${imageBase}/company-logo-white.svg`,
+    flight: `${imageBase}/airplane-white-icon.svg`,
+    stays: `${imageBase}/bed-white-icon.svg`,
+    menu: `${imageBase}/open-icon-white.svg`,
+    close: `${imageBase}/close-icon-white.svg`,
+  },
+  darkAssets: {
+    logo: `${imageBase}/company-logo.svg`,
+    flight: `${imageBase}/airplane-icon.svg`,
+    stays: `${imageBase}/bed-icon.svg`,
+    menu: `${imageBase}/open-icon.svg`,
+    close: `${imageBase}/close-icon-nav.svg`,
+  },
+});
+renderFlightForm();
+renderStayForm();
+renderPlaces();
+renderReviews();
 
 // Nav Booking Tab
 const navTabs = document.querySelectorAll('.nav-booking-tab');
@@ -15,19 +41,6 @@ navTabs.forEach((tab) => {
 const tabs = document.querySelectorAll('.booking-tab');
 const flightForm = document.getElementById('flight-content');
 const stayForm = document.getElementById('stay-content');
-const flightActions = document.querySelector('.flight-actions');
-const staysActions = document.querySelector('.stays-actions');
-const header = document.querySelector('header');
-const nav = document.querySelector('nav');
-const navLinks = header.querySelectorAll('a.nav-link');
-const logoImg = header.querySelector('.company-logo-nav img');
-const flightIcon = header.querySelector('.flights-btn-nav img');
-const staysIcon = header.querySelector('.stays-btn-nav img');
-const menuIcon = header.querySelector('.menu-nav');
-const closeIcon = header.querySelector('.close-nav');
-
-renderFlightForm();
-renderStayForm();
 
 tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
@@ -44,62 +57,7 @@ tabs.forEach((tab) => {
   });
 });
 
-// scroll sticky navbar
-function updateNavStyle() {
-  const isScrolled = window.scrollY > 20;
-  const isHamburgerActive = hamburger.classList.contains('active');
-
-  if (isScrolled || isHamburgerActive) {
-    header.classList.add('sticky');
-
-    navLinks.forEach((link) => {
-      link.classList.add('links-black');
-    });
-
-    logoImg.src = '/assets/company-logo.svg';
-    flightIcon.src = '/assets/airplane-icon.svg';
-    staysIcon.src = '/assets/bed-icon.svg';
-    menuIcon.src = '/assets/open-icon.svg';
-    closeIcon.src = '/assets/close-icon-nav.svg';
-  } else {
-    header.classList.remove('sticky');
-
-    navLinks.forEach((link) => {
-      link.classList.remove('links-black');
-    });
-
-    logoImg.src = '/assets/company-logo-white.svg';
-    flightIcon.src = '/assets/airplane-white-icon.svg';
-    staysIcon.src = '/assets/bed-white-icon.svg';
-    menuIcon.src = '/assets/open-icon-white.svg';
-    closeIcon.src = '/assets/close-icon-white.svg';
-  }
-}
-
-// Call on scroll
-window.addEventListener('scroll', updateNavStyle);
-
-// Call on hamburger toggle
-const toggleMobileNav = () => {
-  hamburger.classList.toggle('active');
-  mobileNav.classList.toggle('show');
-  updateNavStyle(); // Ensure nav styling updates
-};
-
-const closeMobileNav = () => {
-  hamburger.classList.remove('active');
-  mobileNav.classList.remove('show');
-  updateNavStyle(); // Ensure nav styling resets
-};
-
-hamburger?.addEventListener('click', toggleMobileNav);
-
-// Responsive close
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 976) closeMobileNav();
-});
-
-// Interactive cards
+/*
 const boxes = document.querySelectorAll('.box');
 boxes.forEach((box) =>
   box.addEventListener('click', (e) => {
@@ -113,6 +71,7 @@ boxes.forEach((box) =>
 document.addEventListener('click', () => {
   boxes.forEach((box) => box.classList.remove('active'));
 });
+*/
 
 // Swap From - To values in flight form
 const swapIcon = document.querySelector('.swap-icon');
@@ -157,3 +116,55 @@ fromToInput.addEventListener('input', (e) => {
   // Optionally move caret if needed
   fromToInput.setSelectionRange(caretPos, caretPos);
 });
+
+function renderPlaces() {
+  const placesContainer = document.getElementById('placesCard');
+
+  placesContainer.innerHTML = places
+    .map(
+      ({ city, country, image, services }) => `
+        <div class="places-content flex">
+          <img src="${image}" alt="${city}, ${country}" />
+          <div class="grid">
+            <p class="fw-semi-bold heading-normal-txt">${city}, ${country}</p>
+            <p class="fw-medium fs-14">
+              ${services.join('&nbsp;&nbsp;•&nbsp;&nbsp;')}
+            </p>
+          </div>
+        </div>
+      `
+    )
+    .join('');
+}
+
+function renderReviews() {
+  const reviewsContainer = document.getElementById('swiperWrapper');
+
+  reviewsContainer.innerHTML = reviews
+    .map(
+      (reviews) => `
+        <div class="swiper-slide">
+          <div class="grid swiper-content">
+            <h1 class="fs-24 fw-bold">${reviews.title}</h1>
+            <p class="fs-14 text-neutral-grey">${reviews.message}</p>
+            <button class="btn-black">View More</button>
+            <div class="star-icon">
+              ${`<img src="${imageBase}/star-icon.svg" alt="star" />`.repeat(reviews.stars)}
+            </div>
+            <div>
+              <h1 class="fs-14 fw-bold">${reviews.name}</h1>
+              <h2 class="fs-12 fw-medium text-neutral-grey">${reviews.location}</h2>
+              <div class="flex">
+                <img src="${reviews.platformIcon}" alt="${reviews.platform}" />
+                <span class="fs-12 fw-bold text-neutral-grey">&nbsp;${reviews.platform}</span>
+              </div>
+            </div>
+            <div class="swiper-content-img">
+              <img src="${reviews.bannerImage}" alt="${reviews.name}'s review banner" />
+            </div>
+          </div>
+        </div>
+      `
+    )
+    .join('');
+}

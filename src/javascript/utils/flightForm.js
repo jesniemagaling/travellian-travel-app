@@ -1,3 +1,5 @@
+const imageBase = `${import.meta.env.BASE_URL}assets`;
+
 export function renderFlightForm() {
   let flightFormHTML = '';
 
@@ -30,7 +32,7 @@ export function renderFlightForm() {
             <div class="input-with-icon input-calendar">
               <input type="date" />
               <img
-                src="/assets/calendar-icon.svg"
+                src="${imageBase}/calendar-icon.svg"
                 alt="Calendar"
                 class="input-icon-right input-calendar-icon"
               />
@@ -42,7 +44,7 @@ export function renderFlightForm() {
             <div class="input-with-icon input-calendar">
               <input type="date" />
               <img
-                src="/assets/calendar-icon.svg"
+                src="${imageBase}/calendar-icon.svg"
                 alt="Calendar"
                 class="input-icon-right input-calendar-icon"
               />
@@ -61,12 +63,12 @@ export function renderFlightForm() {
     <div class="actions flight-actions">
       <a href="">
         <button class="inline-flex btn-black flight-btn">
-          <img src="/assets/plus-icon.svg" alt="" />&nbsp;Add Promo Code
+          <img src="${imageBase}/plus-icon.svg" alt="" />&nbsp;Add Promo Code
         </button>
       </a>
       <a href="">
         <button class="inline-flex btn-primary flight-btn">
-          <img src="/assets/show-icon.svg" alt="" />&nbsp;Show Flights
+          <img src="${imageBase}/show-icon.svg" alt="" />&nbsp;Show Flights
         </button>
       </a>
     </div>

@@ -1,33 +1,78 @@
 import { renderFlightForm } from '../utils/flightForm';
+import { setupStickyNav, createTabSwitcher } from '../utils/nav.js';
+import { bookingBanners } from '../utils/places.js';
+import { userOverlays } from '../utils/userOverlays.js';
+
+const imageBase = `${import.meta.env.BASE_URL}assets`;
+
+setupStickyNav({
+  lightAssets: {
+    logo: `${imageBase}/company-logo-white.svg`,
+    flight: `${imageBase}/airplane-white-icon.svg`,
+    stays: `${imageBase}/bed-white-icon.svg`,
+    menu: `${imageBase}/open-icon-white.svg`,
+    close: `${imageBase}/close-icon-white.svg`,
+  },
+  darkAssets: {
+    logo: `${imageBase}/company-logo.svg`,
+    flight: `${imageBase}/airplane-icon.svg`,
+    stays: `${imageBase}/bed-icon.svg`,
+    menu: `${imageBase}/open-icon.svg`,
+    close: `${imageBase}/close-icon-nav.svg`,
+  },
+});
+createTabSwitcher({
+  activeTab: document.querySelector('.flights-btn'),
+  inactiveTab: document.querySelector('.stays-btn'),
+});
 
 renderFlightForm();
+renderUserOverlays();
+renderTravelBundle();
 
-// Booking Tab Logic
-let isStaysClicked = false;
+function renderUserOverlays() {
+  const mapContainerHTML = document.getElementById('mapContent');
 
-const navTabs = document.querySelectorAll('.nav-booking-tab');
-const flightsTab = document.querySelector('.flights-btn');
-const staysTab = document.querySelector('.stays-btn');
+  mapContainerHTML.innerHTML = userOverlays
+    .map(
+      ({ id, name, boardingPass, image }) => `
+        <div class="map-user-overlay-${id} user-overlay flex user-hidden">
+          <img src="${image}" alt="${name}" />
+          <div class="grid">
+            <h1 class="fs-12 fw-bold">${name}</h1>
+            <p class="fs-10 text-neutral-grey">${boardingPass}</p>
+          </div>
+        </div>
+      `
+    )
+    .join('');
+}
 
-navTabs.forEach((tab) => {
-  tab.addEventListener('click', () => {
-    navTabs.forEach((t) => t.classList.remove('active'));
-    tab.classList.add('active');
-    isStaysClicked = tab.classList.contains('stays-btn');
-  });
+function renderTravelBundle() {
+  const travelBundleHTML = document.getElementById('bookingContent');
 
-  tab.addEventListener('mouseenter', () => {
-    navTabs.forEach((t) => t.classList.remove('active'));
-    tab.classList.add('active');
-  });
-});
-
-staysTab.addEventListener('mouseleave', () => {
-  if (!isStaysClicked) {
-    navTabs.forEach((t) => t.classList.remove('active'));
-    flightsTab.classList.add('active');
-  }
-});
+  travelBundleHTML.innerHTML = bookingBanners
+    .map(
+      ({ destination, description, price, image }) => `
+        <div class="box">
+          <img class="image-box" src="${image}" />
+          <div class="card-overlay">
+            <div class="flex">
+              <div class="grid">
+                <h1>${destination}</h1>
+                <p>${description}</p>
+              </div>
+              <h2 class="fw-semi-bold fs-24">$ ${price}</h2>
+            </div>
+            <button class="travel-bundle-btn inline-flex btn-primary">
+              Book Flight
+            </button>
+          </div>
+        </div>
+      `
+    )
+    .join('');
+}
 
 // === Map Overlay Logic ===
 document.addEventListener('DOMContentLoaded', () => {

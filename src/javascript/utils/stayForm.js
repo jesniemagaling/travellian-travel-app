@@ -1,3 +1,5 @@
+const imageBase = `${import.meta.env.BASE_URL}assets`;
+
 export function renderStayForm() {
   let stayFormHTML = '';
 
@@ -8,7 +10,7 @@ export function renderStayForm() {
         <div class="form-group">
           <label>Enter Destination</label>
           <div class="input-with-icon">
-            <img src="/assets/bed-icon.svg" alt="Bed" class="input-icon" />
+            <img src="${imageBase}/bed-icon.svg" alt="Bed" class="input-icon" />
             <input type="text" placeholder="Istanbul, Turkey" />
           </div>
         </div>
@@ -18,7 +20,7 @@ export function renderStayForm() {
           <div class="input-with-icon input-calendar">
             <input type="date" />
             <img
-              src="/assets/calendar-icon.svg"
+              src="${imageBase}/calendar-icon.svg"
               alt="Calendar"
               class="input-icon-right input-calendar-icon"
             />
@@ -30,7 +32,7 @@ export function renderStayForm() {
           <div class="input-with-icon input-calendar">
             <input type="date" />
             <img
-              src="/assets/calendar-icon.svg"
+              src="${imageBase}/calendar-icon.svg"
               alt="Calendar"
               class="input-icon-right input-calendar-icon"
             />
@@ -41,7 +43,7 @@ export function renderStayForm() {
           <label>Rooms & Guests</label>
           <div class="input-with-icon">
             <img
-              src="/assets/user-icon.svg"
+              src="${imageBase}/user-icon.svg"
               alt="User"
               class="input-icon"
             />
@@ -58,12 +60,12 @@ export function renderStayForm() {
     <div class="actions stays-actions">
       <a href="">
         <button class="inline-flex btn-black stays-btn">
-          <img src="/assets/plus-icon.svg" alt="" />&nbsp;Add Promo Code
+          <img src="${imageBase}/plus-icon.svg" alt="" />&nbsp;Add Promo Code
         </button>
       </a>
       <a href="">
         <button class="inline-flex btn-primary stays-btn">
-          <img src="/assets/building-icon.svg" alt="" />&nbsp;Show Stays
+          <img src="${imageBase}/building-icon.svg" alt="" />&nbsp;Show Stays
         </button>
       </a>
     </div>

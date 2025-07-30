@@ -50,7 +50,7 @@
             >
           </a>
           <a
-            href="../hotel/hotelsearch.html"
+            href="../stay/searchstays.html"
             class="inline-flex nav-link stays-btn-nav stays-btn nav-booking-tab"
           >
             <img src="/assets/bed-white-icon.svg" alt="bed" /><span
@@ -89,11 +89,11 @@
 
       <!-- Mobile Navigation -->
       <div class="mobile-nav" id="mobileNav">
-        <a href="../flight/flightsearch.html" class="mobile-link">
+        <a href="#" class="mobile-link">
           <img src="/assets/airplane-icon.svg" alt="airplane" />
           <span class="fs-16 fw-semi-bold">&nbsp;Find Flights</span>
         </a>
-        <a href="#" class="mobile-link">
+        <a href="../stay/searchstays.html" class="mobile-link">
           <img src="/assets/bed-icon.svg" alt="bed" />
           <span class="fs-16 fw-semi-bold">&nbsp;Find Stays</span>
         </a>
@@ -8929,41 +8929,7 @@
             />
           </svg>
         </div>
-        <div class="map-user-overlay-1 user-overlay flex user-hidden">
-          <img src="/assets/people-1.svg" alt="" />
-          <div class="grid">
-            <h1 class="fs-12 fw-bold">James Doe</h1>
-            <p class="fs-10 text-neutral-grey">Boarding Pass N'123</p>
-          </div>
-        </div>
-        <div class="map-user-overlay-2 user-overlay flex user-hidden">
-          <img src="/assets/people-2.svg" alt="" />
-          <div class="grid">
-            <h1 class="fs-12 fw-bold">James Doe</h1>
-            <p class="fs-10 text-neutral-grey">Boarding Pass N'123</p>
-          </div>
-        </div>
-        <div class="map-user-overlay-3 user-overlay flex user-hidden">
-          <img src="/assets/people-3.svg" alt="" />
-          <div class="grid">
-            <h1 class="fs-12 fw-bold">James Doe</h1>
-            <p class="fs-10 text-neutral-grey">Boarding Pass N'123</p>
-          </div>
-        </div>
-        <div class="map-user-overlay-4 user-overlay flex user-hidden">
-          <img src="/assets/people-4.svg" alt="" />
-          <div class="grid">
-            <h1 class="fs-12 fw-bold">James Doe</h1>
-            <p class="fs-10 text-neutral-grey">Boarding Pass N'123</p>
-          </div>
-        </div>
-        <div class="map-user-overlay-5 user-overlay flex user-hidden">
-          <img src="/assets/people-5.svg" alt="" />
-          <div class="grid">
-            <h1 class="fs-12 fw-bold">James Doe</h1>
-            <p class="fs-10 text-neutral-grey">Boarding Pass N'123</p>
-          </div>
-        </div>
+        <div id="mapContent"></div>
       </div>
     </section>
 
@@ -8976,84 +8942,11 @@
             Your one-stop travel pack for wherever you're off to next.
           </p>
         </div>
-        <button class="btn-stroke">
-          <a href="flightlisting.html" target="_blank">See All</a>
-        </button>
+        <a href="flightlisting.html" target="_blank">
+          <button class="btn-stroke">See All</button>
+        </a>
       </div>
-      <div class="booking-banner box-area">
-        <div class="box">
-          <img class="image-box" src="/assets/travel-bg-au.svg" alt="Flights" />
-          <div class="card-overlay">
-            <div class="flex">
-              <div class="grid">
-                <h1>Melbourne</h1>
-                <p>An amazing journey</p>
-              </div>
-              <h2 class="fw-semi-bold fs-24">$ 700</h2>
-            </div>
-            <button class="travel-bundle-btn inline-flex btn-primary">
-              Book Flight
-            </button>
-          </div>
-        </div>
-        <div class="box">
-          <img
-            class="image-box"
-            src="/assets/travel-bg-paris.svg"
-            alt="Flights"
-          />
-          <div class="card-overlay">
-            <div class="flex">
-              <div class="grid">
-                <h1>Paris</h1>
-                <p>A paris adventure</p>
-              </div>
-              <h2 class="fw-semi-bold fs-24">$ 700</h2>
-            </div>
-            <button class="travel-bundle-btn inline-flex btn-primary">
-              Book Flight
-            </button>
-          </div>
-        </div>
-        <div class="box">
-          <img
-            class="image-box"
-            src="/assets/travel-bg-london.svg"
-            alt="Flights"
-          />
-          <div class="card-overlay">
-            <div class="flex">
-              <div class="grid">
-                <h1>London</h1>
-                <p>London eye adventure</p>
-              </div>
-              <h2 class="fw-semi-bold fs-24">$ 700</h2>
-            </div>
-            <button class="travel-bundle-btn inline-flex btn-primary">
-              Book Flight
-            </button>
-          </div>
-        </div>
-        <div class="box">
-          <img
-            class="image-box"
-            src="/assets/travel-bg-columbia.svg"
-            alt="Flights"
-          />
-          <div class="card-overlay">
-            <div class="flex">
-              <div class="grid">
-                <h1>Columbia</h1>
-                <p>Amazing strees</p>
-              </div>
-              <h2 class="fw-semi-bold fs-24">$ 700</h2>
-            </div>
-            <button class="travel-bundle-btn inline-flex btn-primary">
-              Book Flight
-            </button>
-          </div>
-        </div>
-      </div>
+      <div class="booking-banner box-area" id="bookingContent"></div>
     </section>
 
     <!-- Travel Location -->
@@ -9065,9 +8958,9 @@
             Traveling this season? We’ll help you get there.
           </p>
         </div>
-        <button class="btn-stroke">
-          <a href="flightlisting.html" target="_blank">See All</a>
-        </button>
+        <a href="flightlisting.html" target="_blank">
+          <button class="btn-stroke">See All</button>
+        </a>
       </div>
       <div class="travel-location-wrapper">
         <div class="travel-location-card card-1">
@@ -9185,7 +9078,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="/src/javascript/landing-page/main.js"></script>
     <script
       type="module"
       src="/src/javascript/flight-page/flightsearch.js"

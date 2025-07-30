@@ -160,39 +160,10 @@
         </div>
       </div>
 
-      <div class="flex places-card-hotel places-card">
-        <div class="places-heading-hotel places-content flex">
-          <img src="/assets/istanbul.jpg" alt="istanbul" />
-          <div class="grid">
-            <p class="fw-semi-bold">Istanbul, Turkey</p>
-            <p class="fs-12">325 places</p>
-          </div>
-        </div>
-
-        <div class="places-heading-hotel places-content flex">
-          <img src="/assets/sydney.jpg" alt="" />
-          <div class="grid">
-            <p class="fw-semi-bold">Sydney, Australia</p>
-            <p class="fs-12">325 places</p>
-          </div>
-        </div>
-
-        <div class="places-heading-hotel places-content flex">
-          <img src="/assets/baku.jpg" alt="" />
-          <div class="grid">
-            <p class="fw-semi-bold">Baku, Azerbaijan</p>
-            <p class="fs-12">325 places</p>
-          </div>
-        </div>
-
-        <div class="places-heading-hotel places-content flex">
-          <img src="/assets/maldives.jpg" alt="" />
-          <div class="grid">
-            <p class="fw-semi-bold">Malé, Maldives</p>
-            <p class="fs-12">325 places</p>
-          </div>
-        </div>
-      </div>
+      <div
+        class="flex places-card-hotel places-card"
+        id="popularDestination"
+      ></div>
     </section>
 
     <!-- Travel Bundle Section -->
@@ -208,80 +179,7 @@
           <a href="stayslisting.html" target="_blank">See All</a>
         </button>
       </div>
-      <div class="booking-banner box-area">
-        <div class="box">
-          <img class="image-box" src="/assets/travel-bg-au.svg" alt="Flights" />
-          <div class="card-overlay">
-            <div class="flex">
-              <div class="grid">
-                <h1>Melbourne</h1>
-                <p>An amazing journey</p>
-              </div>
-              <h2 class="fw-semi-bold fs-24">$ 700</h2>
-            </div>
-            <button class="travel-bundle-btn inline-flex btn-primary">
-              Book Hotel
-            </button>
-          </div>
-        </div>
-        <div class="box">
-          <img
-            class="image-box"
-            src="/assets/travel-bg-paris.svg"
-            alt="Flights"
-          />
-          <div class="card-overlay">
-            <div class="flex">
-              <div class="grid">
-                <h1>Paris</h1>
-                <p>A paris adventure</p>
-              </div>
-              <h2 class="fw-semi-bold fs-24">$ 700</h2>
-            </div>
-            <button class="travel-bundle-btn inline-flex btn-primary">
-              Book Hotel
-            </button>
-          </div>
-        </div>
-        <div class="box">
-          <img
-            class="image-box"
-            src="/assets/travel-bg-london.svg"
-            alt="Flights"
-          />
-          <div class="card-overlay">
-            <div class="flex">
-              <div class="grid">
-                <h1>London</h1>
-                <p>London eye adventure</p>
-              </div>
-              <h2 class="fw-semi-bold fs-24">$ 700</h2>
-            </div>
-            <button class="travel-bundle-btn inline-flex btn-primary">
-              Book Hotel
-            </button>
-          </div>
-        </div>
-        <div class="box">
-          <img
-            class="image-box"
-            src="/assets/travel-bg-columbia.svg"
-            alt="Flights"
-          />
-          <div class="card-overlay">
-            <div class="flex">
-              <div class="grid">
-                <h1>Columbia</h1>
-                <p>Amazing strees</p>
-              </div>
-              <h2 class="fw-semi-bold fs-24">$ 700</h2>
-            </div>
-            <button class="travel-bundle-btn inline-flex btn-primary">
-              Book Hotel
-            </button>
-          </div>
-        </div>
-      </div>
+      <div class="booking-banner box-area" id="bookingContent"></div>
     </section>
 
     <!-- Travel Location -->
@@ -318,7 +216,7 @@
             </div>
           </div>
           <button class="travel-location-btn inline-flex btn-primary">
-            Book Flight
+            Book Stay
           </button>
         </div>
         <div class="travel-location-card card-2">
@@ -413,7 +311,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="/src/javascript/landing-page/main.js"></script>
     <script
       type="module"
       src="/src/javascript/stay-page/searchstays.js"

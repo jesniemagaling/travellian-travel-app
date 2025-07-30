@@ -58,8 +58,10 @@
   gap: 0.5rem;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 100;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  z-index: 50;
   position: absolute;
 }
 
@@ -170,7 +172,9 @@
   padding: 0.4em 1em;
   border-radius: 8px;
   text-align: center;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
 }
 
 .travel-location-card.card-1 .text-center p {

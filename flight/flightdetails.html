@@ -43,12 +43,15 @@
       <nav class="container">
         <div class="nav-left inline-flex">
           <a
-            href="flightlisting.html"
+            href="../flight/flightsearch.html"
             class="inline-flex nav-link flights-btn nav-booking-tab active"
           >
             <img src="/assets/airplane-icon.svg" alt="airplane" />Find Flights
           </a>
-          <a href="#" class="inline-flex nav-link stays-btn nav-booking-tab">
+          <a
+            href="../stay/searchstays.html"
+            class="inline-flex nav-link stays-btn nav-booking-tab"
+          >
             <img src="/assets/bed-icon.svg" alt="bed" />Find Stays
           </a>
         </div>
@@ -291,39 +294,6 @@
             </div>
           </div>
         </div>
-        <div class="flight-itinerary-container">
-          <div class="flight-itinerary-date">
-            <h1 class="fs-20 fw-bold">Return Wed, Dec 8</h1>
-            <p class="fs-20 fw-medium text-neutral-grey">9h 13m</p>
-          </div>
-          <div class="flight-itinerary-airlines">
-            <div class="itinerary-airlines flex">
-              <img src="/assets/emirates-logo.svg" alt="" width="74px" />
-              <div class="itinerary-airlines-info">
-                <h2 class="fw-semi-bold fs-28">Emirates</h2>
-                <p class="text-neutral-grey fs-16">AirbusA320</p>
-              </div>
-            </div>
-            <div class="itinerary-details">
-              <img src="/assets/airplane-icon.svg" alt="" />
-              <img src="/assets/wifi-icon.svg" alt="" />
-              <img src="/assets/stopwatch-icon.svg" alt="" />
-              <img src="/assets/foods-icon.svg" alt="" />
-              <img src="/assets/airlineseat-icon.svg" alt="" />
-            </div>
-          </div>
-          <div class="flight-itinerary-timeframe">
-            <div class="itinerary-time flex">
-              <h3 class="fs-24 fw-semi-bold">11:11pm</h3>
-              <p class="text-neutral-grey fw-medium">Newark(EWR)</p>
-            </div>
-            <img src="/assets/airplane-icon.svg" alt="" />
-            <div class="itinerary-time flex">
-              <h3 class="fs-24 fw-semi-bold">13:09pm</h3>
-              <p class="text-neutral-grey fw-medium">Newark(EWR)</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -407,10 +377,6 @@
     <script
       type="module"
       src="/src/javascript/flight-page/flightdetails.js"
-    ></script>
-    <script
-      type="module"
-      src="/src/javascript/flight-page/flightlisting.js"
     ></script>
     <script type="module" src="/src/javascript/utils/swiper.js"></script>
   </body>

@@ -1,32 +1,75 @@
 import { renderStayForm } from '../utils/stayForm';
+import { setupStickyNav, createTabSwitcher } from '../utils/nav.js';
+import { places, bookingBanners } from '../utils/places.js';
+
+const imageBase = `${import.meta.env.BASE_URL}assets`;
+
+setupStickyNav({
+  lightAssets: {
+    logo: `${imageBase}/company-logo-white.svg`,
+    flight: `${imageBase}/airplane-white-icon.svg`,
+    stays: `${imageBase}/bed-white-icon.svg`,
+    menu: `${imageBase}/open-icon-white.svg`,
+    close: `${imageBase}/close-icon-white.svg`,
+  },
+  darkAssets: {
+    logo: `${imageBase}/company-logo.svg`,
+    flight: `${imageBase}/airplane-icon.svg`,
+    stays: `${imageBase}/bed-icon.svg`,
+    menu: `${imageBase}/open-icon.svg`,
+    close: `${imageBase}/close-icon-nav.svg`,
+  },
+});
+createTabSwitcher({
+  activeTab: document.querySelector('.stays-btn'),
+  inactiveTab: document.querySelector('.flights-btn'),
+});
 
 renderStayForm();
+renderPopularDestination();
+renderTravelBundle();
 
-const flightsTab = document.querySelector('.flights-btn');
-const staysTab = document.querySelector('.stays-btn');
+function renderPopularDestination() {
+  const destinationContainer = document.getElementById('popularDestination');
 
-// Mark if "Find Flights" was clicked
-let isFlightsClicked = false;
+  destinationContainer.innerHTML = places
+    .slice(0, 4)
+    .map(
+      ({ city, country, image, placesCount }) => `
+      <div class="places-heading-hotel places-content flex">
+        <img src="${image}" alt="" />
+        <div class="grid">
+          <p class="fw-semi-bold">${city} ${country}</p>
+          <p class="fs-12">${placesCount} places</p>
+        </div>
+      </div>
+    `
+    )
+    .join('');
+}
 
-// On hover: remove .active from stays, add to flights
-flightsTab.addEventListener('mouseenter', () => {
-  if (!isFlightsClicked) {
-    staysTab.classList.remove('active');
-    flightsTab.classList.add('active');
-  }
-});
+function renderTravelBundle() {
+  const travelBundleHTML = document.getElementById('bookingContent');
 
-// On mouse leave: restore active to stays if not clicked
-flightsTab.addEventListener('mouseleave', () => {
-  if (!isFlightsClicked) {
-    flightsTab.classList.remove('active');
-    staysTab.classList.add('active');
-  }
-});
-
-// On click: keep flights tab active permanently
-flightsTab.addEventListener('click', () => {
-  staysTab.classList.remove('active');
-  flightsTab.classList.add('active');
-  isFlightsClicked = true;
-});
+  travelBundleHTML.innerHTML = bookingBanners
+    .map(
+      ({ destination, description, price, image }) => `
+        <div class="box">
+          <img class="image-box" src="${image}" />
+          <div class="card-overlay">
+            <div class="flex">
+              <div class="grid">
+                <h1>${destination}</h1>
+                <p>${description}</p>
+              </div>
+              <h2 class="fw-semi-bold fs-24">$ ${price}</h2>
+            </div>
+            <button class="travel-bundle-btn inline-flex btn-primary">
+              Book Stay
+            </button>
+          </div>
+        </div>
+      `
+    )
+    .join('');
+}
