@@ -86,7 +86,7 @@ function renderFlights() {
                 <button class="btn-stroke">
                   <img src="${imageBase}/heart-stroke-icon.svg" alt="" />
                 </button>
-                <button class="btn-primary full-width">View Deals</button>
+                <button class="btn-primary full-width" data-id="${flight.id}">View Deals</button>
               </div>
             </div>
           </div>
@@ -95,3 +95,13 @@ function renderFlights() {
     )
     .join('');
 }
+
+document.addEventListener('click', (e) => {
+  const button = e.target.closest('.btn-primary[data-id]');
+  if (!button) return;
+
+  const flightId = button.dataset.id;
+  if (flightId) {
+    window.location.href = `/flight/flightdetails.html?flight=${flightId}`;
+  }
+});

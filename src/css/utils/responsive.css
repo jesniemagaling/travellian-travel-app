@@ -190,6 +190,11 @@
     padding: 1em 2.5em 0 2.5em;
   }
 
+  .header-2 {
+    padding: 0;
+    padding-inline: 1em;
+  }
+
   main .swiper {
     padding: 1em;
   }

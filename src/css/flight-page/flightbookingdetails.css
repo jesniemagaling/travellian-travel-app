@@ -145,6 +145,7 @@
   overflow: hidden;
   border-radius: 12px;
   max-width: 120px;
+  height: 120px;
 }
 
 .booking-total-banner img {

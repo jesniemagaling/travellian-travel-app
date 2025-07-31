@@ -26,6 +26,10 @@
   gap: 1.5em;
 }
 
+.hotel-logo img {
+  height: 64px;
+}
+
 .hotel-location {
   padding: 0.2em 0;
 }
@@ -196,7 +200,7 @@
 
 .booking-price-info {
   display: grid;
-  row-gap: 2em;
+  row-gap: 1.5em;
 }
 
 .booking-price-details {
@@ -208,6 +212,10 @@
 .price {
   display: flex;
   justify-content: space-between;
+}
+
+.confirm-button button {
+  width: 100%;
 }
 
 /* Pop up add new card */

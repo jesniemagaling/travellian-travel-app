@@ -22,12 +22,14 @@ header {
 
 .hotel-details-heading {
   display: flex;
+  gap: 1em;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
 
 .hotel-name.flex {
   gap: 1em;
+  flex-wrap: nowrap;
 }
 
 .hotel-per-night {
@@ -261,7 +263,10 @@ header {
   border-radius: 12px;
   position: relative;
   z-index: 2;
-  transition: transform 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    height 0.3s ease,
+    border-radius 0.3s ease;
 }
 
 .modal-img {
@@ -368,8 +373,13 @@ header {
   padding: 0.25em 0 0.8em 0;
 }
 
+.rooms-cta.flex {
+  justify-content: start;
+  gap: 1em;
+}
+
 .rooms-btn .btn-stroke {
-  width: 180px;
+  width: 140px;
 }
 
 .room-amenities {
@@ -466,7 +476,9 @@ ul.amenities {
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  transition: border-radius 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-radius 0.3s ease,
+    box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
 }
@@ -496,7 +508,9 @@ ul.amenities {
   opacity: 0;
   z-index: 2;
   border-radius: 12px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .amenities-data p {
@@ -714,21 +728,11 @@ ul.amenities {
   .hotel-location-card.card-5 {
     border-bottom-right-radius: 12px;
   }
-  .hotel-name h1 {
-    max-width: 405px;
-  }
-  .hotel-name.flex {
-    flex-direction: column;
-    align-items: start;
-  }
   .hotel-per-night {
     align-items: start;
   }
   .hotel-per-night span {
     padding-top: 1.4em;
-  }
-  .hotel-name .flex {
-    margin-bottom: 0.5em;
   }
 }
 
@@ -765,9 +769,6 @@ ul.amenities {
   ul.amenities {
     column-count: 1;
   }
-  .rooms-btn .btn-stroke {
-    width: 100%;
-  }
   .hotel-details-wrapper {
     margin: 6.5rem auto 2rem auto;
   }
@@ -792,9 +793,6 @@ ul.amenities {
   }
   .hotel-location-card.card-3 {
     border-top-right-radius: 12px;
-  }
-  .hotel-name h1 {
-    max-width: 240px;
   }
   .amenities-data {
     bottom: 1.5em;

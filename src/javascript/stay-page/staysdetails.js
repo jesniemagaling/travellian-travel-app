@@ -3,6 +3,15 @@ import {
   createTabSwitcher,
   initUserDropdown,
 } from '../utils/nav';
+import { stays } from '../utils/stays';
+import {
+  renderAmenitiesSlides,
+  renderReviewsSlides,
+  renderRoomSlides,
+  renderStaysDetails,
+  renderStaysLocation,
+  renderStaysOverview,
+} from './staysInfo';
 
 document.addEventListener('DOMContentLoaded', () => {
   setupMobileNav();
@@ -11,39 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
     activeTab: document.querySelector('.stays-btn'),
     inactiveTab: document.querySelector('.flights-btn'),
   });
+
+  const stayId = getStayFromURL();
+  const selectedStay = stays.find((stay) => stay.id === stayId);
+
+  if (selectedStay) {
+    renderStaysDetails(selectedStay);
+    renderStaysOverview(selectedStay);
+    renderStaysLocation(selectedStay);
+  }
+
+  renderRoomSlides();
+  renderAmenitiesSlides();
+  renderReviewsSlides();
 });
 
-const paymentOptions = document.querySelectorAll('.payment-option');
-
-paymentOptions.forEach((option) => {
-  option.addEventListener('click', () => {
-    // Remove .selected from all options
-    paymentOptions.forEach((opt) => opt.classList.remove('selected'));
-
-    // Add .selected to the clicked one
-    option.classList.add('selected');
-
-    // Manually check the radio
-    const radio = option.querySelector('input[type="radio"]');
-    radio.checked = true;
-  });
-});
-
-const openModalBtn = document.querySelector('.payment-method-btn');
-const modal = document.getElementById('addCardModal');
-const closeModalBtn = modal.querySelector('.modal-close');
-const modalOverlay = modal.querySelector('.modal-overlay');
-
-// Show modal
-openModalBtn.addEventListener('click', () => {
-  modal.style.display = 'block';
-});
-
-// Hide modal
-closeModalBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-modalOverlay.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
+// Gets `stay` from the URL, e.g. ?stay=familyRoom
+export function getStayFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('stay');
+}

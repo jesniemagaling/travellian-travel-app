@@ -101,7 +101,7 @@ function renderStays() {
                 <button class="btn-stroke">
                   <img src="${imageBase}/heart-stroke-icon.svg" alt="" />
                 </button>
-                <button class="btn-primary full-width">View Deals</button>
+                <button class="btn-primary full-width" data-id="${stay.id}">View Deals</button>
               </div>
             </div>
           </div>
@@ -110,3 +110,13 @@ function renderStays() {
     )
     .join('');
 }
+
+document.addEventListener('click', (e) => {
+  const button = e.target.closest('.btn-primary[data-id]');
+  if (!button) return;
+
+  const stayId = button.dataset.id;
+  if (stayId) {
+    window.location.href = `/stay/staysdetails.html?stay=${stayId}`;
+  }
+});
