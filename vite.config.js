@@ -5,7 +5,7 @@ import { resolve } from 'path';
 export default defineConfig({
   // No 'root' property needed if your HTML files are in subdirectories directly under the project root.
   // Vite defaults to process.cwd() (the project root) as the 'root' if not specified.
-
+  base: '/travellian-travel-app/',
   server: {
     // Set the path to open relative to your project root
     open: '/landing/index.html',
@@ -23,7 +23,7 @@ export default defineConfig({
         flightDetails: resolve(__dirname, 'flight/flightdetails.html'),
         flightConfirmation: resolve(
           __dirname,
-          'flight/flightconfiramation.html'
+          'flight/flightconfirmation.html'
         ),
         flightBookingDetails: resolve(
           __dirname,
