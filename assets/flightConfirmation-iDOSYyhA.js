@@ -1,20 +1,20 @@
-import"./swiper-DolsZaOw.js";import{a as v,i as g,c as b}from"./nav-BRbo9wLN.js";/* empty css                      *//* empty css                      *//* empty css                           */import{f as y}from"./flights-Bw2lqAzd.js";document.addEventListener("DOMContentLoaded",()=>{v(),g(),b({activeTab:document.querySelector(".flights-btn"),inactiveTab:document.querySelector(".stays-btn")});const e=w(),s=y.find(i=>i.id===e);s?k(s):console.warn("Flight not found")});function w(){return new URLSearchParams(window.location.search).get("flight")}function k(e,s={}){const i=document.getElementById("flight-details");if(!i)return;const a=e.departures[0],{passengerName:o="Jesnie Magaling",boardingPass:r="1234567890",classType:l="Economy",date:n="Aug 5, 2025",gate:c="B12",seat:d="24A",codePrefix:f="EK",code:h="84920124"}=s,[t,m]=a.time.split(" - "),[p,u]=a.route.split("-");i.innerHTML=`
+import"./swiper-DolsZaOw.js";import{a as g,i as b,c as y}from"./nav-BRbo9wLN.js";/* empty css                      *//* empty css                      *//* empty css                           */import{f as w}from"./flights-Bw2lqAzd.js";const e="/travellian-travel-app/assets";document.addEventListener("DOMContentLoaded",()=>{g(),b(),y({activeTab:document.querySelector(".flights-btn"),inactiveTab:document.querySelector(".stays-btn")});const i=$(),a=w.find(s=>s.id===i);a?k(a):console.warn("Flight not found")});function $(){return new URLSearchParams(window.location.search).get("flight")}function k(i,a={}){const s=document.getElementById("flight-details");if(!s)return;const t=i.departures[0],{passengerName:r="Jesnie Magaling",boardingPass:l="1234567890",classType:n="Economy",date:c="Aug 5, 2025",gate:d="B12",seat:f="24A",codePrefix:h="EK",code:m="84920124"}=a,[o,p]=t.time.split(" - "),[v,u]=t.route.split("-");s.innerHTML=`
     <section>
       <div class="flight-details-wrapper">
         <div class="flight-details-heading">
-          <h1 class="fs-28 fw-bold">${e.airline}</h1>
-          <h2 class="fs-32 fw-bold">$${e.price}</h2>
+          <h1 class="fs-28 fw-bold">${i.airline}</h1>
+          <h2 class="fs-32 fw-bold">$${i.price}</h2>
         </div>
         <div class="flight-confirmation flight-details-info">
           <div>
             <div class="flight-details-location">
-              <img src="/assets/location-icon.svg" alt="" />
-              <p class="fs-14">${a.route}</p>
+              <img src="${e}/location-icon.svg" alt="" />
+              <p class="fs-14">${t.route}</p>
             </div>
           </div>
           <div class="flight-details-btn">
             <button class="btn-stroke">
-              <img src="/assets/share-icon.svg" alt="" />
+              <img src="${e}/share-icon.svg" alt="" />
             </button>
             <button class="btn-primary">Download</button>
           </div>
@@ -22,59 +22,59 @@ import"./swiper-DolsZaOw.js";import{a as v,i as g,c as b}from"./nav-BRbo9wLN.js"
         <div class="flight-details-confirmation">
           <div class="flight-ticket">
             <div class="flight-time">
-              <h1 class="fs-32 fw-semi-bold">${t}</h1>
-              <p class="fs-14 text-neutral-grey fw-medium">${p}</p>
-              <img src="/assets/airplanevert-icon.svg" alt="" />
-              <h1 class="fs-32 fw-semi-bold">${m}</h1>
+              <h1 class="fs-32 fw-semi-bold">${o}</h1>
+              <p class="fs-14 text-neutral-grey fw-medium">${v}</p>
+              <img src="${e}/airplanevert-icon.svg" alt="" />
+              <h1 class="fs-32 fw-semi-bold">${p}</h1>
               <p class="fs-14 text-neutral-grey fw-medium">${u}</p>
             </div>
             <div class="ticket-info">
               <div class="ticket-profile">
                 <div class="flex">
-                  <img src="/assets/profile-icon.svg" alt="" />
+                  <img src="${e}/profile-icon.svg" alt="" />
                   <div class="profile-name">
-                    <h1 class="fs-20 fw-bold">${o}</h1>
-                    <p class="fs-14">Boarding Pass N’${r}</p>
+                    <h1 class="fs-20 fw-bold">${r}</h1>
+                    <p class="fs-14">Boarding Pass N’${l}</p>
                   </div>
                 </div>
-                <h2 class="fs-14 fw-bold">${l}</h2>
+                <h2 class="fs-14 fw-bold">${n}</h2>
               </div>
               <div class="plane-details grid-4">
                 <div class="flex">
-                  <img src="/assets/calendar-primary-icon.svg" alt="" />
+                  <img src="${e}/calendar-primary-icon.svg" alt="" />
                   <div class="profile-name">
                     <h1 class="text-neutral-grey fs-14 fw-semi-bold">Date</h1>
-                    <p class="fs-12 fw-medium">${n}</p>
-                  </div>
-                </div>
-                <div class="flex">
-                  <img src="/assets/clock-icon.svg" alt="" />
-                  <div class="profile-name">
-                    <h1 class="text-neutral-grey fs-14 fw-semi-bold">Time</h1>
-                    <p class="fs-12 fw-medium">${t}</p>
-                  </div>
-                </div>
-                <div class="flex">
-                  <img src="/assets/door-icon.svg" alt="" />
-                  <div class="profile-name">
-                    <h1 class="text-neutral-grey fs-14 fw-semi-bold">Gate</h1>
                     <p class="fs-12 fw-medium">${c}</p>
                   </div>
                 </div>
                 <div class="flex">
-                  <img src="/assets/airlineseat-primary-icon.svg" alt="" />
+                  <img src="${e}/clock-icon.svg" alt="" />
+                  <div class="profile-name">
+                    <h1 class="text-neutral-grey fs-14 fw-semi-bold">Time</h1>
+                    <p class="fs-12 fw-medium">${o}</p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <img src="${e}/door-icon.svg" alt="" />
+                  <div class="profile-name">
+                    <h1 class="text-neutral-grey fs-14 fw-semi-bold">Gate</h1>
+                    <p class="fs-12 fw-medium">${d}</p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <img src="${e}/airlineseat-primary-icon.svg" alt="" />
                   <div class="profile-name">
                     <h1 class="text-neutral-grey fs-14 fw-semi-bold">Seat</h1>
-                    <p class="fs-12 fw-medium">${d}</p>
+                    <p class="fs-12 fw-medium">${f}</p>
                   </div>
                 </div>
               </div>
               <div class="ticket-barcode">
                 <div class="ticket-code">
-                  <h1 class="fs-32 fw-semi-bold">${f}</h1>
-                  <p class="fw-medium fs12">${h}</p>
+                  <h1 class="fs-32 fw-semi-bold">${h}</h1>
+                  <p class="fw-medium fs12">${m}</p>
                 </div>
-                <img src="/assets/barcode-icon.svg" alt="" />
+                <img src="${e}/barcode-icon.svg" alt="" />
               </div>
             </div>
           </div>

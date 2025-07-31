@@ -1,14 +1,14 @@
-import"./swiper-DolsZaOw.js";import{a as w,i as $,c as k}from"./nav-BRbo9wLN.js";/* empty css                      *//* empty css                      */import{f as x}from"./flights-Bw2lqAzd.js";document.addEventListener("DOMContentLoaded",()=>{w(),$(),k({activeTab:document.querySelector(".flights-btn"),inactiveTab:document.querySelector(".stays-btn")});const e=L(),t=x.find(s=>s.id===e);t?S(t):console.warn("Flight not found")});function L(){return new URLSearchParams(window.location.search).get("flight")}function S(e){const t=document.querySelector(".flight-booking-payment"),s=e.departures?.[0];if(!t||!s)return;const[y,g]=s.time.split(" - "),[u,b]=s.route.split("-"),l=e.price,o=20,r=10,c=l+o+r;t.innerHTML=`
+import"./swiper-DolsZaOw.js";import{a as $,i as k,c as x}from"./nav-BRbo9wLN.js";/* empty css                      *//* empty css                      */import{f as L}from"./flights-Bw2lqAzd.js";const a="/travellian-travel-app/assets";document.addEventListener("DOMContentLoaded",()=>{$(),k(),x({activeTab:document.querySelector(".flights-btn"),inactiveTab:document.querySelector(".stays-btn")});const e=S(),t=L.find(i=>i.id===e);t?F(t):console.warn("Flight not found")});function S(){return new URLSearchParams(window.location.search).get("flight")}function F(e){const t=document.querySelector(".flight-booking-payment"),i=e.departures?.[0];if(!t||!i)return;const[y,u]=i.time.split(" - "),[b,w]=i.route.split("-"),n=e.price,o=20,c=10,d=n+o+c;t.innerHTML=`
     <div class="booking-payment-wrapper">
       <div class="flight-details-heading">
         <h1 class="fs-28 fw-bold">${e.aircraft}</h1>
-        <h2 class="fs-32 fw-bold text-accent-slamon">$${l}</h2>
+        <h2 class="fs-32 fw-bold text-accent-slamon">$${n}</h2>
       </div>
 
       <div class="flight-itinerary-container">
         <div class="flight-itinerary-date">
           <h1 class="fs-20 fw-bold">Return Flight</h1>
-          <p class="fs-20 fw-medium text-neutral-grey">${s.duration}</p>
+          <p class="fs-20 fw-medium text-neutral-grey">${i.duration}</p>
         </div>
 
         <div class="flight-itinerary-airlines">
@@ -20,23 +20,23 @@ import"./swiper-DolsZaOw.js";import{a as w,i as $,c as k}from"./nav-BRbo9wLN.js"
             </div>
           </div>
           <div class="itinerary-details">
-            <img src="/assets/airplane-icon.svg" alt="" />
-            <img src="/assets/wifi-icon.svg" alt="" />
-            <img src="/assets/stopwatch-icon.svg" alt="" />
-            <img src="/assets/foods-icon.svg" alt="" />
-            <img src="/assets/airlineseat-icon.svg" alt="" />
+            <img src="${a}/airplane-icon.svg" alt="" />
+            <img src="${a}/wifi-icon.svg" alt="" />
+            <img src="${a}/stopwatch-icon.svg" alt="" />
+            <img src="${a}/foods-icon.svg" alt="" />
+            <img src="${a}/airlineseat-icon.svg" alt="" />
           </div>
         </div>
 
         <div class="flight-itinerary-timeframe">
           <div class="itinerary-time flex">
             <h3 class="fs-24 fw-semi-bold">${y}</h3>
-            <p class="text-neutral-grey fw-medium">${u}</p>
-          </div>
-          <img src="/assets/airplane-icon.svg" alt="" />
-          <div class="itinerary-time flex">
-            <h3 class="fs-24 fw-semi-bold">${g}</h3>
             <p class="text-neutral-grey fw-medium">${b}</p>
+          </div>
+          <img src="${a}/airplane-icon.svg" alt="" />
+          <div class="itinerary-time flex">
+            <h3 class="fs-24 fw-semi-bold">${u}</h3>
+            <p class="text-neutral-grey fw-medium">${w}</p>
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ import"./swiper-DolsZaOw.js";import{a as w,i as $,c as k}from"./nav-BRbo9wLN.js"
         <label class="payment-option">
           <div class="payment-info">
             <h3 class="fs-16 fw-bold">Pay part now, part later</h3>
-            <p>Pay $${(c/2).toFixed(2)} now, and the rest later. No extra fees.</p>
+            <p>Pay $${(d/2).toFixed(2)} now, and the rest later. No extra fees.</p>
             <a href="#">More info</a>
           </div>
           <input type="radio" name="payment" />
@@ -62,13 +62,13 @@ import"./swiper-DolsZaOw.js";import{a as w,i as $,c as k}from"./nav-BRbo9wLN.js"
       <div class="payment-method-wrapper">
         <label class="payment-method selected">
           <div class="payment-info">
-            <img src="/assets/visa-icon.svg" alt="Visa" />
+            <img src="${a}/visa-icon.svg" alt="Visa" />
             <h3 class="fs-16 fw-bold">**** 4321 <span class="fw-regular fs-14">02/27</span></h3>
           </div>
           <input type="radio" name="paymentMethod" checked />
         </label>
         <button class="payment-method-btn">
-          <img src="/assets/addcircle-icon.svg" alt="" />
+          <img src="${a}/addcircle-icon.svg" alt="" />
           <p class="fw-medium fs-12 text-neutral-grey">Add a new card</p>
         </button>
       </div>
@@ -98,14 +98,14 @@ import"./swiper-DolsZaOw.js";import{a as w,i as $,c as k}from"./nav-BRbo9wLN.js"
         </p>
         <div class="booking-price-details fw-medium">
           <h1 class="fw-bold">Price Details</h1>
-          <div class="price"><p>Base Fare</p><h2 class="fw-semi-bold">$${l}</h2></div>
+          <div class="price"><p>Base Fare</p><h2 class="fw-semi-bold">$${n}</h2></div>
           <div class="price"><p>Discount</p><h2 class="fw-semi-bold">$0</h2></div>
           <div class="price"><p>Taxes</p><h2 class="fw-semi-bold">$${o}</h2></div>
-          <div class="price"><p>Service Fee</p><h2 class="fw-semi-bold">$${r}</h2></div>
+          <div class="price"><p>Service Fee</p><h2 class="fw-semi-bold">$${c}</h2></div>
         </div>
         <div class="price">
           <p class="fw-bold">Total</p>
-          <h2 class="fw-semi-bold">$${c}</h2>
+          <h2 class="fw-semi-bold">$${d}</h2>
         </div>
         <div class="confirm-payment">
           <button class="btn-primary full-width confirm-btn" data-flight-id="${e.id}">
@@ -113,4 +113,4 @@ import"./swiper-DolsZaOw.js";import{a as w,i as $,c as k}from"./nav-BRbo9wLN.js"
         </div>
       </div>
     </aside>
-  `;const d=document.querySelector(".confirm-btn");d&&d.addEventListener("click",i=>{const n=`flightconfirmation.html?flight=${i.currentTarget.getAttribute("data-flight-id")}`;window.location.href=n});const m=document.querySelectorAll(".payment-option");m.forEach(i=>{i.addEventListener("click",()=>{m.forEach(n=>n.classList.remove("selected")),i.classList.add("selected");const h=i.querySelector('input[type="radio"]');h.checked=!0})});const p=document.querySelector(".payment-method-btn"),a=document.getElementById("addCardModal"),f=a?.querySelector(".modal-close"),v=a?.querySelector(".modal-overlay");p&&a&&f&&v&&(p.addEventListener("click",()=>{a.style.display="block"}),f.addEventListener("click",()=>{a.style.display="none"}),v.addEventListener("click",()=>{a.style.display="none"}))}
+  `;const m=document.querySelector(".confirm-btn");m&&m.addEventListener("click",l=>{const r=`travellian-travel-app/flight/flightconfirmation.html?flight=${l.currentTarget.getAttribute("data-flight-id")}`;window.location.href=r});const p=document.querySelectorAll(".payment-option");p.forEach(l=>{l.addEventListener("click",()=>{p.forEach(r=>r.classList.remove("selected")),l.classList.add("selected");const g=l.querySelector('input[type="radio"]');g.checked=!0})});const f=document.querySelector(".payment-method-btn"),s=document.getElementById("addCardModal"),v=s?.querySelector(".modal-close"),h=s?.querySelector(".modal-overlay");f&&s&&v&&h&&(f.addEventListener("click",()=>{s.style.display="block"}),v.addEventListener("click",()=>{s.style.display="none"}),h.addEventListener("click",()=>{s.style.display="none"}))}

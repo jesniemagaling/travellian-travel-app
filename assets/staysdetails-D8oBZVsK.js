@@ -1,4 +1,4 @@
-import{a as v,i as p,c as f}from"./nav-BRbo9wLN.js";import{r,a as h,b as d,s as w}from"./stays-BfrsDapl.js";function u(e){const i=document.getElementById("staysDetailsContainer");!i||!e||(i.innerHTML=`
+import{a as v,i as p,c as f}from"./nav-BRbo9wLN.js";import{r,a as h,b as d,s as w}from"./stays-BfrsDapl.js";const u="/travellian-travel-app/assets";function g(e){const i=document.getElementById("staysDetailsContainer");!i||!e||(i.innerHTML=`
     <div class="hotel-details-heading">
       <div class="hotel-name flex">
         <h1 class="fs-28 fw-bold">${e.name}</h1>
@@ -8,7 +8,7 @@ import{a as v,i as p,c as f}from"./nav-BRbo9wLN.js";import{r,a as h,b as d,s as 
     <div class="hotel-details-info">
       <div>
         <div class="hotel-details-location">
-          <img src="/assets/location-icon.svg" alt="location icon" />
+          <img src="${u}/location-icon.svg" alt="location icon" />
           <p class="fs-14">${e.location}</p>
         </div>
         <div class="rating-badge">
@@ -27,14 +27,14 @@ import{a as v,i as p,c as f}from"./nav-BRbo9wLN.js";import{r,a as h,b as d,s as 
               <img src="${a}" alt="stay image ${s+1}" />
             </div>`).join("")}
     </div>
-  `)}function g(e){const i=document.querySelector(".overview-container");!i||!e||(i.innerHTML=`
+  `)}function b(e){const i=document.querySelector(".overview-container");!i||!e||(i.innerHTML=`
     <div class="overview-heading">
       <h1 class="fs-20 fw-bold">Overview</h1>
       <p class="fw-medium">
         ${e.overview}
       </p>
     </div>
-  `)}function b(e){const i=document.querySelector(".map-container");!i||!e||(i.innerHTML=`
+  `)}function $(e){const i=document.querySelector(".map-container");!i||!e||(i.innerHTML=`
     <iframe
       src="${e.locationMap}"
       width="600"
@@ -44,7 +44,7 @@ import{a as v,i as p,c as f}from"./nav-BRbo9wLN.js";import{r,a as h,b as d,s as 
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
-  `)}function $(){const e=document.querySelector(".swiper-wrapper");if(!e||!Array.isArray(r))return;e.innerHTML="",r.forEach(s=>{const t=document.createElement("article");t.className="rooms-content swiper-slide",t.id=s.id,t.innerHTML=`
+  `)}function S(){const e=document.querySelector(".swiper-wrapper");if(!e||!Array.isArray(r))return;e.innerHTML="",r.forEach(s=>{const t=document.createElement("article");t.className="rooms-content swiper-slide",t.id=s.id,t.innerHTML=`
       <div class="modal-image-container">
         <div class="modal-swiper swiper">
           <div class="swiper-wrapper">
@@ -81,7 +81,7 @@ import{a as v,i as p,c as f}from"./nav-BRbo9wLN.js";import{r,a as h,b as d,s as 
           </div>
         </div>
       </div>
-    `,e.appendChild(t)});const i=e.querySelectorAll(".book-now-btn"),a=c();i.forEach(s=>{s.addEventListener("click",t=>{const n=t.currentTarget.getAttribute("data-room-id"),l=`staysbookingdetails.html?stay=${a}&room=${n}`;window.location.href=l})})}function S(){const e=document.querySelector(".amenities-swiper .swiper-wrapper");e&&h.forEach(i=>{const a=document.createElement("article");a.className="amenities-article swiper-slide",a.innerHTML=`
+    `,e.appendChild(t)});const i=e.querySelectorAll(".book-now-btn"),a=c();i.forEach(s=>{s.addEventListener("click",t=>{const n=t.currentTarget.getAttribute("data-room-id"),l=`staysbookingdetails.html?stay=${a}&room=${n}`;window.location.href=l})})}function y(){const e=document.querySelector(".amenities-swiper .swiper-wrapper");e&&h.forEach(i=>{const a=document.createElement("article");a.className="amenities-article swiper-slide",a.innerHTML=`
       <div class="amenities-image">
         <img
           src="${i.image}"
@@ -93,7 +93,7 @@ import{a as v,i as p,c as f}from"./nav-BRbo9wLN.js";import{r,a as h,b as d,s as 
           <p class="fw-medium">${i.description}</p>
         </div>
       </div>
-    `,e.appendChild(a)})}function y(){const e=document.querySelector(".stays-testimonial");if(!e)return;e.innerHTML="";const i=3,a=Math.ceil(d.length/i);for(let s=0;s<a;s++){const t=document.createElement("article");t.className="testimonials-details swiper-slide";const n=s*i,l=n+i;d.slice(n,l).forEach(o=>{const m=`
+    `,e.appendChild(a)})}function L(){const e=document.querySelector(".stays-testimonial");if(!e)return;e.innerHTML="";const i=3,a=Math.ceil(d.length/i);for(let s=0;s<a;s++){const t=document.createElement("article");t.className="testimonials-details swiper-slide";const n=s*i,l=n+i;d.slice(n,l).forEach(o=>{const m=`
         <div class="testimonial-card">
           <img src="${o.profileImage}" alt="${o.name}" />
           <div class="fs-14 testimonial-info">
@@ -110,4 +110,4 @@ import{a as v,i as p,c as f}from"./nav-BRbo9wLN.js";import{r,a as h,b as d,s as 
             </p>
           </div>
         </div>
-      `;t.innerHTML+=m}),e.appendChild(t)}}document.addEventListener("DOMContentLoaded",()=>{v(),p(),f({activeTab:document.querySelector(".stays-btn"),inactiveTab:document.querySelector(".flights-btn")});const e=c(),i=w.find(a=>a.id===e);i&&(u(i),g(i),b(i)),$(),S(),y()});function c(){return new URLSearchParams(window.location.search).get("stay")}export{c as g};
+      `;t.innerHTML+=m}),e.appendChild(t)}}document.addEventListener("DOMContentLoaded",()=>{v(),p(),f({activeTab:document.querySelector(".stays-btn"),inactiveTab:document.querySelector(".flights-btn")});const e=c(),i=w.find(a=>a.id===e);i&&(g(i),b(i),$(i)),S(),y(),L()});function c(){return new URLSearchParams(window.location.search).get("stay")}export{c as g};
