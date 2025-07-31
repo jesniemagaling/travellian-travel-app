@@ -1,4 +1,4 @@
-import"./swiper-DolsZaOw.js";import{a as $,i as k,c as x}from"./nav-BRbo9wLN.js";/* empty css                      *//* empty css                      */import{f as L}from"./flights-Bw2lqAzd.js";const a="/travellian-travel-app/assets";document.addEventListener("DOMContentLoaded",()=>{$(),k(),x({activeTab:document.querySelector(".flights-btn"),inactiveTab:document.querySelector(".stays-btn")});const e=S(),t=L.find(i=>i.id===e);t?F(t):console.warn("Flight not found")});function S(){return new URLSearchParams(window.location.search).get("flight")}function F(e){const t=document.querySelector(".flight-booking-payment"),i=e.departures?.[0];if(!t||!i)return;const[y,u]=i.time.split(" - "),[b,w]=i.route.split("-"),n=e.price,o=20,c=10,d=n+o+c;t.innerHTML=`
+import"./swiper-DolsZaOw.js";import{a as $,i as k,c as x}from"./nav-BRbo9wLN.js";/* empty css                      *//* empty css                      */import{f as L}from"./flights-Bw2lqAzd.js";const a="/travellian-travel-app/assets";document.addEventListener("DOMContentLoaded",()=>{$(),k(),x({activeTab:document.querySelector(".flights-btn"),inactiveTab:document.querySelector(".stays-btn")});const e=S(),t=L.find(s=>s.id===e);t?F(t):console.warn("Flight not found")});function S(){return new URLSearchParams(window.location.search).get("flight")}function F(e){const t=document.querySelector(".flight-booking-payment"),s=e.departures?.[0];if(!t||!s)return;const[g,u]=s.time.split(" - "),[b,w]=s.route.split("-"),n=e.price,r=20,c=10,d=n+r+c;t.innerHTML=`
     <div class="booking-payment-wrapper">
       <div class="flight-details-heading">
         <h1 class="fs-28 fw-bold">${e.aircraft}</h1>
@@ -8,7 +8,7 @@ import"./swiper-DolsZaOw.js";import{a as $,i as k,c as x}from"./nav-BRbo9wLN.js"
       <div class="flight-itinerary-container">
         <div class="flight-itinerary-date">
           <h1 class="fs-20 fw-bold">Return Flight</h1>
-          <p class="fs-20 fw-medium text-neutral-grey">${i.duration}</p>
+          <p class="fs-20 fw-medium text-neutral-grey">${s.duration}</p>
         </div>
 
         <div class="flight-itinerary-airlines">
@@ -30,7 +30,7 @@ import"./swiper-DolsZaOw.js";import{a as $,i as k,c as x}from"./nav-BRbo9wLN.js"
 
         <div class="flight-itinerary-timeframe">
           <div class="itinerary-time flex">
-            <h3 class="fs-24 fw-semi-bold">${y}</h3>
+            <h3 class="fs-24 fw-semi-bold">${g}</h3>
             <p class="text-neutral-grey fw-medium">${b}</p>
           </div>
           <img src="${a}/airplane-icon.svg" alt="" />
@@ -100,7 +100,7 @@ import"./swiper-DolsZaOw.js";import{a as $,i as k,c as x}from"./nav-BRbo9wLN.js"
           <h1 class="fw-bold">Price Details</h1>
           <div class="price"><p>Base Fare</p><h2 class="fw-semi-bold">$${n}</h2></div>
           <div class="price"><p>Discount</p><h2 class="fw-semi-bold">$0</h2></div>
-          <div class="price"><p>Taxes</p><h2 class="fw-semi-bold">$${o}</h2></div>
+          <div class="price"><p>Taxes</p><h2 class="fw-semi-bold">$${r}</h2></div>
           <div class="price"><p>Service Fee</p><h2 class="fw-semi-bold">$${c}</h2></div>
         </div>
         <div class="price">
@@ -113,4 +113,4 @@ import"./swiper-DolsZaOw.js";import{a as $,i as k,c as x}from"./nav-BRbo9wLN.js"
         </div>
       </div>
     </aside>
-  `;const m=document.querySelector(".confirm-btn");m&&m.addEventListener("click",l=>{const r=`travellian-travel-app/flight/flightconfirmation.html?flight=${l.currentTarget.getAttribute("data-flight-id")}`;window.location.href=r});const p=document.querySelectorAll(".payment-option");p.forEach(l=>{l.addEventListener("click",()=>{p.forEach(r=>r.classList.remove("selected")),l.classList.add("selected");const g=l.querySelector('input[type="radio"]');g.checked=!0})});const f=document.querySelector(".payment-method-btn"),s=document.getElementById("addCardModal"),v=s?.querySelector(".modal-close"),h=s?.querySelector(".modal-overlay");f&&s&&v&&h&&(f.addEventListener("click",()=>{s.style.display="block"}),v.addEventListener("click",()=>{s.style.display="none"}),h.addEventListener("click",()=>{s.style.display="none"}))}
+  `;const m=document.querySelector(".confirm-btn");m&&m.addEventListener("click",l=>{const o=`flightconfirmation.html?flight=${l.currentTarget.getAttribute("data-flight-id")}`;window.location.href=o});const p=document.querySelectorAll(".payment-option");p.forEach(l=>{l.addEventListener("click",()=>{p.forEach(o=>o.classList.remove("selected")),l.classList.add("selected");const y=l.querySelector('input[type="radio"]');y.checked=!0})});const f=document.querySelector(".payment-method-btn"),i=document.getElementById("addCardModal"),v=i?.querySelector(".modal-close"),h=i?.querySelector(".modal-overlay");f&&i&&v&&h&&(f.addEventListener("click",()=>{i.style.display="block"}),v.addEventListener("click",()=>{i.style.display="none"}),h.addEventListener("click",()=>{i.style.display="none"}))}
