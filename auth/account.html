@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golobe</title>
+
+    <link rel="icon" type="image/svg+xml" href="/travellian-travel-app/assets/company-icon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Swiper Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <script type="module" crossorigin src="/travellian-travel-app/assets/swiper-DolsZaOw.js"></script>
+    <script type="module" crossorigin src="/travellian-travel-app/assets/nav-BRbo9wLN.js"></script>
+    <script type="module" crossorigin src="/travellian-travel-app/assets/favorites-BQsjAuVP.js"></script>
+    <script type="module" crossorigin src="/travellian-travel-app/assets/account-CDC8O0aV.js"></script>
+    <script type="module" crossorigin src="/travellian-travel-app/assets/flightForm-BNUiH5sV.js"></script>
+    <script type="module" crossorigin src="/travellian-travel-app/assets/stayForm-BQbN_MYX.js"></script>
+    <script type="module" crossorigin src="/travellian-travel-app/assets/places-m7fFGoKg.js"></script>
+    <script type="module" crossorigin src="/travellian-travel-app/assets/main-C4v7jIRw.js"></script>
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/swiper-CsF7dNSY.css">
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/nav-2jKT-IqO.css">
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/favorites-D5BmCDta.css">
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/account-IurjW48_.css">
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/flightlisting-bOrOBmjG.css">
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/stayslisting-BkcxaVwb.css">
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/flightdetails-CsKqPNXo.css">
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/flightconfirmation-CGWwxdcE.css">
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header>
+      <nav class="container">
+        <div class="nav-left inline-flex">
+          <a
+            href="/flight/flightsearch.html"
+            class="inline-flex nav-link flights-btn nav-booking-tab"
+          >
+            <img src="/travellian-travel-app/assets/airplane-icon.svg" alt="airplane" />Find Flights
+          </a>
+          <a
+            href="/stay/searchstays.html"
+            class="inline-flex nav-link stays-btn nav-booking-tab"
+          >
+            <img src="/travellian-travel-app/assets/bed-icon.svg" alt="bed" />Find Stays
+          </a>
+        </div>
+
+        <div class="company-logo">
+          <a href="/landing/index.html"
+            ><img src="/travellian-travel-app/assets/company-logo.svg" alt="Logo"
+          /></a>
+        </div>
+
+        <div class="nav-right inline-flex">
+          <button class="favorites-btn btn-white fs-16 fw-semi-bold">
+            <img src="/travellian-travel-app/assets/heart-icon.svg" alt="" />&nbsp;<a href="#"
+              >Favorites</a
+            >
+          </button>
+          <button class="user-profile-btn btn-secondary fs-16 fw-semi-bold">
+            <img src="/travellian-travel-app/assets/profile-icon.svg" alt="" />&nbsp;&nbsp;Jesnie M.
+          </button>
+          <div class="mobile-toggle" id="hamburger">
+            <i class="fa-solid fa-bars menu-icon"></i>
+            <i class="fa-solid fa-xmark close-icon"></i>
+          </div>
+        </div>
+        <!-- This is the dropdown menu -->
+        <div class="user-nav" id="userNav">
+          <div class="user-nav-header flex">
+            <!-- Added class for styling header -->
+            <img
+              src="/travellian-travel-app/assets/profile-icon.svg"
+              alt="profile"
+              class="user-nav-profile-img"
+            />
+            <div class="grid user-nav-info">
+              <!-- Added class for styling info -->
+              <h1 class="fs-16 fw-semi-bold">Jesnie Magaling</h1>
+              <h2 class="fs-14 fw-medium text-primary-color">Online</h2>
+            </div>
+          </div>
+          <div class="profile-layer">
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img src="/travellian-travel-app/assets/user-sm-icon.svg" alt="" />&nbsp;&nbsp;My
+              Accounts</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img src="/travellian-travel-app/assets/card-icon.svg" alt="" />&nbsp;&nbsp;Payments</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img
+                src="/travellian-travel-app/assets/settings-icon.svg"
+                alt=""
+              />&nbsp;&nbsp;Settings</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img
+                src="/travellian-travel-app/assets/support-icon.svg"
+                alt=""
+              />&nbsp;&nbsp;Support</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img src="/travellian-travel-app/assets/logout-icon.svg" alt="" />&nbsp;&nbsp;Logout</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobileNav">
+        <a href="./flightsearch.html" class="mobile-link" target="_blank">
+          <img src="/travellian-travel-app/assets/airplane-icon.svg" alt="airplane" />
+          <span class="fs-16 fw-semi-bold">&nbsp;&nbsp;Find Flights</span>
+        </a>
+        <a href="#" class="mobile-link">
+          <img src="/travellian-travel-app/assets/bed-icon.svg" alt="bed" />
+          <span class="fs-16 fw-semi-bold">&nbsp;&nbsp;Find Stays</span>
+        </a>
+        <a href="#" class="mobile-link fs-16 fw-semi-bold"
+          ><img src="/travellian-travel-app/assets/heart-icon.svg" alt="" />&nbsp;&nbsp;Favorites</a
+        >
+        <a href="#" class="mobile-link fs-16 fw-semi-bold"
+          ><img src="/travellian-travel-app/assets/user-icon.svg" alt="" />&nbsp;&nbsp;Account</a
+        >
+      </div>
+    </header>
+
+    <!-- Account Section -->
+    <section>
+      <div class="account-container container">
+        <div class="account-header">
+          <div class="cover-photo">
+            <img
+              src="/travellian-travel-app/assets/cover-bg.svg"
+              alt="Cover Photo"
+              class="cover-img"
+            />
+            <button class="upload-cover-btn btn-primary flex">
+              <img src="/travellian-travel-app/assets/upload-icon.svg" alt="Upload" />
+              <span class="upload-text">&nbsp;Upload new cover</span>
+            </button>
+          </div>
+          <div class="profile-info">
+            <div class="profile-img-wrapper">
+              <img
+                src="/travellian-travel-app/assets/profile-icon.svg"
+                alt="Profile Picture"
+                class="profile-img"
+              />
+              <button class="edit-profile-btn">
+                <img src="/travellian-travel-app/assets/pen-icon.svg" alt="Edit" />
+              </button>
+            </div>
+            <h2 class="profile-name fw-semi-bold fs-24">Jesnie Magaling</h2>
+            <p class="profile-email text-neutral-grey">
+              magalingjesnie@gmail.com
+            </p>
+          </div>
+        </div>
+
+        <div class="account-container-btn">
+          <button class="account-btn btn-white accounts-tab active">
+            <h3>Account</h3>
+          </button>
+          <button class="history-btn btn-white accounts-tab">
+            <h3>History</h3>
+          </button>
+          <button class="payment-methods-btn btn-white accounts-tab">
+            <h3>Payment Methods</h3>
+          </button>
+        </div>
+
+        <div class="account-details active">
+          <h1 class="fw-bold fs-32">Account</h1>
+          <div class="account-details-container">
+            <div class="user-info account-name">
+              <div class="name">
+                <small class="text-neutral-grey">Name</small>
+                <h2 class="fw-semi-bold fs-20">Jesnie magaling</h2>
+              </div>
+              <button class="edit-btn btn-stroke flex">
+                <img src="/travellian-travel-app/assets/edit-icon.svg" alt="edit-icon" />
+                <span>&nbsp;Change</span>
+              </button>
+            </div>
+            <div class="user-info account-email">
+              <div class="name">
+                <small class="text-neutral-grey">Email</small>
+                <h2 class="fw-semi-bold fs-20">magalingjesnie@gmail.com</h2>
+              </div>
+              <button class="edit-btn btn-stroke flex">
+                <img src="/travellian-travel-app/assets/edit-icon.svg" alt="edit-icon" />
+                <span>&nbsp;Change</span>
+              </button>
+            </div>
+            <div class="user-info account-password">
+              <div class="password">
+                <small class="text-neutral-grey">Password</small>
+                <h2 class="fw-semi-bold fs-20">************</h2>
+              </div>
+              <button class="edit-btn btn-stroke flex">
+                <img src="/travellian-travel-app/assets/edit-icon.svg" alt="edit-icon" />
+                <span>&nbsp;Change</span>
+              </button>
+            </div>
+            <div class="user-info account-number">
+              <div class="number">
+                <small class="text-neutral-grey">Phone number</small>
+                <h2 class="fw-semi-bold fs-20">0900 090 1305</h2>
+              </div>
+              <button class="edit-btn btn-stroke flex">
+                <img src="/travellian-travel-app/assets/edit-icon.svg" alt="edit-icon" />
+                <span>&nbsp;Change</span>
+              </button>
+            </div>
+            <div class="user-info account-address">
+              <div class="address">
+                <small class="text-neutral-grey">Address</small>
+                <h2 class="fw-semi-bold fs-20">Hagonoy, Bulacan</h2>
+              </div>
+              <button class="edit-btn btn-stroke flex">
+                <img src="/travellian-travel-app/assets/edit-icon.svg" alt="edit-icon" />
+                <span>&nbsp;Change</span>
+              </button>
+            </div>
+            <div class="user-info account-birth">
+              <div class="date-of-birth">
+                <small class="text-neutral-grey">Date of birth</small>
+                <h2 class="fw-semi-bold fs-20">08/05/2004</h2>
+              </div>
+              <button class="edit-btn btn-stroke flex">
+                <img src="/travellian-travel-app/assets/edit-icon.svg" alt="edit-icon" />
+                <span>&nbsp;Change</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="history-details hidden">
+          <h1 class="fw-bold fs-32">Tickets/Bookings</h1>
+          <div class="history-details-container">
+            <div class="history-container-btn">
+              <button class="favorites-flights-btn btn-white favorites-tab">
+                <img src="/travellian-travel-app/assets/airplane-icon.svg" alt="" />
+                <h3>Flights</h3>
+              </button>
+              <button
+                class="favorites-stays-btn btn-white favorites-tab active"
+              >
+                <img src="/travellian-travel-app/assets/bed-icon.svg" alt="" />
+                <h3>Stays</h3>
+              </button>
+            </div>
+
+            <div class="flights-history hidden">
+              <div class="flights-history-itinerary">
+                <img src="/travellian-travel-app/assets/emirates-logo.svg" alt="" width="64px" />
+                <div class="flights-history-date">
+                  <div class="flights-date">
+                    <p class="text-neutral-grey">Newark(EWR)</p>
+                    <h4 class="fs-20 fw-semi-bold">13:05 am</h4>
+                  </div>
+                  <span>—</span>
+                  <div class="flights-date">
+                    <p class="text-neutral-grey">Newark(EWR)</p>
+                    <h4 class="fs-20 fw-semi-bold">9:00 pm</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="flights-history-info">
+                <div class="history-detail-icon">
+                  <img src="/travellian-travel-app/assets/calendar-primary-icon.svg" alt="" />
+                  <div class="">
+                    <h5 class="text-neutral-grey fs-12 fw-semi-bold">Date</h5>
+                    <p class="fs-16 fw-medium">07/13/25</p>
+                  </div>
+                </div>
+                <div class="history-detail-icon">
+                  <img src="/travellian-travel-app/assets/door-icon.svg" alt="" />
+                  <div class="">
+                    <h5 class="text-neutral-grey fs-12 fw-semi-bold">Gate</h5>
+                    <p class="fs-16 fw-medium">A13</p>
+                  </div>
+                </div>
+                <div class="history-detail-icon">
+                  <img src="/travellian-travel-app/assets/clock-icon.svg" alt="" />
+                  <div class="">
+                    <h5 class="text-neutral-grey fs-12 fw-semi-bold">
+                      Flight time
+                    </h5>
+                    <p class="fs-16 fw-medium">Newark(EWR)</p>
+                  </div>
+                </div>
+                <div class="history-detail-icon">
+                  <img src="/travellian-travel-app/assets/airlineseat-primary-icon.svg" />
+                  <div class="">
+                    <h5 class="text-neutral-grey fs-12 fw-semi-bold">
+                      Seat no.
+                    </h5>
+                    <p class="fs-16 fw-medium">139</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flights-history-btn">
+                <button class="btn-primary">Download Ticket</button>
+                <button class="btn-stroke">
+                  <img src="/travellian-travel-app/assets/arrow-right-icon.svg" alt="" width="18px" />
+                </button>
+              </div>
+            </div>
+
+            <div class="stays-history active">
+              <div class="stays-history-itinerary">
+                <img src="/travellian-travel-app/assets/hotel-logo.svg" alt="" />
+                <div class="stays-history-date">
+                  <div class="stays-date">
+                    <p class="text-neutral-grey">Check-In</p>
+                    <h4 class="fs-20 fw-semi-bold">Thur, Dec 8</h4>
+                  </div>
+                  <span>—</span>
+                  <div class="stays-date">
+                    <p class="text-neutral-grey">Check-Out</p>
+                    <h4 class="fs-20 fw-semi-bold">Fri, Dec 9</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="stays-history-info">
+                <div class="history-detail-icon">
+                  <img src="/travellian-travel-app/assets/clock-icon.svg" alt="" />
+                  <div class="">
+                    <h5 class="text-neutral-grey fs-12 fw-semi-bold">
+                      Check-In time
+                    </h5>
+                    <p class="fs-16 fw-medium">13:09am</p>
+                  </div>
+                </div>
+                <div class="history-detail-icon">
+                  <img src="/travellian-travel-app/assets/door-icon.svg" alt="" />
+                  <div class="">
+                    <h5 class="text-neutral-grey fs-12 fw-semi-bold">
+                      Room no.
+                    </h5>
+                    <p class="fs-16 fw-medium">On arrival</p>
+                  </div>
+                </div>
+                <div class="history-detail-icon">
+                  <img src="/travellian-travel-app/assets/clock-icon.svg" alt="" />
+                  <div class="">
+                    <h5 class="text-neutral-grey fs-12 fw-semi-bold">
+                      Check-Out time
+                    </h5>
+                    <p class="fs-16 fw-medium">05:09pm</p>
+                  </div>
+                </div>
+              </div>
+              <div class="stays-history-btn">
+                <button class="btn-primary">Download Ticket</button>
+                <button class="btn-stroke">
+                  <img src="/travellian-travel-app/assets/arrow-right-icon.svg" alt="" width="18px" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-methods hidden">
+          <h1 class="fw-bold fs-32">Payment methods</h1>
+          <div class="payment-methods-container">
+            <div class="card card-1">
+              <div class="card-info">
+                <div class="card-number">
+                  <p class="fs-24 fw-semi-bold">**** **** ****</p>
+                  <h2 class="fs-32 fw-semi-bold">1309</h2>
+                </div>
+                <button class="card-delete-btn">
+                  <img src="/travellian-travel-app/assets/bin-icon.svg" alt="" />
+                </button>
+              </div>
+              <div class="card-info">
+                <div class="card-exp">
+                  <p class="fs-12 fw-medium">Valid Thru</p>
+                  <h3 class="fs-20 fw-semi-bold">02/27</h3>
+                </div>
+                <img src="/travellian-travel-app/assets/visa-icon.svg" alt="" width="52px" />
+              </div>
+            </div>
+            <!-- add new card -->
+            <button class="payment-method-btn">
+              <img src="/travellian-travel-app/assets/addcircle-icon.svg" alt="" />
+              <p class="fw-medium fs-12 text-neutral-grey">Add a new card</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section>
+      <div class="subscribe-wrapper">
+        <div class="flex">
+          <div class="grid subscribe-heading">
+            <h1 class="fw-bold">Subscribe Newsletter</h1>
+            <h2 class="fw-bold">The Travel</h2>
+            <p class="fw-medium text-neutral-grey">
+              Get inspired! Receive travel discounts, tips and behind the scenes
+              stories.
+            </p>
+          </div>
+          <div class="grid subscribe-form">
+            <label for="">Email</label>
+            <div>
+              <input type="text" placeholder="Your email address" />
+              <button class="btn-black fs-14 fw-semi-bold">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container flex-no-wrap">
+        <div class="links socials grid">
+          <img
+            class="socials-company-logo"
+            src="/travellian-travel-app/assets/footer-copany-logo.svg"
+            alt=""
+          />
+          <div class="social-links inline-flex">
+            <a href=""><img src="/travellian-travel-app/assets/fb-icon.svg" alt="facebook logo" /></a>
+            <a href="#"><img src="/travellian-travel-app/assets/tw-icon.svg" alt="twitter logo" /></a>
+            <a href="#"
+              ><img src="/travellian-travel-app/assets/ig-icon.svg" alt="instagram logo"
+            /></a>
+            <a href="#"><img src="/travellian-travel-app/assets/yt-icon.svg" alt="youtube logo" /></a>
+          </div>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Destination</h1>
+          <a href="#">Canada</a>
+          <a href="#">Alaska</a>
+          <a href="#">France</a>
+          <a href="#">Iceland</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Activities</h1>
+          <a href="#">Lights</a>
+          <a href="#">Cruising & sailing</a>
+          <a href="#">Multi-activities</a>
+          <a href="#">Kayaing</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Travel Blogs</h1>
+          <a href="#">Tokyo Travel Guide</a>
+          <a href="#">Sri Lanka Travel Guide</a>
+          <a href="#">Peru Travel Guide</a>
+          <a href="#">Bali Travel Guide</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">About Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Contact Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="addCardModal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close">
+          <img src="/travellian-travel-app/assets/close-icon.svg" alt="Close" />
+        </button>
+        <h2 class="fs-40 fw-bold">Add a new Card</h2>
+
+        <form class="add-card-form">
+          <!-- Floating Card Number Input -->
+          <div class="floating-input-group">
+            <input type="text" id="cardNumber" placeholder=" " required />
+            <label for="cardNumber">Card Number</label>
+            <img src="/travellian-travel-app/assets/visablue-icon.svg" class="card-icon" alt="Visa" />
+          </div>
+
+          <div class="flex">
+            <div class="floating-input-group exp-date">
+              <input type="text" placeholder="02/27" required />
+              <label>Exp. Date</label>
+            </div>
+            <div class="floating-input-group cvc">
+              <input type="text" placeholder="123" required />
+              <label>CVC</label>
+            </div>
+          </div>
+
+          <div class="floating-input-group">
+            <input type="text" id="cardNumber" placeholder=" " required />
+            <label for="cardNumber">Name on Card</label>
+          </div>
+
+          <div class="floating-input-group">
+            <select>
+              <option>United States</option>
+              <option>Philippines</option>
+              <option>Japan</option>
+              <!-- Add more -->
+            </select>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" />
+            Securely save my information for 1-click checkout
+          </label>
+
+          <button type="submit" class="btn-primary">Add Card</button>
+
+          <p class="fs-12 text-center text-neutral-grey">
+            By confirming your submission, you allow Golobe to charge your card
+            for this payment and future payments in accordance with their terms.
+            You can always cancel your subscription.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

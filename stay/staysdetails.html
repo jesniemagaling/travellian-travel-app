@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golobe</title>
+
+    <link rel="icon" type="image/svg+xml" href="/travellian-travel-app/assets/company-icon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Swiper Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <script type="module" crossorigin src="/travellian-travel-app/assets/swiper-DolsZaOw.js"></script>
+    <script type="module" crossorigin src="/travellian-travel-app/assets/nav-BRbo9wLN.js"></script>
+    <script type="module" crossorigin src="/travellian-travel-app/assets/stays-BfrsDapl.js"></script>
+    <script type="module" crossorigin src="/travellian-travel-app/assets/staysdetails-GhJhBYeD.js"></script>
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/swiper-CsF7dNSY.css">
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/nav-2jKT-IqO.css">
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/stayslisting-BkcxaVwb.css">
+    <link rel="stylesheet" crossorigin href="/travellian-travel-app/assets/staysdetails-DhUYwKWT.css">
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header-2">
+      <nav class="container">
+        <div class="nav-left inline-flex">
+          <a
+            href="../flight/flightsearch.html"
+            class="inline-flex nav-link flights-btn nav-booking-tab"
+          >
+            <img src="/travellian-travel-app/assets/airplane-icon.svg" alt="airplane" />Find Flights
+          </a>
+          <a
+            href="../stay/stayslisting.html"
+            class="inline-flex nav-link stays-btn nav-booking-tab active"
+          >
+            <img src="/travellian-travel-app/assets/bed-icon.svg" alt="bed" />Find Stays
+          </a>
+        </div>
+
+        <div class="company-logo">
+          <a href="/landing/index.html"
+            ><img src="/travellian-travel-app/assets/company-logo.svg" alt="Logo"
+          /></a>
+        </div>
+
+        <div class="nav-right inline-flex">
+          <button class="favorites-btn btn-white fs-16 fw-semi-bold">
+            <img src="/travellian-travel-app/assets/heart-icon.svg" alt="" />&nbsp;Favorites
+          </button>
+          <button class="user-profile-btn btn-secondary fs-16 fw-semi-bold">
+            <img src="/travellian-travel-app/assets/profile-icon.svg" alt="" />&nbsp;&nbsp;Jesnie M.
+          </button>
+          <div class="mobile-toggle" id="hamburger">
+            <img src="/travellian-travel-app/assets/open-icon.svg" alt="" class="menu-icon" />
+            <img src="/travellian-travel-app/assets/close-icon-nav.svg" alt="" class="close-icon" />
+          </div>
+        </div>
+        <!-- This is the dropdown menu -->
+        <div class="user-nav" id="userNav">
+          <div class="user-nav-header flex">
+            <!-- Added class for styling header -->
+            <img
+              src="/travellian-travel-app/assets/profile-icon.svg"
+              alt="profile"
+              class="user-nav-profile-img"
+            />
+            <div class="grid user-nav-info">
+              <!-- Added class for styling info -->
+              <h1 class="fs-16 fw-semi-bold">Jesnie Magaling</h1>
+              <h2 class="fs-14 fw-medium text-primary-color">Online</h2>
+            </div>
+          </div>
+          <div class="profile-layer">
+            <a href="/auth/account.html" class="user-link fs-14 fw-medium"
+              ><img src="/travellian-travel-app/assets/user-sm-icon.svg" alt="" />&nbsp;&nbsp;My
+              Accounts</a
+            >
+            <a href="/auth/account.html" class="user-link fs-14 fw-medium"
+              ><img src="/travellian-travel-app/assets/card-icon.svg" alt="" />&nbsp;&nbsp;Payments</a
+            >
+            <a href="/auth/account.html" class="user-link fs-14 fw-medium"
+              ><img
+                src="/travellian-travel-app/assets/settings-icon.svg"
+                alt=""
+              />&nbsp;&nbsp;Settings</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img
+                src="/travellian-travel-app/assets/support-icon.svg"
+                alt=""
+              />&nbsp;&nbsp;Support</a
+            >
+            <a href="#" class="user-link fs-14 fw-medium"
+              ><img src="/travellian-travel-app/assets/logout-icon.svg" alt="" />&nbsp;&nbsp;Logout</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobileNav">
+        <a href="./flightsearch.html" class="mobile-link" target="_blank">
+          <img src="/travellian-travel-app/assets/airplane-icon.svg" alt="airplane" />
+          <span class="fs-16 fw-semi-bold">&nbsp;&nbsp;Find Flights</span>
+        </a>
+        <a href="/stay/searchstays.html" class="mobile-link">
+          <img src="/travellian-travel-app/assets/bed-icon.svg" alt="bed" />
+          <span class="fs-16 fw-semi-bold">&nbsp;&nbsp;Find Stays</span>
+        </a>
+        <a href="/auth/favorites.html" class="mobile-link fs-16 fw-semi-bold"
+          ><img src="/travellian-travel-app/assets/heart-icon.svg" alt="" />&nbsp;&nbsp;Favorites</a
+        >
+        <a href="/auth/account.html" class="mobile-link fs-16 fw-semi-bold"
+          ><img src="/travellian-travel-app/assets/user-icon.svg" alt="" />&nbsp;&nbsp;Account</a
+        >
+      </div>
+    </header>
+
+    <!-- Hotel Banner -->
+    <section>
+      <div class="hotel-details-wrapper" id="staysDetailsContainer"></div>
+    </section>
+
+    <!-- Overview Section -->
+    <section>
+      <div class="overview-container container"></div>
+    </section>
+
+    <!-- Available rooms section -->
+    <section>
+      <div class="avail-rooms-container">
+        <div class="avail-rooms-heading container">
+          <h1 class="fs-20 fw-bold">Available Rooms</h1>
+          <!-- Next / Prev Button Container -->
+          <div class="room-swiper-controls">
+            <div class="room-button room-button-prev btn-stroke">Back</div>
+            <div class="room-button room-button-next btn-primary">Next</div>
+          </div>
+        </div>
+        <div class="rooms-wrapper">
+          <div class="allrooms-swiper swiper">
+            <div class="swiper-wrapper"></div>
+            <!-- swiper-wrapper -->
+          </div>
+          <!-- allrooms-swiper -->
+        </div>
+        <!-- rooms-wrapper -->
+      </div>
+    </section>
+
+    <!-- Stays location -->
+    <section>
+      <div class="stays-location-container container">
+        <div class="stays-location-heading">
+          <h1 class="fs-20 fw-bold">Location/Map</h1>
+          <button class="btn-primary">
+            <a
+              class="fs-14 fw-semi-bold"
+              href="https://www.google.com/maps?ll=41.003611%2C28.974722&z=16&t=m&hl=en&gl=PH&mapclient=embed&cid=2301651138487600372"
+              target="_blank"
+              >View on google maps</a
+            >
+          </button>
+        </div>
+        <div class="map-container"></div>
+      </div>
+    </section>
+
+    <!-- Amenities section -->
+    <section>
+      <div class="amenities-container">
+        <div class="avail-rooms-heading container">
+          <h1 class="fs-20 fw-bold">Amenities</h1>
+        </div>
+      </div>
+      <div class="amenities-swiper-container">
+        <div class="amenities-swiper swiper">
+          <div class="swiper-wrapper"></div>
+        </div>
+        <!-- Navigation OUTSIDE wrapper -->
+        <div class="amenities-swiper-controls">
+          <div class="amenities-swiper-button-prev"></div>
+          <div class="amenities-swiper-pagination"></div>
+          <div class="amenities-swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section>
+      <div class="stays-reviews-container container">
+        <div class="stays-reviews-heading">
+          <h1 class="fs-20 fw-bold">Reviews</h1>
+          <button class="btn-primary">
+            <a class="fs-14 fw-semi-bold" href="#">Give your review</a>
+          </button>
+        </div>
+        <div class="stays-ratings">
+          <h1 class="fw-bold fs-50">4.2</h1>
+          <div class="div">
+            <h2 class="fs-20 fw-semi-bold">Very Good</h2>
+            <p class="fs-14">371 verified reviews</p>
+          </div>
+        </div>
+        <div class="testimonials-swiper-container">
+          <div class="testimonials-swiper swiper">
+            <div class="stays-testimonial swiper-wrapper"></div>
+          </div>
+          <!-- Navigation OUTSIDE wrapper -->
+          <div class="testimonials-swiper-controls">
+            <div class="testimonials-swiper-button-prev"></div>
+            <div class="testimonials-swiper-pagination"></div>
+            <div class="testimonials-swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section>
+      <div class="subscribe-wrapper">
+        <div class="flex">
+          <div class="grid subscribe-heading">
+            <h1 class="fw-bold">Subscribe Newsletter</h1>
+            <h2 class="fw-bold">The Travel</h2>
+            <p class="fw-medium text-neutral-grey">
+              Get inspired! Receive travel discounts, tips and behind the scenes
+              stories.
+            </p>
+          </div>
+          <div class="grid subscribe-form">
+            <label for="">Email</label>
+            <div>
+              <input type="text" placeholder="Your email address" />
+              <button class="btn-black fs-14 fw-semi-bold">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container flex-no-wrap">
+        <div class="links socials grid">
+          <img
+            class="socials-company-logo"
+            src="/travellian-travel-app/assets/footer-copany-logo.svg"
+            alt=""
+          />
+          <div class="social-links inline-flex">
+            <a href=""><img src="/travellian-travel-app/assets/fb-icon.svg" alt="facebook logo" /></a>
+            <a href="#"><img src="/travellian-travel-app/assets/tw-icon.svg" alt="twitter logo" /></a>
+            <a href="#"
+              ><img src="/travellian-travel-app/assets/ig-icon.svg" alt="instagram logo"
+            /></a>
+            <a href="#"><img src="/travellian-travel-app/assets/yt-icon.svg" alt="youtube logo" /></a>
+          </div>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Destination</h1>
+          <a href="#">Canada</a>
+          <a href="#">Alaska</a>
+          <a href="#">France</a>
+          <a href="#">Iceland</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Our Activities</h1>
+          <a href="#">Lights</a>
+          <a href="#">Cruising & sailing</a>
+          <a href="#">Multi-activities</a>
+          <a href="#">Kayaing</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Travel Blogs</h1>
+          <a href="#">Tokyo Travel Guide</a>
+          <a href="#">Sri Lanka Travel Guide</a>
+          <a href="#">Peru Travel Guide</a>
+          <a href="#">Bali Travel Guide</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">About Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+        <div class="links grid">
+          <h1 class="fw-bold">Contact Us</h1>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
