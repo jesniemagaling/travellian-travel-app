@@ -108,7 +108,7 @@ document.addEventListener('click', (e) => {
 
   const flightId = button.dataset.id;
   if (flightId) {
-    window.location.href = `/flight/flightdetails.html?flight=${flightId}`;
+    window.location.href = `flightdetails.html?flight=${flightId}`;
   }
 });
 

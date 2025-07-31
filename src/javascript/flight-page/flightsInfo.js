@@ -1,3 +1,5 @@
+const imageBase = `${import.meta.env.BASE_URL}assets`;
+
 export function renderFlightDetails(flight) {
   const detailsContainer = document.querySelector('.flight-details-wrapper');
   const featuresContainer = document.querySelector(
@@ -14,7 +16,7 @@ export function renderFlightDetails(flight) {
   const departure = flight.departures[0];
 
   detailsContainer.querySelector('.flight-details-location').innerHTML = `
-    <img src="/assets/location-icon.svg" alt="" />
+    <img src="${imageBase}/location-icon.svg" alt="" />
     <p class="fs-14">
       ${departure.route}
     </p>

@@ -5,6 +5,8 @@ import {
 } from '../utils/nav';
 import { flights } from '../utils/flights';
 
+const imageBase = `${import.meta.env.BASE_URL}assets`;
+
 document.addEventListener('DOMContentLoaded', () => {
   setupMobileNav();
   initUserDropdown();
@@ -59,13 +61,13 @@ function renderFlightConfirmation(flight, passengerInfo = {}) {
         <div class="flight-confirmation flight-details-info">
           <div>
             <div class="flight-details-location">
-              <img src="/assets/location-icon.svg" alt="" />
+              <img src="${imageBase}/location-icon.svg" alt="" />
               <p class="fs-14">${departure.route}</p>
             </div>
           </div>
           <div class="flight-details-btn">
             <button class="btn-stroke">
-              <img src="/assets/share-icon.svg" alt="" />
+              <img src="${imageBase}/share-icon.svg" alt="" />
             </button>
             <button class="btn-primary">Download</button>
           </div>
@@ -75,14 +77,14 @@ function renderFlightConfirmation(flight, passengerInfo = {}) {
             <div class="flight-time">
               <h1 class="fs-32 fw-semi-bold">${departureTime}</h1>
               <p class="fs-14 text-neutral-grey fw-medium">${departureLocation}</p>
-              <img src="/assets/airplanevert-icon.svg" alt="" />
+              <img src="${imageBase}/airplanevert-icon.svg" alt="" />
               <h1 class="fs-32 fw-semi-bold">${arrivalTime}</h1>
               <p class="fs-14 text-neutral-grey fw-medium">${arrivalLocation}</p>
             </div>
             <div class="ticket-info">
               <div class="ticket-profile">
                 <div class="flex">
-                  <img src="/assets/profile-icon.svg" alt="" />
+                  <img src="${imageBase}/profile-icon.svg" alt="" />
                   <div class="profile-name">
                     <h1 class="fs-20 fw-bold">${passengerName}</h1>
                     <p class="fs-14">Boarding Pass N’${boardingPass}</p>
@@ -92,28 +94,28 @@ function renderFlightConfirmation(flight, passengerInfo = {}) {
               </div>
               <div class="plane-details grid-4">
                 <div class="flex">
-                  <img src="/assets/calendar-primary-icon.svg" alt="" />
+                  <img src="${imageBase}/calendar-primary-icon.svg" alt="" />
                   <div class="profile-name">
                     <h1 class="text-neutral-grey fs-14 fw-semi-bold">Date</h1>
                     <p class="fs-12 fw-medium">${date}</p>
                   </div>
                 </div>
                 <div class="flex">
-                  <img src="/assets/clock-icon.svg" alt="" />
+                  <img src="${imageBase}/clock-icon.svg" alt="" />
                   <div class="profile-name">
                     <h1 class="text-neutral-grey fs-14 fw-semi-bold">Time</h1>
                     <p class="fs-12 fw-medium">${departureTime}</p>
                   </div>
                 </div>
                 <div class="flex">
-                  <img src="/assets/door-icon.svg" alt="" />
+                  <img src="${imageBase}/door-icon.svg" alt="" />
                   <div class="profile-name">
                     <h1 class="text-neutral-grey fs-14 fw-semi-bold">Gate</h1>
                     <p class="fs-12 fw-medium">${gate}</p>
                   </div>
                 </div>
                 <div class="flex">
-                  <img src="/assets/airlineseat-primary-icon.svg" alt="" />
+                  <img src="${imageBase}/airlineseat-primary-icon.svg" alt="" />
                   <div class="profile-name">
                     <h1 class="text-neutral-grey fs-14 fw-semi-bold">Seat</h1>
                     <p class="fs-12 fw-medium">${seat}</p>
@@ -125,7 +127,7 @@ function renderFlightConfirmation(flight, passengerInfo = {}) {
                   <h1 class="fs-32 fw-semi-bold">${codePrefix}</h1>
                   <p class="fw-medium fs12">${code}</p>
                 </div>
-                <img src="/assets/barcode-icon.svg" alt="" />
+                <img src="${imageBase}/barcode-icon.svg" alt="" />
               </div>
             </div>
           </div>

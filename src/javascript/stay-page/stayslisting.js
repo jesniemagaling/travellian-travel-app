@@ -122,7 +122,7 @@ document.addEventListener('click', (e) => {
 
   const stayId = button.dataset.id;
   if (stayId) {
-    window.location.href = `/stay/staysdetails.html?stay=${stayId}`;
+    window.location.href = `staysdetails.html?stay=${stayId}`;
   }
 });
 

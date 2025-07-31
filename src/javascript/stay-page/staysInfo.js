@@ -2,6 +2,8 @@
 import { rooms, amenities, reviews } from '../utils/stays';
 import { getStayFromURL } from './staysdetails';
 
+const imageBase = `${import.meta.env.BASE_URL}assets`;
+
 // Render the details of a single stay
 export function renderStaysDetails(stay) {
   const container = document.getElementById('staysDetailsContainer');
@@ -17,7 +19,7 @@ export function renderStaysDetails(stay) {
     <div class="hotel-details-info">
       <div>
         <div class="hotel-details-location">
-          <img src="/assets/location-icon.svg" alt="location icon" />
+          <img src="${imageBase}/location-icon.svg" alt="location icon" />
           <p class="fs-14">${stay.location}</p>
         </div>
         <div class="rating-badge">

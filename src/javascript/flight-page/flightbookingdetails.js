@@ -5,6 +5,8 @@ import {
 } from '../utils/nav';
 import { flights } from '../utils/flights';
 
+const imageBase = `${import.meta.env.BASE_URL}assets`;
+
 document.addEventListener('DOMContentLoaded', () => {
   setupMobileNav();
   initUserDropdown();
@@ -64,11 +66,11 @@ function renderFlightBooking(flight) {
             </div>
           </div>
           <div class="itinerary-details">
-            <img src="/assets/airplane-icon.svg" alt="" />
-            <img src="/assets/wifi-icon.svg" alt="" />
-            <img src="/assets/stopwatch-icon.svg" alt="" />
-            <img src="/assets/foods-icon.svg" alt="" />
-            <img src="/assets/airlineseat-icon.svg" alt="" />
+            <img src="${imageBase}/airplane-icon.svg" alt="" />
+            <img src="${imageBase}/wifi-icon.svg" alt="" />
+            <img src="${imageBase}/stopwatch-icon.svg" alt="" />
+            <img src="${imageBase}/foods-icon.svg" alt="" />
+            <img src="${imageBase}/airlineseat-icon.svg" alt="" />
           </div>
         </div>
 
@@ -77,7 +79,7 @@ function renderFlightBooking(flight) {
             <h3 class="fs-24 fw-semi-bold">${departureTime}</h3>
             <p class="text-neutral-grey fw-medium">${departureAirport}</p>
           </div>
-          <img src="/assets/airplane-icon.svg" alt="" />
+          <img src="${imageBase}/airplane-icon.svg" alt="" />
           <div class="itinerary-time flex">
             <h3 class="fs-24 fw-semi-bold">${arrivalTime}</h3>
             <p class="text-neutral-grey fw-medium">${arrivalAirport}</p>
@@ -106,13 +108,13 @@ function renderFlightBooking(flight) {
       <div class="payment-method-wrapper">
         <label class="payment-method selected">
           <div class="payment-info">
-            <img src="/assets/visa-icon.svg" alt="Visa" />
+            <img src="${imageBase}/visa-icon.svg" alt="Visa" />
             <h3 class="fs-16 fw-bold">**** 4321 <span class="fw-regular fs-14">02/27</span></h3>
           </div>
           <input type="radio" name="paymentMethod" checked />
         </label>
         <button class="payment-method-btn">
-          <img src="/assets/addcircle-icon.svg" alt="" />
+          <img src="${imageBase}/addcircle-icon.svg" alt="" />
           <p class="fw-medium fs-12 text-neutral-grey">Add a new card</p>
         </button>
       </div>

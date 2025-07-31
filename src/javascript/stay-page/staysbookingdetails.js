@@ -6,6 +6,8 @@ import {
   createTabSwitcher,
 } from '../utils/nav.js';
 
+const imageBase = `${import.meta.env.BASE_URL}assets`;
+
 document.addEventListener('DOMContentLoaded', () => {
   const { stayId, roomId } = getParamsFromURL();
 
@@ -46,7 +48,7 @@ function renderBookingSummary(stay, room) {
   ).innerHTML = `
     <h2 class="fw-semi-bold fs-24">${stay.name}</h2>
     <div class="hotel-location">
-      <img src="/assets/location-icon.svg" alt="" />
+      <img src="${imageBase}/location-icon.svg" alt="" />
       <p class="fs-14 fw-medium">${stay.location}</p>
     </div>
   `;

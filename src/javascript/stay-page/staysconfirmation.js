@@ -5,6 +5,8 @@ import {
   createTabSwitcher,
 } from '../utils/nav.js';
 
+const imageBase = `${import.meta.env.BASE_URL}assets`;
+
 document.addEventListener('DOMContentLoaded', () => {
   setupMobileNav();
   initUserDropdown();
@@ -42,7 +44,7 @@ function renderConfirmation(stay, room) {
   `;
 
   bookingDetails.querySelector('.hotel-details-location').innerHTML = `
-    <img src="/assets/location-icon.svg" alt="" />
+    <img src="${imageBase}/location-icon.svg" alt="" />
     <p class="fs-14">${stay.location}</p>
   `;
 
