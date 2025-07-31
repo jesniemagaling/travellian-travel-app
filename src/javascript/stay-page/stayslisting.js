@@ -43,7 +43,10 @@ function renderStays() {
   const stayContainer = document.getElementById('stayCardContainer');
   if (!stayContainer) return;
 
-  stayContainer.innerHTML = stays
+  const filteredStays = filterStays(stays, stayFilters);
+  const sortedStays = sortStays(filteredStays, stayFilters.sort);
+
+  stayContainer.innerHTML = sortedStays
     .map(
       (stay) => `
         <div class="hotel-card stays-listing">
@@ -109,6 +112,8 @@ function renderStays() {
       `
     )
     .join('');
+  stayVisibleCount.textContent = sortedStays.length;
+  stayTotalCount.textContent = `${stays.length} places`;
 }
 
 document.addEventListener('click', (e) => {
@@ -120,3 +125,70 @@ document.addEventListener('click', (e) => {
     window.location.href = `/stay/staysdetails.html?stay=${stayId}`;
   }
 });
+
+// STAYS LISTING FILTERING
+const stayFilters = {
+  price: [0, 1000],
+  rating: null,
+  type: '', // hotel, motel, etc.
+  sort: 'recommended',
+};
+
+function filterStays(stays, { price, rating, type }) {
+  return stays.filter((stay) => {
+    if (stay.price < price[0] || stay.price > price[1]) return false;
+    if (rating !== null && stay.rating < rating) return false;
+    if (type && stay.type !== type) return false;
+    return true;
+  });
+}
+
+function sortStays(stays, sortOption) {
+  switch (sortOption) {
+    case 'priceLowHigh':
+      return [...stays].sort((a, b) => a.price - b.price);
+    case 'priceHighLow':
+      return [...stays].sort((a, b) => b.price - a.price);
+    case 'ratingHighLow':
+      return [...stays].sort((a, b) => b.rating - a.rating);
+    default:
+      return stays;
+  }
+}
+
+document.querySelectorAll('[data-rating]').forEach((btn) =>
+  btn.addEventListener('click', (e) => {
+    stayFilters.rating = Number(
+      e.target.closest('[data-rating]').dataset.rating
+    );
+    renderStays();
+  })
+);
+
+document.getElementById('staySortSelect')?.addEventListener('change', (e) => {
+  stayFilters.sort = e.target.value;
+  renderStays();
+});
+
+// for stay type buttons (hotel, motel, etc.)
+document.querySelectorAll('.sort-btn').forEach((btn) =>
+  btn.addEventListener('click', (e) => {
+    document
+      .querySelectorAll('.sort-btn')
+      .forEach((el) => el.classList.remove('active'));
+    e.target.classList.add('active');
+
+    const label = e.target.textContent.toLowerCase();
+    stayFilters.type = label.includes('hotel')
+      ? 'hotel'
+      : label.includes('motel')
+        ? 'motel'
+        : label.includes('resort')
+          ? 'resort'
+          : label.includes('hostel')
+            ? 'hostel'
+            : '';
+
+    renderStays();
+  })
+);

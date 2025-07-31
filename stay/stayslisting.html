@@ -203,9 +203,7 @@
             <h3 class="fs-16 fw-semi-bold filter-heading filter-toggle">
               Amenities
             </h3>
-            <label
-              ><input type="checkbox" name="trips" /> 24hr front desk</label
-            >
+            <label><input type="checkbox" name="trips" /> 24hr room desk</label>
             <label
               ><input type="checkbox" name="trips" /> Air conditioned</label
             >
@@ -219,16 +217,16 @@
           <!-- Sorting Options -->
           <div class="sort-bar space-between">
             <div class="sort-options grid-4">
-              <button class="sort-btn">
+              <button class="sort-btn active" data-type="hotel">
                 Hotels<br /><small>513 places</small>
               </button>
-              <button class="sort-btn active">
+              <button class="sort-btn" data-type="motel">
                 Motels<br /><small>51 places</small>
               </button>
-              <button class="sort-btn">
+              <button class="sort-btn" data-type="hostel">
                 Hostels<br /><small>13 places</small>
               </button>
-              <button class="sort-btn">
+              <button class="sort-btn" data-type="resort">
                 Resorts<br /><small>72 places</small>
               </button>
             </div>
@@ -237,14 +235,16 @@
           <!-- Result Count -->
           <div class="showing-result">
             <p class="fs-14 fw-semi-bold">
-              Showing 13 of <strong>259 places</strong>
+              Showing <span id="stayVisibleCount">0</span> of
+              <strong id="stayTotalCount">0 places</strong>
             </p>
             <div class="sort-dropdown flex">
-              <label>Sort by</label>
-              <select>
-                <option>Recommended</option>
-                <option>Price Low to High</option>
-                <option>Duration</option>
+              <label for="staySortSelect">Sort by</label>
+              <select id="staySortSelect">
+                <option value="recommended">Recommended</option>
+                <option value="priceLowHigh">Price Low to High</option>
+                <option value="priceHighLow">Price High to Low</option>
+                <option value="ratingHighLow">Rating High to Low</option>
               </select>
             </div>
           </div>
