@@ -154,109 +154,139 @@
           <h2 class="fs-20 fw-bold">Filters</h2>
 
           <!-- Price Filter -->
-          <div class="filter-group">
+          <div class="filter-group" data-filter="price">
             <button class="fs-16 fw-semi-bold filter-toggle">Price</button>
             <input type="range" min="50" max="1200" class="price-slider" />
             <div class="price-values flex">
-              <p class="fs-14 fw-medium text-neutral-grey">$50</p>
-              <p class="fs-14 fw-medium text-neutral-grey">$1200</p>
+              <p class="fs-14 fw-medium text-neutral-grey min-price">$50</p>
+              <p class="fs-14 fw-medium text-neutral-grey max-price">$1200</p>
             </div>
           </div>
 
           <!-- Departure Time -->
-          <div class="filter-group">
+          <div class="filter-group" data-filter="time">
             <button class="fs-16 fw-semi-bold filter-toggle">
               Departure Time
             </button>
             <input type="range" min="0" max="1440" class="time-slider" />
             <div class="time-values flex">
-              <p class="fs-14 fw-medium text-neutral-grey">12:00am</p>
-              <p class="fs-14 fw-medium text-neutral-grey">11:59pm</p>
+              <p class="fs-14 fw-medium text-neutral-grey start-time">
+                12:00am
+              </p>
+              <p class="fs-14 fw-medium text-neutral-grey end-time">11:59pm</p>
             </div>
           </div>
 
           <!-- Rating -->
-          <div class="filter-group">
+          <div class="filter-group" data-filter="rating">
             <h3 class="fs-16 fw-semi-bold filter-heading">Rating</h3>
             <div class="rating-options">
-              <button class="btn-stroke">0+</button>
-              <button class="btn-stroke">1+</button>
-              <button class="btn-stroke">2+</button>
-              <button class="btn-stroke">3+</button>
-              <button class="btn-stroke">4+</button>
+              <button class="btn-stroke" data-rating="0">0+</button>
+              <button class="btn-stroke" data-rating="1">1+</button>
+              <button class="btn-stroke" data-rating="2">2+</button>
+              <button class="btn-stroke" data-rating="3">3+</button>
+              <button class="btn-stroke" data-rating="4">4+</button>
             </div>
           </div>
 
           <!-- Airlines -->
-          <div class="filter-group">
+          <div class="filter-group" data-filter="airlines">
             <h3 class="fs-16 fw-semi-bold filter-heading filter-toggle">
               Airlines
             </h3>
-            <label><input type="checkbox" name="airlines" /> Emirates</label>
-            <label><input type="checkbox" name="airlines" /> Fly Dubai</label>
-            <label><input type="checkbox" name="airlines" /> Qatar</label>
-            <label><input type="checkbox" name="airlines" /> Etihad</label>
+            <div class="airline-options">
+              <label
+                ><input type="checkbox" name="airlines" value="Emirates" />
+                Emirates</label
+              >
+              <label
+                ><input type="checkbox" name="airlines" value="Fly Dubai" /> Fly
+                Dubai</label
+              >
+              <label
+                ><input type="checkbox" name="airlines" value="Qatar Airways" />
+                Qatar</label
+              >
+              <label
+                ><input type="checkbox" name="airlines" value="Etihad" />
+                Etihad</label
+              >
+            </div>
           </div>
 
           <!-- Trip Types -->
-          <div class="filter-group">
+          <div class="filter-group" data-filter="tripType">
             <h3 class="fs-16 fw-semi-bold filter-heading filter-toggle">
               Trips
             </h3>
-            <label><input type="checkbox" name="trips" /> Round Trip</label>
-            <label><input type="checkbox" name="trips" /> One Way</label>
-            <label><input type="checkbox" name="trips" /> Multi-City</label>
-            <label
-              ><input type="checkbox" name="trips" /> My Dates Are
-              Flexible</label
-            >
+            <div class="trip-type-options">
+              <label
+                ><input type="checkbox" name="tripType" value="Round Trip" />
+                Round Trip</label
+              >
+              <label
+                ><input type="checkbox" name="tripType" value="One Way" /> One
+                Way</label
+              >
+              <label
+                ><input type="checkbox" name="tripType" value="Multi-City" />
+                Multi-City</label
+              >
+              <label
+                ><input type="checkbox" name="tripType" value="Flexible" /> My
+                Dates Are Flexible</label
+              >
+            </div>
           </div>
         </aside>
 
         <!-- Flight Listings Section -->
-        <div class="flight-results">
+        <section class="flight-results">
           <!-- Sorting Options -->
           <div class="sort-bar space-between">
             <div class="sort-options grid-4">
-              <button class="sort-btn">
-                Cheapest<br /><small>$99 . 2h 18m</small>
+              <button class="sort-btn" data-sort="cheapest">
+                Cheapest<br /><small>$99 · 2h 18m</small>
               </button>
-              <button class="sort-btn active">
-                Best<br /><small>$99 . 2h 18m</small>
+              <button class="sort-btn active" data-sort="best">
+                Best<br /><small>$99 · 2h 18m</small>
               </button>
-              <button class="sort-btn">
-                Quickest<br /><small>$99 . 2h 18m</small>
+              <button class="sort-btn" data-sort="quickest">
+                Quickest<br /><small>$99 · 2h 18m</small>
               </button>
-              <button class="sort-btn">
+              <button class="sort-btn" data-sort="other">
                 <div class="inline-flex">
-                  <img src="/assets/menu-icon.svg" alt="" />Other sort
+                  <img src="/assets/menu-icon.svg" alt="Other sort icon" />
+                  Other sort
                 </div>
               </button>
             </div>
           </div>
 
           <!-- Result Count -->
-          <div class="showing-result">
+          <div class="showing-result space-between">
             <p class="fs-14 fw-semi-bold">
-              Showing 4 of <strong>257 places</strong>
+              Showing <span id="result-count">0</span> of
+              <strong id="total-flights">0 flights</strong>
             </p>
             <div class="sort-dropdown flex">
-              <label>Sort by</label>
-              <select>
-                <option>Recommended</option>
-                <option>Price Low to High</option>
-                <option>Duration</option>
+              <label for="sortSelect">Sort by</label>
+              <select id="sortSelect">
+                <option value="recommended">Recommended</option>
+                <option value="price-low-high">Price Low to High</option>
+                <option value="duration">Duration</option>
               </select>
             </div>
           </div>
 
+          <!-- Flight Cards Render Here -->
           <div id="flightCardContainer"></div>
 
           <!-- Show more -->
           <button class="btn-secondary full-width mt-2">
             Show more results
           </button>
-        </div>
+        </section>
       </div>
     </section>
 
