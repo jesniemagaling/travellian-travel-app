@@ -103,7 +103,10 @@ header {
   gap: 1rem;
   background-color: var(--clr-neutral-50);
   border-radius: 0 0 12px 12px;
-  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease,
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    max-height 0.3s ease,
     padding 0.3s ease;
   opacity: 0;
   transform: translateY(-10px); /* start slightly above */
@@ -174,6 +177,7 @@ header {
   margin-bottom: 0.5rem;
   display: block;
   cursor: pointer;
+  color: var(--clr-neutral-200);
 }
 
 .price-slider,
@@ -311,12 +315,16 @@ input[type='checkbox']:checked {
 }
 
 .sort-btn {
+  background-color: transparent;
   padding: 1em;
   border: none;
   font-weight: var(--fw-semi-bold);
   font-size: var(--fs-16);
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  color: var(--clr-neutral-200);
 }
 
 .sort-btn small {
@@ -343,11 +351,16 @@ input[type='checkbox']:checked {
   color: var(--clr-accent-200);
 }
 
+.sort-dropdown.flex {
+  gap: 0.5em;
+}
+
 .sort-dropdown label {
   margin: 0 0 0 1.5em;
 }
 
 .sort-dropdown select {
+  color: var(--clr-neutral-200);
   padding: 0.4em;
   border: none;
   font-size: var(--fs-14);
