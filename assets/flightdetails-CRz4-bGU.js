@@ -1,4 +1,4 @@
-import{a as h,i as g,c as m}from"./nav-BUibuh3s.js";import{f as S}from"./flights-Bw2lqAzd.js";const b="/travellian-travel-app/assets";function q(e){const t=document.querySelector(".flight-details-wrapper"),i=document.querySelector(".flight-features-container");if(!t||!i||!e)return;t.querySelector(".flight-details-heading").innerHTML=`
+import{a as h,i as g,c as m}from"./swiper-D8Rclskd.js";import{f as S}from"./flights-Bw2lqAzd.js";const b="/travellian-travel-app/assets";function q(e){const t=document.querySelector(".flight-details-wrapper"),i=document.querySelector(".flight-features-container");if(!t||!i||!e)return;t.querySelector(".flight-details-heading").innerHTML=`
     <h1 class="fs-28 fw-bold">${e.airline} ${e.aircraft}</h1>
     <h2 class="fs-32 fw-bold text-accent-slamon">$${e.price}</h2>
   `;const s=e.departures[0];t.querySelector(".flight-details-location").innerHTML=`
