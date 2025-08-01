@@ -181,6 +181,7 @@ header {
   margin-bottom: 0.5rem;
   display: block;
   cursor: pointer;
+  color: var(--clr-neutral-200);
 }
 
 .price-slider,
@@ -331,6 +332,8 @@ input[type='checkbox']:checked {
     transform 0.3s ease,
     background-color 0.3s ease;
   text-align: left;
+  color: var(--clr-neutral-200);
+  background-color: transparent;
 }
 
 .sort-btn small {
@@ -345,6 +348,11 @@ input[type='checkbox']:checked {
   background-color: var(--clr-primary-300);
 }
 
+.sort-btn:hover,
+.sort-btn:focus {
+  background-color: transparent;
+}
+
 /* Result Count */
 .showing-result {
   display: flex;
@@ -354,6 +362,10 @@ input[type='checkbox']:checked {
 
 .showing-result strong {
   color: var(--clr-accent-200);
+}
+
+.sort-dropdown.flex {
+  gap: 0.5em;
 }
 
 .sort-dropdown label {
