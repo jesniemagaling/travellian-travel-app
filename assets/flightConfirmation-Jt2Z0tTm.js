@@ -1,4 +1,4 @@
-import"./swiper-DolsZaOw.js";/* empty css               *//* empty css                      *//* empty css                      *//* empty css                           */import{a as g,i as b,c as y}from"./nav-BUibuh3s.js";import{f as w}from"./flights-Bw2lqAzd.js";const e="/travellian-travel-app/assets";document.addEventListener("DOMContentLoaded",()=>{g(),b(),y({activeTab:document.querySelector(".flights-btn"),inactiveTab:document.querySelector(".stays-btn")});const i=$(),a=w.find(s=>s.id===i);a?k(a):console.warn("Flight not found")});function $(){return new URLSearchParams(window.location.search).get("flight")}function k(i,a={}){const s=document.getElementById("flight-details");if(!s)return;const t=i.departures[0],{passengerName:r="Jesnie Magaling",boardingPass:l="1234567890",classType:n="Economy",date:c="Aug 5, 2025",gate:d="B12",seat:f="24A",codePrefix:h="EK",code:m="84920124"}=a,[o,p]=t.time.split(" - "),[v,u]=t.route.split("-");s.innerHTML=`
+import"./swiper-DZbraFs1.js";import{a as g,i as b,c as y}from"./nav-BUibuh3s.js";import{f as w}from"./flights-Bw2lqAzd.js";const e="/travellian-travel-app/assets";document.addEventListener("DOMContentLoaded",()=>{g(),b(),y({activeTab:document.querySelector(".flights-btn"),inactiveTab:document.querySelector(".stays-btn")});const i=$(),a=w.find(s=>s.id===i);a?k(a):console.warn("Flight not found")});function $(){return new URLSearchParams(window.location.search).get("flight")}function k(i,a={}){const s=document.getElementById("flight-details");if(!s)return;const t=i.departures[0],{passengerName:l="Jesnie Magaling",boardingPass:r="1234567890",classType:n="Economy",date:c="Aug 5, 2025",gate:d="B12",seat:f="24A",codePrefix:h="EK",code:m="84920124"}=a,[o,p]=t.time.split(" - "),[v,u]=t.route.split("-");s.innerHTML=`
     <section>
       <div class="flight-details-wrapper">
         <div class="flight-details-heading">
@@ -33,8 +33,8 @@ import"./swiper-DolsZaOw.js";/* empty css               *//* empty css          
                 <div class="flex">
                   <img src="${e}/profile-icon.svg" alt="" />
                   <div class="profile-name">
-                    <h1 class="fs-20 fw-bold">${r}</h1>
-                    <p class="fs-14">Boarding Pass N’${l}</p>
+                    <h1 class="fs-20 fw-bold">${l}</h1>
+                    <p class="fs-14">Boarding Pass N’${r}</p>
                   </div>
                 </div>
                 <h2 class="fs-14 fw-bold">${n}</h2>
