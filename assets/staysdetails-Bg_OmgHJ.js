@@ -1,4 +1,4 @@
-import{a as v,i as p,c as f}from"./nav-BRbo9wLN.js";import{r,a as h,b as d,s as w}from"./stays-BfrsDapl.js";const u="/travellian-travel-app/assets";function g(e){const i=document.getElementById("staysDetailsContainer");!i||!e||(i.innerHTML=`
+import{a as v,i as p,c as f}from"./styles-CO8zrl36.js";import{r,a as h,b as d,s as w}from"./stays-BfrsDapl.js";const u="/travellian-travel-app/assets";function g(e){const i=document.getElementById("staysDetailsContainer");!i||!e||(i.innerHTML=`
     <div class="hotel-details-heading">
       <div class="hotel-name flex">
         <h1 class="fs-28 fw-bold">${e.name}</h1>
