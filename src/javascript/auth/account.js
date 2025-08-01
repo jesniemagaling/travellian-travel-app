@@ -1,16 +1,14 @@
-const userBtn = document.querySelector('.user-profile-btn');
-const userNav = document.getElementById('userNav');
+import {
+  setupMobileNav,
+  createTabSwitcher,
+  initUserDropdown,
+} from '../utils/nav';
 
-userBtn.addEventListener('click', (e) => {
-  e.stopPropagation(); // prevent click from bubbling
-  userNav.classList.toggle('show');
-});
-
-// Close dropdown when clicking outside
-document.addEventListener('click', (e) => {
-  if (!userNav.contains(e.target) && !userBtn.contains(e.target)) {
-    userNav.classList.remove('show');
-  }
+initUserDropdown();
+setupMobileNav();
+createTabSwitcher({
+  activeTab: document.querySelector('.flights-btn'),
+  inactiveTab: document.querySelector('.stays-btn'),
 });
 
 const openModalBtn = document.querySelector('.payment-method-btn');

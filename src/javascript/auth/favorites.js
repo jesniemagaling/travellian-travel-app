@@ -1,3 +1,16 @@
+import {
+  setupMobileNav,
+  createTabSwitcher,
+  initUserDropdown,
+} from '../utils/nav';
+
+initUserDropdown();
+setupMobileNav();
+createTabSwitcher({
+  activeTab: document.querySelector('.flights-btn'),
+  inactiveTab: document.querySelector('.stays-btn'),
+});
+
 let isStaysClicked = false;
 
 const favoritesTabs = document.querySelectorAll('.favorites-tab');
