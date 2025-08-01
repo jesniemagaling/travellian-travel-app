@@ -1,23 +1,11 @@
 // vite.config.js
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
   // No 'root' property needed if your HTML files are in subdirectories directly under the project root.
   // Vite defaults to process.cwd() (the project root) as the 'root' if not specified.
   base: '/travellian-travel-app/',
-
-  plugins: [
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'src/css/utils/responsive.css',
-          dest: 'src/css/utils',
-        },
-      ],
-    }),
-  ],
 
   server: {
     // Set the path to open relative to your project root

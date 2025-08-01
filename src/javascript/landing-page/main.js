@@ -3,8 +3,6 @@ import { renderStayForm } from '../utils/stayForm';
 import { setupStickyNav } from '../utils/nav.js';
 import { places } from '../utils/places.js';
 import { reviews } from '../utils/reviews.js';
-import '../../css/utils/utilities.css';
-import '../../css/utils/responsive.css';
 
 const imageBase = `${import.meta.env.BASE_URL}assets`;
 
