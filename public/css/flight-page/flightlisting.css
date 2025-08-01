@@ -327,6 +327,15 @@ input[type='checkbox']:checked {
   color: var(--clr-neutral-200);
 }
 
+.sort-btn:hover,
+.sort-btn:focus {
+  background-color: transparent;
+}
+
+.sort-btn .inline-flex {
+  align-items: center;
+}
+
 .sort-btn small {
   font-weight: var(--fw-medium);
   color: var(--clr-neutral-100);
