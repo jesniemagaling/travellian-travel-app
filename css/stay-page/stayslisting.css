@@ -377,6 +377,7 @@ input[type='checkbox']:checked {
   border: none;
   font-size: var(--fs-14);
   font-weight: var(--fw-semi-bold);
+  color: var(--clr-neutral-200);
 }
 
 /*=== Flight Card ===*/
